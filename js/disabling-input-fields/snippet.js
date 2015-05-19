@@ -1,0 +1,1 @@
+$('input[type="submit"]').attr('disabled', true);
