@@ -128,10 +128,10 @@ $('.div').css('min-height', $('.main-div').height());
 Sometimes 'ya mom wants two divs to have the same height no matter what content they have in them. This little snippet enables just that; in this case it sets the `min-height` which means that it can be bigger than the main div but never smaller. This is great for masonry like websites.
 
 
-###Zebra Stiped Unordered List
+###Zebra Striped Unordered List
 
 ```javascript
 $('li:odd').css('background', '#e8e8e8');
 ```
 
-Mom can easily create zebra striped unordered lists by placing the background you define on every odd list item so that she can place the default one for the even ones in her CSS. 'Ya mom can add this snippet to any type of markup, from tables to plain divs, anything you want to be zebra stripped.
+Mom can easily create zebra striped unordered lists by placing the background you define on every odd list item so that she can place the default one for the even ones in her CSS. 'Ya mom can add this snippet to any type of markup, from tables to plain divs, anything she wants to be zebra stripped.
