@@ -1,4 +1,4 @@
-##How's 'ya mutha?
+##jQuery Recipes Your Mom Should Know
 
 > Get 'ya mom using these simple jQuery tips and she'll be rollin'!
 
