@@ -37,7 +37,7 @@ Sometimes mom needs to check if her images are fully loaded in order to continue
 ###Fix Broken Images Automatically
 
 ```javascript
-$('img').error(function () {
+$('img').on('error', function () {
   $(this).attr('src', 'img/broken.png');
 });
 ```
@@ -63,7 +63,7 @@ Mom usually wants to change the visual of a clickable element on her page when t
 ###Disabling Input Fields
 
 ```javascript
-$('input[type="submit"]').attr('disabled', true);
+$('input[type="submit"]').prop('disabled', true);
 ```
 
 On occasion 'ya mom may want the submit button of a form or one of its text inputs to be disabled until the user has performed a certain action (e.g., checking the "I've read the terms" checkbox). This line of code adds the `disabled` attribute to mom's input so she can enable it when she wants to.
@@ -122,16 +122,14 @@ By adding this script all mom really needs to do on her page is the necessary HT
 ###Make Two Divs the Same Height
 
 ```javascript
-$('.div').css('min-height', $('.main-div').height());
+var $columns = $('.column');
+var height = 0;
+$columns.each(function () {
+  if ($(this).height() > height) {
+    height = $(this).height();
+  }
+});
+$columns.height(height);
 ```
 
-Sometimes 'ya mom wants two divs to have the same height no matter what content they have in them. This little snippet enables just that; in this case it sets the `min-height` which means that it can be bigger than the main div but never smaller. This is great for masonry like websites.
-
-
-###Zebra Striped Unordered List
-
-```javascript
-$('li:odd').css('background', '#e8e8e8');
-```
-
-Mom can easily create zebra striped unordered lists by placing the background you define on every odd list item so that she can place the default one for the even ones in her CSS. 'Ya mom can add this snippet to any type of markup, from tables to plain divs, anything she wants to be zebra stripped.
+Sometimes 'ya mom wants two divs to have the same height no matter what content they have in them. This little snippet enables just that; in this case it loops over a set of elements and sets the height for them to the height of the tallest element.
