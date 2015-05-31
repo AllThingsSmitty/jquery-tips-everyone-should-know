@@ -35,7 +35,7 @@ $.preloadImages = function () {
 $.preloadImages("img/hover1.png","img/hover2.png");
 ```
 
-If 'ya mom's page uses a lot of images that aren't visible initially (e.g., when a hover is performed), it might be worth her while to preload them. This simple script does exactly that.
+If 'ya mom's page uses a lot of images that aren't visible initially (e.g., when a hover is performed) it's worth her while to preload them. This simple snippet does exactly that.
 
 
 ###Checking If Images Are Loaded
