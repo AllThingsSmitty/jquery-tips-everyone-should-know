@@ -23,6 +23,21 @@ When mom uses the `animate` and `scrollTop` functions in jQuery she doesn't need
 Changing the `scrollTop` value changes where 'ya mom wants the scrollbar to land. All she's really doing is animating the body of the document throughout the course of 800ms until it scrolls all the way to the top of the document.
 
 
+###Preload Images
+
+```javascript
+$.preloadImages = function () {
+  for (var i = 0; i < arguments.length; i++) {
+    $("<img />").attr("src", arguments[i]);
+  }
+}
+
+$.preloadImages("img/hover1.png","img/hover2.png");
+```
+
+If 'ya mom's page uses a lot of images that aren't visible initially (e.g., when a hover is performed), it might be worth her while to preload them. This simple script does exactly that.
+
+
 ###Checking If Images Are Loaded
 
 ```javascript
