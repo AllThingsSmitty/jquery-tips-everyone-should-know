@@ -7,7 +7,7 @@
 ###Back to Top Button
 
 ```javascript
-// Back to top
+// Back To Top
 $('a.top').click(function () {
   $(document.body).animate({scrollTop: 0}, 800);
   return false;
@@ -74,8 +74,6 @@ $('.btn').hover(function () {
 
 Mom usually wants to change the visual of a clickable element on her page when the user hovers over it. This snippet adds a class to her element when the user is hovering; when the user stops it removes the class. 'Ya mom just needs to add the necessary CSS.
 
-**Note**: 'Ya mom hasn't brushed up on her [CSS chops](https://www.youtube.com/watch?v=dQw4w9WgXcQ) fully just yet. So while CSS may be a faster solution in this case, it's still worth her while to know how to do this.
-
 
 ###Disabling Input Fields
 
@@ -122,7 +120,7 @@ Slides and Fades are something we use plenty in our animations using jQuery. Som
 ###Simple Accordion
 
 ```javascript
-// Close all panels
+// Close all Panels
 $('#accordion').find('.content').hide();
 // Accordion
 $('#accordion').find('.accordion-header').click(function () {
