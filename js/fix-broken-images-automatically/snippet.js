@@ -1,3 +1,3 @@
 $('img').on('error', function () {
-  $(this).attr('src', 'img/broken.png');
+  $(this).prop('src', 'img/broken.png');
 });

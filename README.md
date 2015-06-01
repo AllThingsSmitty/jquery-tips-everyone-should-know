@@ -28,7 +28,7 @@ Changing the `scrollTop` value changes where 'ya mom wants the scrollbar to land
 ```javascript
 $.preloadImages = function () {
   for (var i = 0; i < arguments.length; i++) {
-    $("<img>").attr("src", arguments[i]);
+    $("<img>").prop("src", arguments[i]);
   }
 };
 
@@ -53,7 +53,7 @@ Sometimes mom needs to check if her images are fully loaded in order to continue
 
 ```javascript
 $('img').on('error', function () {
-  $(this).attr('src', 'img/broken.png');
+  $(this).prop('src', 'img/broken.png');
 });
 ```
 
