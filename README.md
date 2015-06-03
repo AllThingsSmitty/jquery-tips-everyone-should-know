@@ -28,11 +28,11 @@ Changing the `scrollTop` value changes where 'ya mom wants the scrollbar to land
 ```javascript
 $.preloadImages = function () {
   for (var i = 0; i < arguments.length; i++) {
-    $("<img>").prop("src", arguments[i]);
+    $('<img>').attr('src', arguments[i]);
   }
 };
 
-$.preloadImages("img/hover1.png","img/hover2.png");
+$.preloadImages('img/hover1.png', 'img/hover2.png');
 ```
 
 If 'ya mom's page uses a lot of images that aren't visible initially (e.g., when a hover is performed) it's worth her while to preload them. This simple snippet does exactly that.
