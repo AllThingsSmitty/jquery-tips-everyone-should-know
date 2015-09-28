@@ -1,10 +1,22 @@
-##jQuery Recipes Your Mom Should Know
+# jQuery Recipes Your Mom Should Know
 
-> Get 'ya mom using these simple jQuery tips and she'll be rollin'!
+Get 'ya mom using these simple jQuery tips and she'll be rollin'!
 
 ![Mom image 1](img/mom.jpg)
 
-###Back to Top Button
+1. [Back to Top Button](#back-to-top-button)
+1. [Preload Images](#preload-images)
+1. [Checking If Images Are Loaded](#checking-if-images-are-loaded)
+1. [Fix Broken Images Automatically](#fix-broken-images-automatically)
+1. [Toggle Classes on Hover](#toggle-classes-on-hover)
+1. [Disabling Input Fields](#disabling-input-fields)
+1. [Stop the Loading of Links](#stop-the-loading-of-links)
+1. [Toggle Fade/Slide](#toggle-fade-slide)
+1. [Simple Accordion](#simple-accordion)
+1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
+
+
+### Back to Top Button
 
 ```javascript
 // Back to top
@@ -23,7 +35,7 @@ When mom uses the `animate` and `scrollTop` functions in jQuery she doesn't need
 Changing the `scrollTop` value changes where 'ya mom wants the scrollbar to land. All she's really doing is animating the body of the document throughout the course of 800ms until it scrolls all the way to the top of the document.
 
 
-###Preload Images
+### Preload Images
 
 ```javascript
 $.preloadImages = function () {
@@ -35,10 +47,10 @@ $.preloadImages = function () {
 $.preloadImages('img/hover1.png', 'img/hover2.png');
 ```
 
-If 'ya mom's page uses a lot of images that aren't visible initially (e.g., when a hover is performed) it's worth her while to preload them. This simple snippet does exactly that.
+If 'ya mom's page uses a lot of images that aren't visible initially (e.g., on hover) it's worth her while to preload them. This simple snippet does exactly that.
 
 
-###Checking If Images Are Loaded
+### Checking If Images Are Loaded
 
 ```javascript
 $('img').load(function () {
@@ -49,7 +61,7 @@ $('img').load(function () {
 Sometimes mom needs to check if her images are fully loaded in order to continue with her scripts. She can also check if one particular image has loaded by replacing the `<img>` tag with an ID or class.
 
 
-###Fix Broken Images Automatically
+### Fix Broken Images Automatically
 
 ```javascript
 $('img').on('error', function () {
@@ -62,7 +74,7 @@ Occasionally 'ya mom has times when there are broken image links on her website 
 Even if she doesn't have any broken links adding this doesn't do any harm.
 
 
-###Toggle Classes on Hover
+### Toggle Classes on Hover
 
 ```javascript
 $('.btn').hover(function () {
@@ -77,10 +89,10 @@ Mom usually wants to change the visual of a clickable element on her page when t
 **Note**: Mom hasn't brushed up on her [CSS chops](https://www.youtube.com/watch?v=dQw4w9WgXcQ) fully just yet. So while CSS may be a faster solution in this case, it's still worth her while to know how to do this.
 
 
-###Disabling Input Fields
+### Disabling Input Fields
 
 ```javascript
-$('input[type="submit"]').prop('disabled', true);
+$('input[type='submit']').prop('disabled', true);
 ```
 
 On occasion 'ya mom may want the submit button of a form or one of its text inputs to be disabled until the user has performed a certain action (e.g., checking the "I've read the terms" checkbox). This line of code adds the `disabled` attribute to mom's input so she can enable it when she wants to.
@@ -92,7 +104,7 @@ $('input[type="submit"]').removeAttr('disabled');
 ```
 
 
-###Stop the Loading of Links
+### Stop the Loading of Links
 
 ```javascript
 $('a.no-link').click(function (e) {
@@ -103,7 +115,7 @@ $('a.no-link').click(function (e) {
 Sometimes 'ya mom doesn't want links to go to a certain page or even reload it; she wants them to do something else like trigger some other script. This piece of code will do the trick of preventing the default action.
 
 
-###Toggle Fade/Slide
+### Toggle Fade/Slide
 
 ```javascript
 // Fade
@@ -119,7 +131,7 @@ $('.btn').click(function () {
 Slides and Fades are something we use plenty in our animations using jQuery. Sometimes mom just wants to show an element when we click something and for that the `fadeIn` and `slideDown` methods are perfect, but if she wants that element to appear on the first click and then disappear on the second this piece of code will work just fine.
 
 
-###Simple Accordion
+### Simple Accordion
 
 ```javascript
 // Close all panels
@@ -133,10 +145,10 @@ $('#accordion').find('.accordion-header').click(function () {
 });
 ```
 
-By adding this script all mom really needs to do on her page is the necessary HTML go get this working. It's a simple method for a quick accordion.
+By adding this script all mom really needs to do on her page is the necessary HTML go get this working. It's a simple method for a quick accordion. And simple makes mom happy.
 
 
-###Make Two Divs the Same Height
+### Make Two Divs the Same Height
 
 ```javascript
 var $columns = $('.column');
