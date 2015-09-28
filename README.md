@@ -11,7 +11,7 @@ Get 'ya mom using these simple jQuery tips and she'll be rollin'!
 1. [Toggle Classes on Hover](#toggle-classes-on-hover)
 1. [Disabling Input Fields](#disabling-input-fields)
 1. [Stop the Loading of Links](#stop-the-loading-of-links)
-1. [Toggle Fade/Slide](#toggle-fade-slide)
+1. [Toggle Fade/Slide](#toggle-fadeslide)
 1. [Simple Accordion](#simple-accordion)
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
 
