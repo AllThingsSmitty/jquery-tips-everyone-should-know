@@ -1,4 +1,4 @@
-// Close all Panels
+// Close all panels
 $('#accordion').find('.content').hide();
 // Accordion
 $('#accordion').find('.accordion-header').click(function () {
