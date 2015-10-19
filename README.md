@@ -86,6 +86,13 @@ $('.btn').hover(function () {
 
 Mom usually wants to change the visual of a clickable element on her page when the user hovers over it. This snippet adds a class to her element when the user is hovering; when the user stops it removes the class. 'Ya mom just needs to add the necessary CSS.
 
+Now let's say mom gets comfortable with the `addClass`/`removeClass` methods and wants an even _simpler_ way of togging classes. Show her the `toggleClass` method and get ready for homemade cookies:
+
+```javascript
+$('.btn').hover(function () { 
+  $(this).toggleClass('hover'); 
+});
+```
 **Note**: Mom hasn't brushed up on her [CSS chops](https://www.youtube.com/watch?v=dQw4w9WgXcQ) fully just yet. So while CSS may be a faster solution in this case, it's still worth her while to know how to do this.
 
 
