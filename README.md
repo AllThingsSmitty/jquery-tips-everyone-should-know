@@ -100,7 +100,7 @@ $('.btn').hover(function () {
 ### Disabling Input Fields
 
 ```javascript
-$('input[type='submit']').prop('disabled', true);
+$('input[type="submit"]').prop('disabled', true);
 ```
 
 On occasion your mom may want the submit button of a form or one of its text inputs to be disabled until the user has performed a certain action (e.g., checking the "I've read the terms" checkbox). This line of code adds the `disabled` attribute to mom's input so she can enable it when she wants to.
