@@ -16,7 +16,7 @@ A collection of simple tips to help up your jQuery game.
 
 ### Back to Top Button
 
-If you're using the `animate` and `scrollTop` methods in jQuery you don't need a plugin to create a simple scroll-to-top animation:
+By using the `animate` and `scrollTop` methods in jQuery you don't need a plugin to create a simple scroll-to-top animation:
 
 ```javascript
 // Back to top
@@ -31,27 +31,27 @@ $('a.top').click(function () {
 <a class="top" href="#">Back to top</a>
 ```
 
-Changing the `scrollTop` value changes where you wants the scrollbar to land. All you're really doing is animating the body of the document throughout the course of 800 miliseconds until it scrolls all the way to the top of the document.
+Changing the `scrollTop` value changes where you wants the scrollbar to land. All you're really doing is animating the body of the document throughout the course of 800 milliseconds until it scrolls to the top of the document.
 
 
 ### Preload Images
 
-If your web page uses a lot of images that aren't visible initially (e.g., on hover) it's worth your while to preload them:
+If your web page uses a lot of images that aren't visible initially (e.g., on hover) it's make sense to preload them:
 
 ```javascript
 $.preloadImages = function () {
   for (var i = 0; i < arguments.length; i++) {
-    $('<img>').attr('src', arguments[i]);
+    $('img').attr('src', arguments[i]);
   }
 };
 
-$.preloadImages('img/hover1.png', 'img/hover2.png');
+$.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
 
 ### Checking If Images Are Loaded
 
-Sometimes you might need to check if your images are fully loaded in order to continue on with your scripts:
+Sometimes you might need to check if your images have fully loaded in order to continue on with your scripts:
 
 ```javascript
 $('img').load(function () {
@@ -64,7 +64,7 @@ You can also check if one particular image has loaded by replacing the `<img>` t
 
 ### Fix Broken Images Automatically
 
-If you happen to find broken image links on your site, replacing them one by one isn't always easy. Adding this simple piece of code can save a lot of headaches:
+If you happen to find broken image links on your site replacing them one by one can be a pain. This simple piece of code can save a lot of headaches:
 
 ```javascript
 $('img').on('error', function () {
@@ -72,12 +72,12 @@ $('img').on('error', function () {
 });
 ```
 
-Even if you don't have any broken links, adding this doesn't do any harm.
+Even if you don't have any broken links, adding this won't do any harm.
 
 
 ### Toggle Classes on Hover
 
-Let's say you want to change the visual of a clickable element on your page when a user hovers over it. This snippet adds a class to your element when the user is hovering; when the user stops it removes the class:
+Let's say you want to change the visual of a clickable element on your page when a user hovers over it. You can add a class to your element when the user is hovering; when the user stops it removes the class:
 
 ```javascript
 $('.btn').hover(function () {
@@ -100,7 +100,7 @@ $('.btn').hover(function () {
 
 ### Disabling Input Fields
 
-Occassionally you may want the submit button of a form or one of its text inputs to be disabled until the user has performed a certain action (e.g., checking the "I've read the terms" checkbox). Add the `disabled` attribute to your input so you can enable it when you want:
+At times you may want the submit button of a form or one of its text inputs to be disabled until the user has performed a certain action (e.g., checking the "I've read the terms" checkbox). Add the `disabled` attribute to your input so you can enable it when you want:
 
 ```javascript
 $('input[type="submit"]').prop('disabled', true);
@@ -115,7 +115,7 @@ $('input[type="submit"]').removeAttr('disabled');
 
 ### Stop the Loading of Links
 
-Sometimes you don't want links to go to a certain page or even reload it; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
+Sometimes you don't want links to go to a certain web page or even reload it; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
 
 ```javascript
 $('a.no-link').click(function (e) {
@@ -126,7 +126,7 @@ $('a.no-link').click(function (e) {
 
 ### Toggle Fade/Slide
 
-Slides and Fades are something we use plenty in our animations using jQuery. You might just want to show an element when we click something which makes the `fadeIn` and `slideDown` methods perfect. But if you want that element to appear on the first click and then disappear on the second this will work just fine:
+Slideing and fading are something we use plenty in our animations with jQuery. You might just want to show an element when a user clicks something, which makes the `fadeIn` and `slideDown` methods perfect. But if you want that element to appear on the first click and then disappear on the second this will work just fine:
 
 ```javascript
 // Fade
@@ -161,7 +161,7 @@ By adding this script all you really needs to do on your web page is the necessa
 
 ### Make Two Divs the Same Height
 
-Sometimes you'll wants two divs to have the same height no matter what content they have in them. This snippet enables just that:
+Sometimes you'll want two divs to have the same height no matter what content they have in them:
 
 ```javascript
 var $columns = $('.column');
