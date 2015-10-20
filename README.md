@@ -177,10 +177,10 @@ $columns.height(height);
 
 In this case the code loops over a set of elements and sets the height for them to the height of the tallest element.
 
-### Open External Links in New Tab/Window		
-		
-Open external links in a new tab or window and ensure links on the same origin open in the same tab or window		
-		
+### Open External Links in New Tab/Window
+
+Open external links in a new tab or window and ensure links on the same origin open in the same tab or window
+
 ```javascript
 $('a[href^="http"]').attr('target','_blank');
 $('a[href^="//"]').attr('target','_blank');
