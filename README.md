@@ -12,7 +12,6 @@ A collection of simple tips to help up your jQuery game.
 1. [Toggle Fade/Slide](#toggle-fadeslide)
 1. [Simple Accordion](#simple-accordion)
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
-1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 
 
 ### Back to Top Button
@@ -78,7 +77,7 @@ Even if you don't have any broken links, adding this won't do any harm.
 
 ### Toggle Classes on Hover
 
-Let's say you want to change the visual of a clickable element on your page when a user hovers over it. You can add a class to your element when the user is hovering; when the user stops it removes the class:
+Let's say you want to change the visual of a clickable element on your page when a user hovers over it. You can add a class to your element when the user is hovering; when the user stops hovering removes the class:
 
 ```javascript
 $('.btn').hover(function () {
@@ -96,7 +95,7 @@ $('.btn').hover(function () {
 });
 ```
 
-**Note**: CSS may be a faster solution in this case but it's still worth your while to know this.
+**Note**: CSS may be a faster solution in this case but it's still worthwhile to know this.
 
 
 ### Disabling Input Fields
@@ -116,7 +115,7 @@ $('input[type="submit"]').prop('disabled', false);
 
 ### Stop the Loading of Links
 
-Sometimes you don't want links to go to a certain web page or even reload it; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
+Sometimes you don't want links to go to a certain web page nor reload the page; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
 
 ```javascript
 $('a.no-link').click(function (e) {
@@ -176,13 +175,3 @@ $columns.height(height);
 ```
 
 In this case the code loops over a set of elements and sets the height for them to the height of the tallest element.
-
-### Open External Links in New Tab/Window
-
-Open external links in a new tab or window and ensure links on the same origin open in the same tab or window
-
-```javascript
-$('a[href^="http"]').attr('target','_blank');
-$('a[href^="//"]').attr('target','_blank');
-$('a[href^="'+window.location.origin+'"]').attr('target','_self');
-```
