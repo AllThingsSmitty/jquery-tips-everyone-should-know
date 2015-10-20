@@ -107,7 +107,7 @@ At times you may want the submit button of a form or one of its text inputs to b
 $('input[type="submit"]').prop('disabled', true);
 ```
 
-All you need to do is run the `removeAttr` method on the input with disabled as the parameter:
+All you need to do is run the `prop` method again on the input, but set the value of `disabled` to `false`:
 
 ```javascript
 $('input[type="submit"]').prop('disabled', false);
