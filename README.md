@@ -12,6 +12,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Toggle Fade/Slide](#toggle-fadeslide)
 1. [Simple Accordion](#simple-accordion)
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
+1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 
 
 ### Back to Top Button
@@ -175,3 +176,13 @@ $columns.height(height);
 ```
 
 In this case the code loops over a set of elements and sets the height for them to the height of the tallest element.
+
+### Open External Links in New Tab/Window
+
+Open external links in a new tab or window and ensure links on the same origin open in the same tab or window
+
+```javascript
+$('a[href^="http"]').attr('target','_blank');
+$('a[href^="//"]').attr('target','_blank');
+$('a[href^="'+window.location.origin+'"]').attr('target','_self');
+```
