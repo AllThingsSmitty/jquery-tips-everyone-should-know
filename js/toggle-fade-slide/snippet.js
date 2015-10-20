@@ -1,3 +1,4 @@
+// Toggle fade/slide
 // Fade
 $('.btn').click(function () {
   $('.element').fadeToggle('slow');

@@ -1,3 +1,4 @@
+// Simple accordion
 // Close all panels
 $('#accordion').find('.content').hide();
 // Accordion
