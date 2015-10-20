@@ -2,4 +2,4 @@
 $('input[type="submit"]').prop('disabled', true);
 
 // Then enable input fields
-$('input[type="submit"]').removeAttr('disabled');
+$('input[type="submit"]').prop('disabled', false);

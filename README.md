@@ -109,7 +109,7 @@ $('input[type="submit"]').prop('disabled', true);
 All you need to do is run the `removeAttr` method on the input with disabled as the parameter:
 
 ```javascript
-$('input[type="submit"]').removeAttr('disabled');
+$('input[type="submit"]').prop('disabled', false);
 ```
 
 
