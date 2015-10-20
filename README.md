@@ -12,6 +12,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Toggle Fade/Slide](#toggle-fadeslide)
 1. [Simple Accordion](#simple-accordion)
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
+1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 
 
 ### Back to Top Button
