@@ -78,7 +78,7 @@ Even if you don't have any broken links, adding this won't do any harm.
 
 ### Toggle Classes on Hover
 
-Let's say you want to change the visual of a clickable element on your page when a user hovers over it. You can add a class to your element when the user is hovering; when the user stops it removes the class:
+Let's say you want to change the visual of a clickable element on your page when a user hovers over it. You can add a class to your element when the user is hovering; when the user stops hovering removes the class:
 
 ```javascript
 $('.btn').hover(function () {
@@ -96,7 +96,7 @@ $('.btn').hover(function () {
 });
 ```
 
-**Note**: CSS may be a faster solution in this case but it's still worth your while to know this.
+**Note**: CSS may be a faster solution in this case but it's still worthwhile to know this.
 
 
 ### Disabling Input Fields
@@ -116,7 +116,7 @@ $('input[type="submit"]').prop('disabled', false);
 
 ### Stop the Loading of Links
 
-Sometimes you don't want links to go to a certain web page or even reload it; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
+Sometimes you don't want links to go to a certain web page nor reload the page; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
 
 ```javascript
 $('a.no-link').click(function (e) {
