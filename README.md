@@ -178,22 +178,23 @@ $columns.height(height);
 
 In this case the code loops over a set of elements and sets the height for them to the height of the tallest element.
 
+
 ### Open External Links in New Tab/Window
 
-Open external links in a new tab or window and ensure links on the same origin open in the same tab or window
+Open external links in a new browser tab or window and ensure links on the same origin open in the same tab or window:
 
 ```javascript
 $('a[href^="http"]').attr('target','_blank');
 $('a[href^="//"]').attr('target','_blank');
 $('a[href^="'+window.location.origin+'"]').attr('target','_self');
 ```
+
+
 ### Find Element By Text
 
-By [:contains](https://api.jquery.com/contains-selector/) selector in jQuery you can find a text in content of an element.
-
-If text doesn't exists that element will be hide.
+By using the `contains()` selector in jQuery you can find text in content of an element. If text doesn't exists, that element will be hidden:
 
 ```javascript
 var search = $('#search').val();
-$("div:not(:contains('"+search+"'))").hide();
+$('div:not(:contains('"+search+"'))").hide();
 ```
