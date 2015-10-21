@@ -13,6 +13,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Simple Accordion](#simple-accordion)
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
+1. [Find Element By Text](#find-element-by-text)
 
 
 ### Back to Top Button
@@ -185,4 +186,14 @@ Open external links in a new tab or window and ensure links on the same origin o
 $('a[href^="http"]').attr('target','_blank');
 $('a[href^="//"]').attr('target','_blank');
 $('a[href^="'+window.location.origin+'"]').attr('target','_self');
+```
+### Find Element By Text
+
+By [:contains](https://api.jquery.com/contains-selector/) selector in jQuery you can find a text in content of an element.
+
+If text doesn't exists that element will be hide.
+
+```javascript
+var search = $('#search').val();
+$("div:not(:contains('"+search+"'))").hide();
 ```
