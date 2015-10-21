@@ -92,8 +92,8 @@ $('.btn').hover(function () {
 You just need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
 
 ```javascript
-$('.btn').hover(function () { 
-  $(this).toggleClass('hover'); 
+$('.btn').hover(function () {
+  $(this).toggleClass('hover');
 });
 ```
 
@@ -177,6 +177,15 @@ $columns.height(height);
 ```
 
 In this case the code loops over a set of elements and sets the height for them to the height of the tallest element.
+
+**Method with same row parent**:
+```javascript
+var $rows = $('.same-height-columns');
+$rows.each(function () {
+	$(this).find('.column').height($(this).height());
+});
+
+```
 
 ### Open External Links in New Tab/Window
 
