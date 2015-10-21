@@ -196,5 +196,5 @@ By using the `contains()` selector in jQuery you can find text in content of an 
 
 ```javascript
 var search = $('#search').val();
-$('div:not(:contains('"+search+"'))').hide();
+$('div:not(:contains("'+search+'"))').hide();
 ```
