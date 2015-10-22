@@ -176,16 +176,15 @@ $columns.each(function () {
 $columns.height(height);
 ```
 
-In this case the code loops over a set of elements and sets the height for them to the height of the tallest element.
+In this case the code loops over a set of elements and sets the height for them to the height of the tallest element. If you want all columns to have the same height:
 
-**Method with same row parent**:
 ```javascript
 var $rows = $('.same-height-columns');
 $rows.each(function () {
 	$(this).find('.column').height($(this).height());
 });
-
 ```
+
 
 ### Open External Links in New Tab/Window
 
