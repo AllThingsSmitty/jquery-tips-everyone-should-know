@@ -14,6 +14,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 1. [Find Element By Text](#find-element-by-text)
+1. [Wrap iframes on a page in a responsive div](#wrap-iframes-on-a-page-in-a-responsive-div)
 
 
 ### Back to Top Button
@@ -92,8 +93,8 @@ $('.btn').hover(function () {
 You just need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
 
 ```javascript
-$('.btn').hover(function () { 
-  $(this).toggleClass('hover'); 
+$('.btn').hover(function () {
+  $(this).toggleClass('hover');
 });
 ```
 
@@ -204,4 +205,15 @@ By using the `contains()` selector in jQuery you can find text in content of an 
 ```javascript
 var search = $('#search').val();
 $('div:not(:contains("'+search+'"))').hide();
+```
+
+### Wrap iframes on a page in a responsive div
+
+If you want your Youtube/Vimeo/Google Maps iframes to be responsive, you can use a simple trick to automatically wrap them into a div and style that as responsive using CSS.
+
+```javascript
+//wrap only these iframes
+var sources = '[src*="youtube.com"],[src*="vimeo.com"],[src*="google.com/maps/embed?"]';
+
+$('iframe').filter(sources).wrap('<div class="iframe-container" />');
 ```
