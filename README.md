@@ -38,7 +38,7 @@ Changing the `scrollTop` value changes where you wants the scrollbar to land. Al
 
 ### Preload Images
 
-If your web page uses a lot of images that aren't visible initially (e.g., on hover) it's make sense to preload them:
+If your web page uses a lot of images that aren't visible initially (e.g., on hover) it makes sense to preload them:
 
 ```javascript
 $.preloadImages = function () {
@@ -92,8 +92,8 @@ $('.btn').hover(function () {
 You just need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
 
 ```javascript
-$('.btn').hover(function () { 
-  $(this).toggleClass('hover'); 
+$('.btn').hover(function () {
+  $(this).toggleClass('hover');
 });
 ```
 
@@ -166,6 +166,10 @@ By adding this script all you really needs to do on your web page is the necessa
 Sometimes you'll want two divs to have the same height no matter what content they have in them:
 
 ```javascript
+$('.div').css('min-height', $(.main-div).height());
+```
+
+```javascript
 var $columns = $('.column');
 var height = 0;
 $columns.each(function () {
@@ -195,6 +199,8 @@ $('a[href^="http"]').attr('target','_blank');
 $('a[href^="//"]').attr('target','_blank');
 $('a[href^="'+window.location.origin+'"]').attr('target','_self');
 ```
+
+**Note:** `window.location.origin` doesn't work in IE10. [This fix](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) takes care of the issue.
 
 
 ### Find Element By Text
