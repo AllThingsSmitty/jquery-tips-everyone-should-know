@@ -14,6 +14,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 1. [Find Element By Text](#find-element-by-text)
+1. [Trigger On Visibility Change](#trigger-on-visibility-change)
 
 
 ### Back to Top Button
@@ -210,4 +211,18 @@ By using the `contains()` selector in jQuery you can find text in content of an 
 ```javascript
 var search = $('#search').val();
 $('div:not(:contains("'+search+'"))').hide();
+```
+
+### Trigger On Visibility Change
+
+Trigger javascript when the user unfocuses or refocuses on a tab.
+
+```javascript
+$(document).on('visibilitychange', function(e){
+  if (e.target.visibilityState === "visible") {
+    console.log('Tab is now in view!');
+  } else if (e.target.visibilityState === "hidden") {
+    console.log('Tab is now hidden!');
+  }
+});
 ```
