@@ -166,8 +166,10 @@ By adding this script all you really needs to do on your web page is the necessa
 Sometimes you'll want two divs to have the same height no matter what content they have in them:
 
 ```javascript
-$('.div').css('min-height', $(.main-div).height());
+$('.div').css('min-height', $('.main-div').height());
 ```
+
+This example sets the `min-height` which means that it can be bigger than the main div but never smaller. However, a more flexible method would be to loop over a set of elements and set the height to the height of the tallest element:
 
 ```javascript
 var $columns = $('.column');
@@ -180,7 +182,7 @@ $columns.each(function () {
 $columns.height(height);
 ```
 
-In this case the code loops over a set of elements and sets the height for them to the height of the tallest element. If you want _all_ columns to have the same height:
+If you want _all_ columns to have the same height:
 
 ```javascript
 var $rows = $('.same-height-columns');

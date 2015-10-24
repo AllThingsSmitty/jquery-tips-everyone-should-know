@@ -1,4 +1,8 @@
 // Make two divs the same height
+// Example 1
+$('.div').css('min-height', $('.main-div').height());
+
+// Example 2
 var $columns = $('.column');
 var height = 0;
 $columns.each(function () {
