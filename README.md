@@ -166,7 +166,7 @@ By adding this script all you really needs to do on your web page is the necessa
 Sometimes you'll want two divs to have the same height no matter what content they have in them:
 
 ```javascript
-$('.div').css('min-height', $(.main-div).height());
+$('.div').css('min-height', $('.main-div').height());
 ```
 
 ```javascript
