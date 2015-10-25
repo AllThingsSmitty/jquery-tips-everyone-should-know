@@ -17,6 +17,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Trigger On Visibility Change](#trigger-on-visibility-change)
 1. [Chain Plugin Calls](#chain-plugin-calls)
 
+
 ### Back to Top Button
 
 By using the `animate` and `scrollTop` methods in jQuery you don't need a plugin to create a simple scroll-to-top animation:
@@ -215,12 +216,12 @@ var search = $('#search').val();
 $('div:not(:contains("'+search+'"))').hide();
 ```
 
-### Trigger On Visibility Change
+### Trigger on Visibility Change
 
-Trigger javascript when the user unfocuses or refocuses on a tab.
+Trigger JavaScript when the user is no longer focusing on a tab, or refocuses on a tab:
 
 ```javascript
-$(document).on('visibilitychange', function(e){
+$(document).on('visibilitychange', function (e) {
   if (e.target.visibilityState === "visible") {
     console.log('Tab is now in view!');
   } else if (e.target.visibilityState === "hidden") {
