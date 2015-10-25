@@ -14,7 +14,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 1. [Find Element By Text](#find-element-by-text)
-1. [Trigger On Visibility Change](#trigger-on-visibility-change)
+1. [Trigger on Visibility Change](#trigger-on-visibility-change)
 
 
 ### Back to Top Button
@@ -215,12 +215,12 @@ var search = $('#search').val();
 $('div:not(:contains("'+search+'"))').hide();
 ```
 
-### Trigger On Visibility Change
+### Trigger on Visibility Change
 
-Trigger javascript when the user unfocuses or refocuses on a tab.
+Trigger JavaScript when the user is no longer focusing on a tab, or refocuses on a tab:
 
 ```javascript
-$(document).on('visibilitychange', function(e){
+$(document).on('visibilitychange', function (e) {
   if (e.target.visibilityState === "visible") {
     console.log('Tab is now in view!');
   } else if (e.target.visibilityState === "hidden") {
