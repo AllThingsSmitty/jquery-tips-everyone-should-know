@@ -44,7 +44,7 @@ If your web page uses a lot of images that aren't visible initially (e.g., on ho
 ```javascript
 $.preloadImages = function () {
   for (var i = 0; i < arguments.length; i++) {
-    $('img').attr('src', arguments[i]);
+    $('<img>').attr('src', arguments[i]);
   }
 };
 
@@ -85,9 +85,9 @@ Let's say you want to change the visual of a clickable element on your page when
 ```javascript
 $('.btn').hover(function () {
   $(this).addClass('hover');
-  }, function () {
-    $(this).removeClass('hover');
-  });
+}, function () {
+  $(this).removeClass('hover');
+});
 ```
 
 You just need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
@@ -136,6 +136,7 @@ Slideing and fading are something we use plenty in our animations with jQuery. Y
 $('.btn').click(function () {
   $('.element').fadeToggle('slow');
 });
+
 // Toggle
 $('.btn').click(function () {
   $('.element').slideToggle('slow');
@@ -150,6 +151,7 @@ This is a simple method for a quick accordion:
 ```javascript
 // Close all panels
 $('#accordion').find('.content').hide();
+
 // Accordion
 $('#accordion').find('.accordion-header').click(function () {
   var next = $(this).next();
@@ -198,9 +200,9 @@ $rows.each(function () {
 Open external links in a new browser tab or window and ensure links on the same origin open in the same tab or window:
 
 ```javascript
-$('a[href^="http"]').attr('target','_blank');
-$('a[href^="//"]').attr('target','_blank');
-$('a[href^="'+window.location.origin+'"]').attr('target','_self');
+$('a[href^="http"]').attr('target', '_blank');
+$('a[href^="//"]').attr('target', '_blank');
+$('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 ```
 
 **Note:** `window.location.origin` doesn't work in IE10. [This fix](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) takes care of the issue.
@@ -212,7 +214,7 @@ By using the `contains()` selector in jQuery you can find text in content of an 
 
 ```javascript
 var search = $('#search').val();
-$('div:not(:contains("'+search+'"))').hide();
+$('div:not(:contains("' + search + '"))').hide();
 ```
 
 ### Trigger on Visibility Change

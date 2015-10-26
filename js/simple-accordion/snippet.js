@@ -1,6 +1,8 @@
 // Simple accordion
+
 // Close all panels
 $('#accordion').find('.content').hide();
+
 // Accordion
 $('#accordion').find('.accordion-header').click(function () {
   var next = $(this).next();
