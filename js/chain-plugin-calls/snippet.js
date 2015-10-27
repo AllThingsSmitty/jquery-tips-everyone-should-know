@@ -1,0 +1,1 @@
+// Chain Plugin Calls$('#elem').show();$('#elem').html('bla');$('#elem').otherStuff();$('#elem')  .show()  .html('bla')  .otherStuff();var $elem = $('#elem');$elem.hide();$elem.html('bla');$elem.otherStuff();
