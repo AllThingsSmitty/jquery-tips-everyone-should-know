@@ -16,6 +16,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Find Element By Text](#find-element-by-text)
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
 1. [Ajax Call Error Handling](#ajax-call-error-handling)
+1. [Submit Form Using Ajax](#submit-form-using-ajax)
 
 
 ### Back to Top Button
@@ -240,4 +241,20 @@ When an Ajax call returns a 404 or 500 error the error handler will be executed.
 ```javascript
 $(document).ajaxError(function (e, xhr, settings, error) {
   console.log(error);
+});
+```
+
+### Submit Form Using Ajax
+
+Simple form submit using ajax
+
+```javascript
+$('.submit').click(function (e) {
+    e.preventDefault();
+    $.post('/login', {
+        username: 'foo',
+        password: 'bar'
+    }, function (data) {
+        console.log(data);
+    });
 });
