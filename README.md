@@ -15,6 +15,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 1. [Find Element By Text](#find-element-by-text)
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
+1. [Disabling Default Events Actions](#disabling-default-events-actions)
 1. [Ajax Call Error Handling](#ajax-call-error-handling)
 
 
@@ -230,6 +231,28 @@ $(document).on('visibilitychange', function (e) {
     console.log('Tab is now hidden!');
   }
 });
+```
+
+
+### Disabling Default Events Actions
+
+The following snippet will disable default events of the anchor tag as well as prevent the event propogation. All three do the same:
+
+```html
+<a href="http://github.com/" class="element">GitHub</a>
+```
+
+```javascript
+$('.element').click(function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+});
+
+$('.element').click(function() {
+  return false;
+});
+
+$('.element').click(false);
 ```
 
 
