@@ -15,6 +15,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 1. [Find Element By Text](#find-element-by-text)
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
+1. [jQuery AJAX Start and Complete](#jquery-ajax-start-and-complete)
 1. [Ajax Call Error Handling](#ajax-call-error-handling)
 
 
@@ -229,6 +230,23 @@ $(document).on('visibilitychange', function (e) {
   } else if (e.target.visibilityState === "hidden") {
     console.log('Tab is now hidden!');
   }
+});
+```
+
+
+### jQuery AJAX Start and Complete
+
+Snippet below shows how to set two jQuery AJAX events that will be triggered whenever an AJAX call starts and finishes:
+
+```javascript
+var $doc = $(document);
+
+$doc.ajaxStart(function() {
+  // Ex: start loading animation
+});
+
+$doc.ajaxComplete(function() {
+  // Ex: stop loading animation
 });
 ```
 
