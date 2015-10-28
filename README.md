@@ -15,6 +15,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 1. [Find Element By Text](#find-element-by-text)
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
+1. [Ajax Call Error Handling](#ajax-call-error-handling)
 
 
 ### Back to Top Button
@@ -230,3 +231,13 @@ $(document).on('visibilitychange', function (e) {
   }
 });
 ```
+
+
+### Ajax Call Error Handling
+
+When an Ajax call returns a 404 or 500 error the error handler will be executed. If the handler isn't defined, other jQuery code might not work anymore. Define a global Ajax error handler:
+
+```javascript
+$(document).ajaxError(function (e, xhr, settings, error) {
+  console.log(error);
+});
