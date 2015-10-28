@@ -16,6 +16,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Find Element By Text](#find-element-by-text)
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
 1. [Ajax Call Error Handling](#ajax-call-error-handling)
+1. [Submit Form Using Ajax](#submit-form-using-ajax)
 
 
 ### Back to Top Button
