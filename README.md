@@ -241,3 +241,19 @@ When an Ajax call returns a 404 or 500 error the error handler will be executed.
 $(document).ajaxError(function (e, xhr, settings, error) {
   console.log(error);
 });
+```
+
+### Submit Form Using Ajax
+
+Simple form submit using ajax
+
+```javascript
+$('.submit').click(function (e) {
+    e.preventDefault();
+    $.post('/login', {
+        username: 'foo',
+        password: 'bar'
+    }, function (data) {
+        console.log(data);
+    });
+});
