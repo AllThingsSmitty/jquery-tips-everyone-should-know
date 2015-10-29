@@ -1,4 +1,5 @@
 // Make two divs the same height
+
 // Example 1
 $('.div').css('min-height', $('.main-div').height());
 
