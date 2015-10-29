@@ -259,4 +259,4 @@ $elem.html('bla');
 $elem.otherStuff();
 ```
 
-Both the "chaining" and the "caching" methods outlined here are not only jQuery best practices and business standards, if you utilize one of them, your code will see a performance boost, as well as increase its readability. 
+Both the "chaining" and the "caching" methods outlined here are not only jQuery best practices and business standards, if you utilize one of them, your code will see a performance boost, as well as an increase in its readability. 
