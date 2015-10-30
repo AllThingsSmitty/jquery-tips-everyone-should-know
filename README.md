@@ -16,6 +16,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Find Element By Text](#find-element-by-text)
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
 1. [Ajax Call Error Handling](#ajax-call-error-handling)
+1. [Chain Plugin Calls](#chain-plugin-calls)
 
 
 ### Back to Top Button
@@ -241,3 +242,35 @@ When an Ajax call returns a 404 or 500 error the error handler will be executed.
 $(document).ajaxError(function (e, xhr, settings, error) {
   console.log(error);
 });
+```
+
+
+### Chain Plugin Calls
+
+jQuery allows for the "chaining" of plugin method calls to mitigate the process of repeatedly querying the DOM and creating multiple jQuery objects. Let's say the following snippet represents your plugin method calls:
+
+```javascript
+$('#elem').show();
+$('#elem').html('bla');
+$('#elem').otherStuff();
+```
+
+This could be vastly improved by using chaining:
+
+```javascript
+$('#elem')
+  .show()
+  .html('bla')
+  .otherStuff();
+```
+
+An alternative is to cache the element in a variable (prefixed with `$`):
+
+```javascript
+var $elem = $('#elem');
+$elem.hide();
+$elem.html('bla');
+$elem.otherStuff();
+```
+
+Both chaining and caching methods in jQuery are best practices that lead to shorter and faster code.
