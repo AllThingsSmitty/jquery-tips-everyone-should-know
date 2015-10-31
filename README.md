@@ -11,7 +11,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Stop the Loading of Links](#stop-the-loading-of-links)
 1. [Toggle Fade/Slide](#toggle-fadeslide)
 1. [Simple Accordion](#simple-accordion)
-1. [Sort listitems alphabetically] (#sort-listitems-alphabetically)
+1. [Sort Listitems Alphabetically] (#sort-listitems-alphabetically)
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 1. [Find Element By Text](#find-element-by-text)
@@ -166,7 +166,7 @@ $('#accordion').find('.accordion-header').click(function () {
 
 By adding this script all you really needs to do on your web page is the necessary HTML go get this working.
 
-### Sort listitems alphabetically
+### Sort Listitems Alphabetically
 
 Sometime you have to much listitems, maybe produced by CMS and you want to order them alphabetically:
 
