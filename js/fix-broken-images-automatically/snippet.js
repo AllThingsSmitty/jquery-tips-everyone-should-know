@@ -1,4 +1,6 @@
 // Fix broken images automatically
 $('img').on('error', function () {
-  $(this).prop('src', 'img/broken.png');
+  if(!$(this).hasClass('broken-image')) {
+    $(this).prop('src', 'img/broken.png').addClass('broken-image');
+  }
 });
