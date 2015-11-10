@@ -27,7 +27,7 @@ By using the `animate` and `scrollTop` methods in jQuery you don't need a plugin
 // Back to top
 $('a.top').click(function (e) {
   e.preventDefault();
-  $(document.body).animate({scrollTop: 0}, 800);
+  $('html, body').animate({scrollTop: 0}, 800);
 });
 ```
 
@@ -37,6 +37,8 @@ $('a.top').click(function (e) {
 ```
 
 Changing the `scrollTop` value changes where you wants the scrollbar to land. All you're really doing is animating the body of the document throughout the course of 800 milliseconds until it scrolls to the top of the document.
+
+**Note:** Watch for some [buggy behavior](https://github.com/jquery/api.jquery.com/issues/417) with `scrollTop`.
 
 
 ### Preload Images
@@ -102,7 +104,7 @@ $('.btn').hover(function () {
 });
 ```
 
-**Note**: CSS may be a faster solution in this case but it's still worthwhile to know this.
+**Note:** CSS may be a faster solution in this case but it's still worthwhile to know this.
 
 
 ### Disabling Input Fields
