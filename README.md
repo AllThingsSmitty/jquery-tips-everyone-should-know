@@ -25,7 +25,7 @@ By using the `animate` and `scrollTop` methods in jQuery you don't need a plugin
 
 ```javascript
 // Back to top
-$('a.top').click(function (e) {
+$('.top').click(function (e) {
   e.preventDefault();
   $('html, body').animate({scrollTop: 0}, 800);
 });
