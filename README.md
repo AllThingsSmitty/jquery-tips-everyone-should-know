@@ -2,7 +2,7 @@
 
 A collection of simple tips to help up your jQuery game.
 
-1. [Check If jQuery Loaded](#check-if-jquery-loaded)
+1. [Checking If jQuery Loaded](#checking-if-jquery-loaded)
 1. [Back to Top Button](#back-to-top-button)
 1. [Preload Images](#preload-images)
 1. [Checking If Images Are Loaded](#checking-if-images-are-loaded)
@@ -20,7 +20,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Chain Plugin Calls](#chain-plugin-calls)
 
 
-### Check If jQuery Loaded
+### Checking If jQuery Loaded
 
 Before you can do anything with jQuery you first need to make certain it has loaded:
 
@@ -243,9 +243,9 @@ Trigger JavaScript when the user is no longer focusing on a tab, or refocuses on
 
 ```javascript
 $(document).on('visibilitychange', function (e) {
-  if (e.target.visibilityState === "visible") {
+  if (e.target.visibilityState === 'visible') {
     console.log('Tab is now in view!');
-  } else if (e.target.visibilityState === "hidden") {
+  } else if (e.target.visibilityState === 'hidden') {
     console.log('Tab is now hidden!');
   }
 });
