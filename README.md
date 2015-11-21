@@ -2,6 +2,7 @@
 
 A collection of simple tips to help up your jQuery game.
 
+1. [Check If jQuery Loaded](#check-if-jquery-loaded)
 1. [Back to Top Button](#back-to-top-button)
 1. [Preload Images](#preload-images)
 1. [Checking If Images Are Loaded](#checking-if-images-are-loaded)
@@ -17,7 +18,19 @@ A collection of simple tips to help up your jQuery game.
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
 1. [Ajax Call Error Handling](#ajax-call-error-handling)
 1. [Chain Plugin Calls](#chain-plugin-calls)
-1. [Checking If jQuery Loaded](#check-if-loaded)
+
+
+### Check If jQuery Loaded
+
+Before you can do anything with jQuery you first need to make certain it has loaded:
+
+```javascript
+if (typeof jQuery == undefined) {
+  // jQuery hasn't loaded
+} else {
+  // jQuery has loaded
+}
+```
 
 
 ### Back to Top Button
@@ -279,17 +292,3 @@ $elem.otherStuff();
 ```
 
 Both chaining and caching methods in jQuery are best practices that lead to shorter and faster code.
-
-### Checking If jQuery Loaded
-
-Sometimes when starting up a project it's easy to skip through adding the necessary files. Also, when learning it's easy to write a line of jQuery and not know if your code is bad or if jQuery isn't loaded at all. Furthermore, if your CDN-ing to a jQuery verion it might be nice to know your internet connection works and the CDN file is live:
-
-```javascript
-if (typeof jQuery == undefined) {
-    // jQuery isn't here
-    // Enter helpful alert() or console.log() message here
-}
-else {
-    // jQuery is here
-}
-```
