@@ -26,9 +26,9 @@ Before you can do anything with jQuery you first need to make certain it has loa
 
 ```javascript
 if (typeof jQuery == undefined) {
-  // jQuery hasn't loaded
+  console.log('jQuery hasn\'t loaded');
 } else {
-  // jQuery has loaded
+  console.log('jQuery has loaded');
 }
 ```
 

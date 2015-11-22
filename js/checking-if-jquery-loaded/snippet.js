@@ -1,6 +1,6 @@
-// Check If jQuery Loaded
+// Checking If jQuery Loaded
 if (typeof jQuery == undefined) {
-  // jQuery hasn't loaded
+  console.log('jQuery hasn\'t loaded');
 } else {
-  // jQuery has loaded
+  console.log('jQuery has loaded');
 }
