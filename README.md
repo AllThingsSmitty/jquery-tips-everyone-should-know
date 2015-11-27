@@ -25,7 +25,7 @@ A collection of simple tips to help up your jQuery game.
 Before you can do anything with jQuery you first need to make certain it has loaded:
 
 ```javascript
-if (typeof jQuery == undefined) {
+if (typeof jQuery == 'undefined') {
   console.log('jQuery hasn\'t loaded');
 } else {
   console.log('jQuery has loaded');
