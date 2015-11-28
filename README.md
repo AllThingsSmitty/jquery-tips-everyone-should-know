@@ -292,3 +292,24 @@ $elem.otherStuff();
 ```
 
 Both chaining and caching methods in jQuery are best practices that lead to shorter and faster code.
+
+
+### Disabling right-click easily
+
+Sometimes you might want to disable the mouse right click in a page. Using jQuery it is very easy:
+
+```javascript
+$(document).bind("contextmenu", function(e) {
+  return false;
+});
+```
+
+Of course you can run this code when document is ready, for example:
+
+```javascript
+$(document).ready(function() {
+  $(document).bind("contextmenu", function(e) {
+    return false;
+  });
+});
+```
