@@ -10,6 +10,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Toggle Classes on Hover](#toggle-classes-on-hover)
 1. [Disabling Input Fields](#disabling-input-fields)
 1. [Stop the Loading of Links](#stop-the-loading-of-links)
+1. [Cache jQuery Selectors](#cache-jquery-selectors)
 1. [Toggle Fade/Slide](#toggle-fadeslide)
 1. [Simple Accordion](#simple-accordion)
 1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
@@ -145,6 +146,29 @@ $('a.no-link').click(function (e) {
   e.preventDefault();
 });
 ```
+
+
+### Cache jQuery Selectors
+
+Think of how many times you write the same selector over and over again in any project. Every `$('.element')` selector has to search the entire DOM each time, regardless if that selector had previously run. Instead, run the selector once and store the results in a variable:
+
+```javascript
+var blocks = $('#blocks').find('li');
+```
+
+Now you can use the `blocks` variable wherever you want without having to search the DOM every time:
+
+```javascript
+$('#hideBlocks').click(function () {
+  blocks.fadeOut();
+});
+
+$('#showBlocks').click(function () {
+  blocks.fadeIn();
+});
+```
+
+Caching jQuery selectors are an easy performance gain.
 
 
 ### Toggle Fade/Slide
@@ -291,4 +315,4 @@ $elem.html('bla');
 $elem.otherStuff();
 ```
 
-Both chaining and caching methods in jQuery are best practices that lead to shorter and faster code.
+Both chaining and [caching](#cache-jquery-selectors) methods in jQuery are best practices that lead to shorter and faster code.
