@@ -245,7 +245,7 @@ $('a[href^="//"]').attr('target', '_blank');
 $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 ```
 
-**Not:** `window.location.origin` komutu IE10'da çalışmayacaktır. [Bu](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) sorunu düzeltecektir.
+**Not:** `window.location.origin` komutu IE10'da çalışmayacaktır. [Bu çözüm](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) sorunu çözecektir.
 
 
 ### Find Element By Text
