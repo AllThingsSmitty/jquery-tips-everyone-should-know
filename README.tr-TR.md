@@ -203,19 +203,17 @@ $('#accordion').find('.accordion-header').click(function () {
 });
 ```
 
-
 By adding this script all you really needs to do on your web page is the necessary HTML go get this working.
 
 
 ### Make Two Divs the Same Height
 
-Sometimes you'll want two divs to have the same height no matter what content they have in them:
+Bazen içerikleri yazıya bağlı olmaksızın iki _div_in aynı yükseklikte olmasını isteyebilirsiniz:
 
 ```javascript
 $('.div').css('min-height', $('.main-div').height());
 ```
-
-This example sets the `min-height` which means that it can be bigger than the main div but never smaller. However, a more flexible method would be to loop over a set of elements and set the height to the height of the tallest element:
+Bu örnekteki `min-height` değerinin belirlenmesi; `main-div`den büyük olabileceğini ama asla daha küçük olamayacağını ifade eder. Ancak elemanlar dizisi üzerinde bir döngü kullanarak yükseklikleri, yüksekliği en büyük olanın olanın değerine ayarlamak daha esnek bir yöntem olacaktır:
 
 ```javascript
 var $columns = $('.column');
@@ -227,8 +225,7 @@ $columns.each(function () {
 });
 $columns.height(height);
 ```
-
-If you want _all_ columns to have the same height:
+Eğer _tüm_ sütunların aynı yükseklikte olmasını isterseniz:
 
 ```javascript
 var $rows = $('.same-height-columns');
@@ -240,7 +237,7 @@ $rows.each(function () {
 
 ### Open External Links in New Tab/Window
 
-Open external links in a new browser tab or window and ensure links on the same origin open in the same tab or window:
+Dış bağlantıları yeni sekmede veya yeni pencerede açın ancak aynı kaynaktan olan bağlantıları ise aynı sekmede veya pencerede açın:
 
 ```javascript
 $('a[href^="http"]').attr('target', '_blank');
@@ -248,7 +245,7 @@ $('a[href^="//"]').attr('target', '_blank');
 $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 ```
 
-**Note:** `window.location.origin` doesn't work in IE10. [This fix](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) takes care of the issue.
+**Not:** `window.location.origin` komutu IE10'da çalışmayacaktır. [Bu](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) sorunu düzeltecektir.
 
 
 ### Find Element By Text
