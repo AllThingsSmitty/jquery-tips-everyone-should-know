@@ -23,7 +23,7 @@ JQuery düzeneğinizi geliştirecek basit ipuçlarının bir derlemesi.
 
 ### Checking If jQuery Loaded
 
-jQuery ile bir şeyler yapmadan önce yüklendiğinden olduğundan emin olmalısınız:
+jQuery ile bir şeyler yapmadan önce yüklenmiş olduğundan emin olmalısınız:
 
 ```javascript
 if (typeof jQuery == 'undefined') {
