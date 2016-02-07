@@ -181,12 +181,12 @@ Slideing and fading are something we use plenty in our animations with jQuery. Y
 
 ```javascript
 // Fade
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').fadeToggle('slow');
 });
 
 // Toggle
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').slideToggle('slow');
 });
 ```
