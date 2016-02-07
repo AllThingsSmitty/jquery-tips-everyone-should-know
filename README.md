@@ -57,7 +57,7 @@ Changing the `scrollTop` value changes where you wants the scrollbar to land. Al
 
 **Note:** Watch for some [buggy behavior](https://github.com/jquery/api.jquery.com/issues/417) with `scrollTop`.
 
-**Note:** Considering using [`.on()`](http://api.jquery.com/on/) (jQuery >= 1.7) rather than `.click()` gives you some advantages: the ability to add multiple events (`.on('click tap hover')`), a binding applies to dynamically created elements as well (no need to manually bind every single dynamically added to a DOM element) and possibility to set a namespace for an event like so: `.on('click.menuOpening')`. The last gives you the power to unbind a specific event (`.off('click.menuOpening')`).
+**Note:** Considering using [`.on()`](http://api.jquery.com/on/) (jQuery >= 1.7) rather than `.click()` gives you some advantages: the ability to add multiple events (`.on('click tap hover')`), a binding applies to dynamically created elements as well (no need to manually bind every single dynamically added to a DOM element) and the possibility to set a namespace for an event like so: `.on('click.menuOpening')`. The last gives you the power to unbind a specific event (`.off('click.menuOpening')`).
 
 
 ### Preload Images
