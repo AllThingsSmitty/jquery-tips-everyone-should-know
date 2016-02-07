@@ -108,7 +108,7 @@ Even if you don't have any broken links, adding this won't do any harm.
 Let's say you want to change the visual of a clickable element on your page when a user hovers over it. You can add a class to your element when the user is hovering; when the user stops hovering removes the class:
 
 ```javascript
-$('.btn').hover(function () {
+$('.btn').on('hover', function () {
   $(this).addClass('hover');
 }, function () {
   $(this).removeClass('hover');
@@ -118,7 +118,7 @@ $('.btn').hover(function () {
 You just need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
 
 ```javascript
-$('.btn').hover(function () {
+$('.btn').on('hover', function () {
   $(this).toggleClass('hover');
 });
 ```
