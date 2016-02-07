@@ -48,7 +48,9 @@ $('.container').on('click', '.top', function (e) {
 
 ```html
 <!-- Create an anchor tag -->
-<a class="top" href="#">Back to top</a>
+<div class="container">
+  <a class="top" href="#">Back to top</a>
+</div>
 ```
 
 Changing the `scrollTop` value changes where you wants the scrollbar to land. All you're really doing is animating the body of the document throughout the course of 800 milliseconds until it scrolls to the top of the document.
