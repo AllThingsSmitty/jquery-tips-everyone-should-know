@@ -146,7 +146,7 @@ $('input[type="submit"]').prop('disabled', false);
 Sometimes you don't want links to go to a certain web page nor reload the page; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
 
 ```javascript
-$('a.no-link').click(function (e) {
+$('a.no-link').on('click', function (e) {
   e.preventDefault();
 });
 ```
