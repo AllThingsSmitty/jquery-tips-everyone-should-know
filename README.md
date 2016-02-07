@@ -80,7 +80,7 @@ $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 Sometimes you might need to check if your images have fully loaded in order to continue on with your scripts:
 
 ```javascript
-$('img').load(function () {
+$('img').on('load', function () {
   console.log('image load successful');
 });
 ```
