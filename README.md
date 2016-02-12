@@ -173,7 +173,7 @@ Caching jQuery selectors are an easy performance gain.
 
 ### Toggle Fade/Slide
 
-Slideing and fading are something we use plenty in our animations with jQuery. You might just want to show an element when a user clicks something, which makes the `fadeIn` and `slideDown` methods perfect. But if you want that element to appear on the first click and then disappear on the second this will work just fine:
+Sliding and fading are something we use plenty in our animations with jQuery. You might just want to show an element when a user clicks something, which makes the `fadeIn` and `slideDown` methods perfect. But if you want that element to appear on the first click and then disappear on the second this will work just fine:
 
 ```javascript
 // Fade
