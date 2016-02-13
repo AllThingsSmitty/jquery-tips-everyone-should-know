@@ -19,6 +19,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
 1. [Ajax Call Error Handling](#ajax-call-error-handling)
 1. [Chain Plugin Calls](#chain-plugin-calls)
+1. [Sort List Items Alphabetically](#sort-list-items-alphabetically)
 
 
 ### Checking If jQuery Loaded
@@ -33,6 +34,7 @@ if (typeof jQuery == 'undefined') {
 }
 ```
 
+Now you're off...
 
 ### Back to Top Button
 
@@ -316,3 +318,21 @@ $elem.otherStuff();
 ```
 
 Both chaining and [caching](#cache-jquery-selectors) methods in jQuery are best practices that lead to shorter and faster code.
+
+
+### Sort List Items Alphabetically
+
+Let's say you end up with too many items in a list. Maybe the content is produced by a CMS and you want to order them alphabetically:
+
+```javascript
+var ul = $('#list'),
+lis = $('li', ul).get();
+
+lis.sort(function (a, b) {
+  return ($(a).text().toUpperCase() < $(b).text().toUpperCase()) ? -1 : 1;
+});
+
+ul.append(lis);
+```
+
+There you go!
