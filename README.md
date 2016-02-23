@@ -2,6 +2,11 @@
 
 A collection of simple tips to help up your jQuery game.
 
+* [Contribution Guidelines](CONTRIBUTING.md)
+
+-
+
+
 1. [Checking If jQuery Loaded](#checking-if-jquery-loaded)
 1. [Back to Top Button](#back-to-top-button)
 1. [Preload Images](#preload-images)
