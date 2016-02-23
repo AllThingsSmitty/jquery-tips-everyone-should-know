@@ -341,3 +341,8 @@ ul.append(lis);
 ```
 
 There you go!
+
+
+### Support
+
+Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
