@@ -42,7 +42,7 @@ By using the `animate` and `scrollTop` methods in jQuery you don't need a plugin
 
 ```javascript
 // Back to top
-$('.top').click(function (e) {
+$('.container').on('click', '.top', function (e) {
   e.preventDefault();
   $('html, body').animate({scrollTop: 0}, 800);
 });
@@ -50,12 +50,16 @@ $('.top').click(function (e) {
 
 ```html
 <!-- Create an anchor tag -->
-<a class="top" href="#">Back to top</a>
+<div class="container">
+  <a class="top" href="#">Back to top</a>
+</div>
 ```
 
 Changing the `scrollTop` value changes where you wants the scrollbar to land. All you're really doing is animating the body of the document throughout the course of 800 milliseconds until it scrolls to the top of the document.
 
 **Note:** Watch for some [buggy behavior](https://github.com/jquery/api.jquery.com/issues/417) with `scrollTop`.
+
+**Note:** Considering using [`.on()`](http://api.jquery.com/on/) (jQuery >= 1.7) rather than `.click()` gives you some advantages: the ability to add multiple events (`.on('click tap hover')`), a binding applies to dynamically created elements as well (no need to manually bind every single dynamically added to a DOM element) and the possibility to set a namespace for an event like so: `.on('click.menuOpening')`. The last gives you the power to unbind a specific event (`.off('click.menuOpening')`).
 
 
 ### Preload Images
@@ -78,7 +82,7 @@ $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 Sometimes you might need to check if your images have fully loaded in order to continue on with your scripts:
 
 ```javascript
-$('img').load(function () {
+$('img').on('load', function () {
   console.log('image load successful');
 });
 ```
@@ -106,7 +110,7 @@ Even if you don't have any broken links, adding this won't do any harm.
 Let's say you want to change the visual of a clickable element on your page when a user hovers over it. You can add a class to your element when the user is hovering; when the user stops hovering removes the class:
 
 ```javascript
-$('.btn').hover(function () {
+$('.btn').on('hover', function () {
   $(this).addClass('hover');
 }, function () {
   $(this).removeClass('hover');
@@ -116,7 +120,7 @@ $('.btn').hover(function () {
 You just need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
 
 ```javascript
-$('.btn').hover(function () {
+$('.btn').on('hover', function () {
   $(this).toggleClass('hover');
 });
 ```
@@ -144,7 +148,7 @@ $('input[type="submit"]').prop('disabled', false);
 Sometimes you don't want links to go to a certain web page nor reload the page; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
 
 ```javascript
-$('a.no-link').click(function (e) {
+$('a.no-link').on('click', function (e) {
   e.preventDefault();
 });
 ```
@@ -179,12 +183,12 @@ Sliding and fading are something we use plenty in our animations with jQuery. Yo
 
 ```javascript
 // Fade
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').fadeToggle('slow');
 });
 
 // Toggle
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').slideToggle('slow');
 });
 ```
@@ -283,7 +287,7 @@ $(document).on('visibilitychange', function (e) {
 When an Ajax call returns a 404 or 500 error the error handler will be executed. If the handler isn't defined, other jQuery code might not work anymore. Define a global Ajax error handler:
 
 ```javascript
-$(document).ajaxError(function (e, xhr, settings, error) {
+$(document).on('ajaxError', function (e, xhr, settings, error) {
   console.log(error);
 });
 ```
