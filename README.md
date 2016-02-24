@@ -2,10 +2,15 @@
 
 A collection of simple tips to help up your jQuery game.
 
+
+## Table of Contents
+
+* [Tips](#tips)
+* [Support](#support)
 * [Contribution Guidelines](CONTRIBUTING.md)
 
--
 
+## Tips
 
 1. [Checking If jQuery Loaded](#checking-if-jquery-loaded)
 1. [Back to Top Button](#back-to-top-button)
@@ -343,6 +348,6 @@ ul.append(lis);
 There you go!
 
 
-### Support
+## Support
 
 Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
