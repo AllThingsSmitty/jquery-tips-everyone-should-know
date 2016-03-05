@@ -20,8 +20,7 @@ Please ensure your pull request adheres to the following guidelines:
 * Code formatting should follow standard [JSLint](http://www.jslint.com/) default settings, including:
   * Indent with two spaces
   * Use single quotes, e.g., `$.preloadImages('img/hover-on.png');`
-* PR's should include a snippet .js file added to the `js` folder.
-* Snippet folders should be named identical to the tip being added in the [README](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/blob/master/README.md) document using the following convention: `make-two-divs-the-same-height`.
+* PR's should include a .js file with the same name as the tip being added in the [README](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/blob/master/README.md) document, e.g., `make-two-divs-the-same-height.js`.
 * Snippets should begin with a comment that matches the name of the tip, e.g., `// Make two divs the same height`.
 * Make sure your text editor is set to remove trailing whitespace.
 * Check your spelling and grammar.
