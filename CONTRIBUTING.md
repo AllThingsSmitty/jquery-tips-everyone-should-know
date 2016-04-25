@@ -29,6 +29,16 @@ Please ensure your pull request adheres to the following guidelines:
 Thank you for your suggestions!
 
 
+### Language Translations
+
+If you fluently speak another language and want to contribute by translating this list into that language, please submit a PR using the following guidelines:
+
+* Add a new folder to the `translations` folder
+* The new folder should be labeled the language culture name, e.g, `es-ES`, `ru-RU`, `zh-CN`, etc.
+
+Additionally, feel free to review already translated content for accuracy.
+
+
 ## Updating Your Pull Request
 
 Sometimes a maintainer will ask you to edit your pull request before it's included. This is normally due to spelling errors or because your PR didn't match the above guidlines guidelines. [This write-up](https://github.com/RichardLitt/docs/blob/master/amending-a-commit-guide.md) covers the different ways you can change a pull request.
