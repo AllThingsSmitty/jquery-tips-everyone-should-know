@@ -25,14 +25,14 @@
 1. [停止路径的负载](#stop-the-loading-of-links)
 1. [缓存jquery选择](#cache-jquery-selectors)
 1. [淡入淡出切换/幻灯片](#toggle-fadeslide)
-1. [简单手风琴(#simple-accordion)
+1. [简单手风琴](#simple-accordion)
 1. [让两个div相同的高度](#make-two-divs-the-same-height)
 1. [打开外部链接在新标签/窗口](#open-external-links-in-new-tabwindow)
 1. [查找元素通过短信](#find-element-by-text)
 1. [可见性改变触发器](#trigger-on-visibility-change)
-1. [Ajax调用错误处理(#ajax-call-error-handling)
-1. [连锁插件调用(#chain-plugin-calls)
-1. [排序列表项按字母顺序(#sort-list-items-alphabetically)
+1. [Ajax调用错误处理](#ajax-call-error-handling)
+1. [连锁插件调用](#chain-plugin-calls)
+1. [排序列表项按字母顺序](#sort-list-items-alphabetically)
 
 
 <div id="checking-if-jquery-loaded"></div>
