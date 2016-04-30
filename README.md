@@ -9,6 +9,7 @@ A collection of simple tips to help up your jQuery game.
 
 * [Tips](#tips)
 * [Support](#support)
+* [Translations](#translations)
 * [Contribution Guidelines](CONTRIBUTING.md)
 
 
@@ -353,3 +354,10 @@ There you go!
 ## Support
 
 Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
+
+
+## Translations
+
+* [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
+* [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
+* [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
