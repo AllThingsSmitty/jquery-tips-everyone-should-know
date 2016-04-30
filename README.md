@@ -29,6 +29,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 1. [Find Element By Text](#find-element-by-text)
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
+1. [jQuery Promises with Deferred and CSS Transitions](#jquery-promises-with-deferred-and-css-transitions)
 1. [Ajax Call Error Handling](#ajax-call-error-handling)
 1. [Chain Plugin Calls](#chain-plugin-calls)
 1. [Sort List Items Alphabetically](#sort-list-items-alphabetically)
@@ -275,6 +276,7 @@ var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
 
+
 ### Trigger on Visibility Change
 
 Trigger JavaScript when the user is no longer focusing on a tab, or refocuses on a tab:
@@ -288,6 +290,41 @@ $(document).on('visibilitychange', function (e) {
   }
 });
 ```
+
+
+### jQuery Promises with Deferred and CSS Transitions
+
+By returning `deferred.promise()` we can chain the animation every time it's successfully finished:
+
+```javascript
+var animate = function($el, cl) {
+    var deferred = $.Deferred();
+    var transitionEnd = 'transitionend webkitTransitionEnd MSTransitionEnd';
+
+    $el.addClass(cl).on(transitionEnd, function() {
+        deferred.resolve($(this));
+    });
+
+    return deferred.promise();
+};
+
+// Usage
+var p = animate($('.element'), 'moveRight').then(function($el) {
+    // $el is returned as an argument
+    return animate($el, 'moveDown');
+}).then(function($el) {
+    return animate($el, 'moveLeft');
+}).then(function($el) {
+    return animate($el, 'moveUp');
+});
+
+// p is also a Promise
+p.then(function() {
+    console.log('Done with all');
+});
+```
+
+Demo: http://jsbin.com/zovoni/edit?html,css,js,output
 
 
 ### Ajax Call Error Handling
