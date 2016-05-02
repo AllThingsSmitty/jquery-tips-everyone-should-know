@@ -49,6 +49,9 @@ if (typeof jQuery == 'undefined') {
 
 Now you're off...
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
+
 ### Back to Top Button
 
 By using the `animate` and `scrollTop` methods in jQuery you don't need a plugin to create a simple scroll-to-top animation:
@@ -70,6 +73,8 @@ Changing the `scrollTop` value changes where you wants the scrollbar to land. Al
 
 **Note:** Watch for some [buggy behavior](https://github.com/jquery/api.jquery.com/issues/417) with `scrollTop`.
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Preload Images
 
@@ -85,6 +90,8 @@ $.preloadImages = function () {
 $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Checking If Images Are Loaded
 
@@ -97,6 +104,8 @@ $('img').load(function () {
 ```
 
 You can also check if one particular image has loaded by replacing the `<img>` tag with an ID or class.
+
+<sup>[back to table of contents](#table-of-contents)</sup>
 
 
 ### Fix Broken Images Automatically
@@ -112,6 +121,8 @@ $('img').on('error', function () {
 ```
 
 Even if you don't have any broken links, adding this won't do any harm.
+
+<sup>[back to table of contents](#table-of-contents)</sup>
 
 
 ### Toggle Classes on Hover
@@ -136,6 +147,8 @@ $('.btn').hover(function () {
 
 **Note:** CSS may be a faster solution in this case but it's still worthwhile to know this.
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Disabling Input Fields
 
@@ -151,6 +164,8 @@ All you need to do is run the `prop` method again on the input, but set the valu
 $('input[type="submit"]').prop('disabled', false);
 ```
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Stop the Loading of Links
 
@@ -161,6 +176,8 @@ $('a.no-link').click(function (e) {
   e.preventDefault();
 });
 ```
+
+<sup>[back to table of contents](#table-of-contents)</sup>
 
 
 ### Cache jQuery Selectors
@@ -185,6 +202,8 @@ $('#showBlocks').click(function () {
 
 Caching jQuery selectors are an easy performance gain.
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Toggle Fade/Slide
 
@@ -201,6 +220,8 @@ $('.btn').click(function () {
   $('.element').slideToggle('slow');
 });
 ```
+
+<sup>[back to table of contents](#table-of-contents)</sup>
 
 
 ### Simple Accordion
@@ -221,6 +242,8 @@ $('#accordion').find('.accordion-header').click(function () {
 ```
 
 By adding this script all you really needs to do on your web page is the necessary HTML go get this working.
+
+<sup>[back to table of contents](#table-of-contents)</sup>
 
 
 ### Make Two Divs the Same Height
@@ -253,6 +276,8 @@ $rows.each(function () {
 });
 ```
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Open External Links in New Tab/Window
 
@@ -266,6 +291,8 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 **Note:** `window.location.origin` doesn't work in IE10. [This fix](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) takes care of the issue.
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Find Element By Text
 
@@ -275,6 +302,9 @@ By using the `contains()` selector in jQuery you can find text in content of an 
 var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
+
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Trigger on Visibility Change
 
@@ -290,6 +320,8 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Ajax Call Error Handling
 
@@ -300,6 +332,8 @@ $(document).ajaxError(function (e, xhr, settings, error) {
   console.log(error);
 });
 ```
+
+<sup>[back to table of contents](#table-of-contents)</sup>
 
 
 ### Chain Plugin Calls
@@ -332,6 +366,8 @@ $elem.otherStuff();
 
 Both chaining and [caching](#cache-jquery-selectors) methods in jQuery are best practices that lead to shorter and faster code.
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ### Sort List Items Alphabetically
 
@@ -349,6 +385,8 @@ ul.append(lis);
 ```
 
 There you go!
+
+<sup>[back to table of contents](#table-of-contents)</sup>
 
 
 ## Support
