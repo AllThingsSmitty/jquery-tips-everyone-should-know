@@ -5,6 +5,7 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 > Para otros grandes listas echa un vistazo a [@sindresorhus](https://github.com/sindresorhus/)'s lista curada de [listas impresionantes](https://github.com/sindresorhus/awesome/).
 
 
+<div id="table-of-contents"></div>
 ## Tabla de contenido
 
 * [Tips](#consejos)
@@ -49,8 +50,10 @@ if (typeof jQuery == 'undefined') {
 
 Ahora que estás fuera...
 
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
-<Div id = "back-to-top-button"> </ div>
+
+<div id="back-to-top-button"></div>
 ### Volver al botón de inicio
 
 Mediante el uso de la `animate` y métodos `scrollTop` en jQuery que no es necesario un plugin para crear una animación simple-scroll-a arriba:
@@ -70,7 +73,9 @@ $('.top').click(function (e) {
 
 El cambio de los cambios de valor `scrollTop` donde se quiere que la barra de desplazamiento a la tierra. Todo lo que realmente está haciendo es animar el cuerpo del documento a lo largo de 800 milisegundos hasta que se desplaza a la parte superior del documento.
 
-** Nota: ** ve por alguna [comportamiento incorrecto](https://github.com/jquery/api.jquery.com/issues/417) con `scrollTop`.
+**Nota:** ve por alguna [comportamiento incorrecto](https://github.com/jquery/api.jquery.com/issues/417) con `scrollTop`.
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="preload-images"></div>
@@ -88,6 +93,8 @@ $.preloadImages = function () {
 $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
 
 <div id="checking-if-images-are-loaded"></div>
 ### Comprobación Si las imágenes se cargan
@@ -101,6 +108,8 @@ $('img').load(function () {
 ```
 
 También puede comprobar si una imagen en particular se ha cargado mediante la sustitución de la etiqueta `<img>` con un ID o clase.
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="fix-broken-images-automatically"></div>
@@ -117,6 +126,8 @@ $('img').on('error', function () {
 ```
 
 Incluso si usted no tiene ningún enlaces rotos, añadiendo que esto no hará ningún daño.
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="toggle-classes-on-hover"></div>
@@ -139,9 +150,11 @@ $('.btn').hover(function () {
   $(this).toggleClass('hover');
 });
 ```
-`` `
+```
 
 **Nota:** CSS puede ser una solución más rápida en este caso, pero es todavía vale la pena saber esto.
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="disabling-input-fields"></div>
@@ -159,6 +172,8 @@ Todo lo que necesita hacer es ejecutar el método `prop` otra vez en la entrada,
 $('input[type="submit"]').prop('disabled', false);
 ```
 
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
 
 <div id ="stop-the-loading-of-links"></div>div>
 ### Detener la carga de Enlaces
@@ -171,6 +186,8 @@ $('a.no-link').click(function (e) {
 });
 ```
 
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
 
 <div id="cache-jquery-selectors"></div>
 ### de caché de jQuery selectores
@@ -180,7 +197,6 @@ Piense en cuántas veces se escribe el mismo selector una y otra vez en cualquie
 ```javascript
 var blocks = $('#blocks').find('li');
 ```
-
 
 Ahora se puede utilizar la variable `blocks` donde quieras sin tener que buscar el DOM en cada ocasión:
 
@@ -195,6 +211,8 @@ $('#showBlocks').click(function () {
 ```
 
 El almacenamiento en caché selectores de jQuery son una ganancia de rendimiento fácil.
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="toggle-fadeslide"></div>
@@ -213,6 +231,8 @@ $('.btn').click(function () {
   $('.element').slideToggle('slow');
 });
 ```
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="simple-accordion"></div>
@@ -234,6 +254,8 @@ $('#accordion').find('.accordion-header').click(function () {
 ```
 
 Mediante la adición de este script lo único que tiene que hacer en su página web es el HTML necesario ir a buscar este trabajo.
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="make-two-divs-the-same-height"></div>
@@ -267,6 +289,8 @@ $rows.each(function () {
 });
 ```
 
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
 
 <div id="open-external-links-in-new-tabwindow"></div>
 ### Abrir enlaces externos en una nueva pestaña / ventana
@@ -281,6 +305,8 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 **Nota:** `window.location.origin` no funciona en IE10. [Esta corrección](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) se ocupa de la cuestión.
 
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
 
 <div id="find-element-by-text"></div>
 ### Buscar elemento Por Texto
@@ -291,6 +317,9 @@ Mediante el uso de la selector `contains()` en jQuery se puede encontrar texto e
 var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
 
 <div id="trigger-on-visibility-change"></div>
 ### Visibilidad gatillo de Cambio
@@ -307,6 +336,9 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
+
 <div id="ajax-call-error-handling"></div>
 ### Control de errores de llamada Ajax
 
@@ -317,6 +349,8 @@ $(document).ajaxError(function (e, xhr, settings, error) {
   console.log(error);
 });
 ```
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="chain-plugin-calls"></div>
@@ -348,8 +382,9 @@ $elem.html('bla');
 $elem.otherStuff();
 ```
 
-
 Ambos métodos [almacenamiento en caché](#cache-jquery-selectors) en el encadenamiento y son las mejores prácticas que conducen al código corto y más rápido.
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="sort-list-items-alphabetically"></div>
@@ -369,6 +404,8 @@ ul.append(lis);
 ```
 
 Hay que ir!
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 ## Apoyo

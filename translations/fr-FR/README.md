@@ -5,6 +5,7 @@ Une collection de conseils simples pour aider votre jeu jQuery.
 > Pour les autres grandes listes vérifier [@sindresorhus](https://github.com/sindresorhus/) de la liste curated des [listes impressionnantes](https://github.com/sindresorhus/awesome/).
 
 
+<div id="table-of-contents"></div>
 ## Table des matières
 
 * [Conseils](#conseils)
@@ -49,6 +50,8 @@ if (typeof jQuery == 'undefined') {
 
 Maintenant, vous êtes hors ...
 
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
 
 <div id="back-to-top-button"></div>
 ### Haut de la page Bouton
@@ -70,7 +73,9 @@ $('.top').click(function (e) {
 
 Modification des valeur change `scrollTop` où vous veut le scrollbar à la terre. Tout ce que vous faites vraiment est d'animer le corps du document tout au long de 800 millisecondes jusqu'à ce qu'elle défile vers le haut du document.
 
-** Note: ** Surveillez certains [comportement bogué](https://github.com/jquery/api.jquery.com/issues/417) avec `scrollTop`.
+**Remarque:** Surveillez certains [comportement bogué](https://github.com/jquery/api.jquery.com/issues/417) avec `scrollTop`.
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 <div id="preload-images"></div>
@@ -88,6 +93,8 @@ $.preloadImages = function () {
 $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
 
 <div id="checking-if-images-are-loaded"></div>
 ### Vérification Si les images sont chargées
@@ -101,6 +108,8 @@ $('img').load(function () {
 ```
 
 Vous pouvez également vérifier si une image particulière a été chargé par le remplacement du `<img>` tag avec un ID ou classe.
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 <div id="fix-broken-images-automatically"></div>
@@ -117,6 +126,8 @@ $('img').on('error', function () {
 ```
 
 Même si vous n'avez pas de liens brisés, ajoutant cela ne fera pas de mal.
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 <div id="toggle-classes-on-hover"></div>
@@ -140,7 +151,9 @@ $('.btn').hover(function () {
 });
 ```
 
-**Note:** CSS peut être une solution plus rapide dans ce cas, mais il est toujours intéressant de savoir.
+**Remarque:** CSS peut être une solution plus rapide dans ce cas, mais il est toujours intéressant de savoir.
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 <div id="disabling-input-fields"></div>
@@ -158,6 +171,8 @@ Tout ce que vous devez faire est de lancer la méthode `prop` à nouveau sur l'e
 $('input[type="submit"]').prop('disabled', false);
 ```
 
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
 
 <div id="stop-the-loading-of-links"></div>
 ### Arrêter le chargement des Liens
@@ -169,6 +184,8 @@ $('a.no-link').click(function (e) {
   e.preventDefault();
 });
 ```
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 <div id="cache-jquery-selectors"></div>
@@ -194,8 +211,10 @@ $('#showBlocks').click(function () {
 
 sélecteurs Caching jQuery sont un gain de performance facile.
 
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
-<Div id = "toggle-fadeslide"> </ div>
+
+<div id="toggle-fadeslide"></div>
 ### Basculer Fade / Slide
 
 Coulissantes et à la décoloration sont quelque chose que nous utilisons beaucoup dans nos animations avec jQuery. Vous voudrez peut-être juste pour montrer un élément lorsqu'un utilisateur clique sur quelque chose, ce qui rend les méthodes `slideDown` et `fadeIn` parfait. Mais si vous voulez que l'élément à apparaître sur le premier clic et puis disparaissent sur le second cela fonctionne très bien:
@@ -211,6 +230,8 @@ $('.btn').click(function () {
   $('.element').slideToggle('slow');
 });
 ```
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 <div id="simple-accordion"></div>
@@ -232,6 +253,8 @@ $('#accordion').find('.accordion-header').click(function () {
 ```
 
 En ajoutant ce script tout ce que vous a vraiment besoin de le faire sur votre page Web est le HTML nécessaire aller chercher ce travail.
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 <div id="make-two-divs-the-same-height"></div>
@@ -265,6 +288,8 @@ $rows.each(function () {
 });
 ```
 
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
 
 <div id="open-external-links-in-new-tabwindow"></div>
 ### Ouvrez Liens externes dans un nouvel onglet / fenêtre
@@ -277,7 +302,9 @@ $('a[href^="//"]').attr('target', '_blank');
 $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 ```
 
-** Note:** `window.location.origin` ne fonctionne pas dans IE10. [Ce correctif](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) prend soin de la question.
+**Remarque:** `window.location.origin` ne fonctionne pas dans IE10. [Ce correctif](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) prend soin de la question.
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 <div id="find-element-by-text"></div>
@@ -289,6 +316,9 @@ En utilisant le `contains()` sélecteur jQuery vous pouvez rechercher du texte d
 var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
 
 <div id="trigger-on-visibility-change"></div>
 ### Déclenchement de la visibilité Change
@@ -305,6 +335,8 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
 
 <div id="ajax-call-error-handling"></div>
 ### Gestion des erreurs Ajax Appel
@@ -316,6 +348,8 @@ $(document).ajaxError(function (e, xhr, settings, error) {
   console.log(error);
 });
 ```
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 <div id="chain-plugin-calls"></div>
@@ -349,6 +383,8 @@ $elem.otherStuff();
 
 Les deux chaînage et [cache](#jquery-sélecteurs cache-) méthodes jQuery sont les meilleures pratiques qui conduisent à un code plus court et plus rapide.
 
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
 
 <div id="sort-list-items-alphabetically"></div>
 ### Trier Liste Articles alphabétiquement
@@ -367,6 +403,8 @@ ul.append(lis);
 ```
 
 Voilà!
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
 
 
 ## Soutien

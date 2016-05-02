@@ -5,6 +5,7 @@
 > 对于其他大名单退房 [@sindresorhus](https://github.com/sindresorhus/)的策展的名单 [真棒名单](https://github.com/sindresorhus/awesome/).
 
 
+<div id="table-of-contents"></div>
 ## 目录
 
 * [温馨提示](＃提示)
@@ -50,6 +51,8 @@ if (typeof jQuery == 'undefined') {
 
 现在你是关闭...
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="back-to-top-button"></div>
 ### 返回顶部按钮
@@ -73,6 +76,8 @@ $('.top').click(function (e) {
 
 **注：** 观看一些 [错误行为](https://github.com/jquery/api.jquery.com/issues/417) 用 `scrollTop`。
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="preload-images"></div>
 ### 预先载入图像
@@ -89,6 +94,8 @@ $.preloadImages = function () {
 $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="checking-if-images-are-loaded"></div>
 ### 检查如果图像加载
@@ -102,6 +109,8 @@ $('img').load(function () {
 ```
 
 您也可以检查，如果一个特定的形象已被用一个ID或类替换`<img>`标签加载。
+
+<sup>[回目录](#table-of-contents)</sup>
 
 
 <div id="fix-broken-images-automatically"></div>
@@ -118,6 +127,8 @@ $('img').on('error', function () {
 ```
 
 即使你没有任何断开的链接，这将不会做任何伤害。
+
+<sup>[回目录](#table-of-contents)</sup>
 
 
 <div id="toggle-classes-on-hover"></div>
@@ -143,6 +154,8 @@ $('.btn').hover(function () {
 
 **注：** CSS可能在这种情况下，更快的解决方案，但它仍然是值得的知道这一点。
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="disabling-input-fields"></div>
 ### 禁用输入字段
@@ -159,6 +172,8 @@ $('input[type="submit"]').prop('disabled', true);
 $('input[type="submit"]').prop('disabled', false);
 ```
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="stop-the-loading-of-links"></div>
 ### 停止路径的负载
@@ -170,6 +185,8 @@ $('a.no-link').click(function (e) {
   e.preventDefault();
 });
 ```
+
+<sup>[回目录](#table-of-contents)</sup>
 
 
 <div id="cache-jquery-selectors"></div>
@@ -195,6 +212,8 @@ $('#showBlocks').click(function () {
 
 缓存jQuery选择器是一种简单的性能增益。
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="toggle-fadeslide"></div>
 ### 切换淡入/幻灯片
@@ -212,6 +231,8 @@ $('.btn').click(function () {
   $('.element').slideToggle('slow');
 });
 ```
+
+<sup>[回目录](#table-of-contents)</sup>
 
 
 <div id="simple-accordion"></div>
@@ -233,6 +254,8 @@ $('#accordion').find('.accordion-header').click(function () {
 ```
 
 通过添加这个脚本你真正需要在网页上做的是必要的HTML去得到这个工作。
+
+<sup>[回目录](#table-of-contents)</sup>
 
 
 <div id="make-two-divs-the-same-height"></div>
@@ -266,6 +289,8 @@ $rows.each(function () {
 });
 ```
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="open-external-links-in-new-tabwindow"></div>
 ### 在新标签中打开外部链接/窗
@@ -280,6 +305,8 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 **注：** `window.location.origin`不IE10工作。 [此修复程序](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) 主罚问题的照顾。
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="find-element-by-text"></div>
 ### 查找元素通过短信
@@ -290,6 +317,9 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
+
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="trigger-on-visibility-change"></div>
 ### 上触发能见度变化
@@ -306,6 +336,8 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="ajax-call-error-handling"></div>
 ### AJAX调用错误处理
@@ -317,6 +349,8 @@ $(document).ajaxError(function (e, xhr, settings, error) {
   console.log(error);
 });
 ```
+
+<sup>[回目录](#table-of-contents)</sup>
 
 
 <div id="chain-plugin-calls"></div>
@@ -351,6 +385,8 @@ $elem.otherStuff();
 
 无论链接和jQuery的[缓存](#缓存的jQuery选择器)方法是导致更短，更快的代码的最佳实践。
 
+<sup>[回目录](#table-of-contents)</sup>
+
 
 <div id="sort-list-items-alphabetically"></div>
 ### 排序列表项按字母顺序
@@ -369,6 +405,8 @@ ul.append(lis);
 ```
 
 你去那里！
+
+<sup>[回目录](#table-of-contents)</sup>
 
 
 ## 支持
