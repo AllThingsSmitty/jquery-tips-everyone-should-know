@@ -289,6 +289,8 @@ $rows.each(function () {
 });
 ```
 
+**Nota:** Esto se puede hacer de varias maneras [en CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) pero dependiendo de cuáles son sus necesidades, saber cómo hacer esto en jQuery es todavía vale la pena.
+
 <sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 

@@ -288,6 +288,8 @@ $rows.each(function () {
 });
 ```
 
+**Remarque:** Cela peut se faire de plusieurs façons [CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO), mais en fonction de vos besoins, de savoir comment faire cela dans jQuery est toujours valable.
+
 <sup>[retour à la table des matières](#table-of-contents)</sup>
 
 

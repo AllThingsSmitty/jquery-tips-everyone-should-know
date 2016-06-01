@@ -276,6 +276,8 @@ $rows.each(function () {
 });
 ```
 
+**Note:** This can be done several ways [in CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) but depending on what your needs are, knowing how to do this in jQuery is still worthwhile.
+
 <sup>[back to table of contents](#table-of-contents)</sup>
 
 

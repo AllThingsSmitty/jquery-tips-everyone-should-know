@@ -289,6 +289,8 @@ $rows.each(function () {
 });
 ```
 
+**注：**这是可以做到几个方面[在CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO)，但根据您的需要是什么，知道如何在jQuery中做到这一点还是值得的。
+
 <sup>[回目录](#table-of-contents)</sup>
 
 
