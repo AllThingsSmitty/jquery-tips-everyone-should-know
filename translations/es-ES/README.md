@@ -59,7 +59,7 @@ Ahora que estás fuera...
 
 .en El uso de `()` le da varias ventajas sobre el uso de `.click ()`, tales como la capacidad de agregar varios eventos...
 
-``javascript
+```javascript
 .on ('click tap hover)
 ```
 
@@ -71,7 +71,7 @@ Ahora que estás fuera...
 .on('click.menuOpening')
 ```
 
-Los espacios de nombres te dan el poder para desenlazar un evento específico ( `.off('click.menuOpening')`).
+Los espacios de nombres te dan el poder para desenlazar un evento específico (por ejemplo,`.off('click.menuOpening')`).
 
 <sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
