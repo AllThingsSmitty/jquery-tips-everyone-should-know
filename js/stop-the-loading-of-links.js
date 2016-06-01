@@ -1,4 +1,4 @@
 // Stop the loading of links
-$('a.no-link').click(function (e) {
+$('a.no-link').on('click', function (e) {
   e.preventDefault();
 });

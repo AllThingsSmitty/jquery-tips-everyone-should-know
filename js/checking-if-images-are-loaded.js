@@ -1,4 +1,4 @@
 // Checking if images are loaded
-$('img').load(function () {
+$('img').on('load', function () {
   console.log('image load successful');
 });

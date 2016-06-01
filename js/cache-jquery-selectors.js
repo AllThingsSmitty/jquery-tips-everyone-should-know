@@ -1,10 +1,10 @@
 // Cache jQuery selectors
 var blocks = $('#blocks').find('li');
 
-$('#hideBlocks').click(function () {
+$('#hideBlocks').on('click', function () {
   blocks.fadeOut();
 });
 
-$('#showBlocks').click(function () {
+$('#showBlocks').on('click', function () {
   blocks.fadeIn();
 });
