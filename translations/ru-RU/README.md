@@ -16,6 +16,7 @@
 ## Советы
 
 1. [Проверка Если jQuery Loaded](#checking-if-jquery-loaded)
+1. [Используйте `.on()` Binding Вместо `.click()`](#use-on-binding-instead-of-click)
 1. [Вернуться к началу Button](#back-to-top-button)
 1. [Предварительная загрузка изображений](#preload-images)
 1. [Проверка Если изображения загружаются](#checking-if-images-are-loaded)
@@ -53,6 +54,28 @@ if (typeof jQuery == 'undefined') {
 <sup>[вернуться к оглавлению](#table-of-contents)</sup>
 
 
+<div id="use-on-binding-instead-of-click"></div>
+### Используйте `.on()` Binding Вместо `.click()`
+
+Используя `.on()` дает ряд преимуществ по сравнению с использованием `.click()`, например, возможность добавлять несколько событий...
+
+```javascript
+.on('click tap hover')
+```
+
+...Привязка применяется к динамически создаваемые элементы, а также (нет необходимости вручную связывать каждый отдельный элемент динамически добавленный к элементу DOM)...
+
+...И возможность установить пространство имен:
+
+```javascript
+.on('click.menuOpening')
+```
+
+Пространства имен дают вам возможность синхронизироваться конкретное событие (`.off('click.menuOpening')`).
+
+<sup>[вернуться к оглавлению](#table-of-contents)</sup>
+
+
 <div id="back-to-top-button"></div>
 ### Вернуться к началу Button
 
@@ -60,7 +83,7 @@ if (typeof jQuery == 'undefined') {
 
 ```javascript
 // Back to top
-$('.top').click(function (e) {
+$('.container').on('click', '.back-to-top', function (e) {
   e.preventDefault();
   $('html, body').animate({scrollTop: 0}, 800);
 });
@@ -102,7 +125,7 @@ $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 Иногда вам может понадобиться, чтобы проверить, если ваши изображения будут полностью загружены, чтобы продолжить с вашими сценариями:
 
 ```javascript
-$('img').load(function () {
+$('img').on('load', function () {
   console.log('image load successful');
 });
 ```
@@ -136,7 +159,7 @@ $('img').on('error', function () {
 Допустим, вы хотите изменить визуальный интерактивными элемент на странице, когда пользователь парит над ним. Вы можете добавить класс к вашему элементу, когда пользователь парит; когда пользователь прекращает зависания удаляет класс:
 
 ```javascript
-$('.btn').hover(function () {
+$('.btn').on('hover', function () {
   $(this).addClass('hover');
 }, function () {
   $(this).removeClass('hover');
@@ -180,7 +203,7 @@ $('input[type="submit"]').prop('disabled', false);
 Иногда вы не хотите, чтобы ссылки перехода на определенную веб-страницу и не перезагрузите страницу; Вы могли бы хотеть, чтобы они делали что-то еще, как спусковой крючок какой-либо другой сценарий. Это будет делать трюк предотвращения действия по умолчанию:
 
 ```javascript
-$('a.no-link').click(function (e) {
+$('a.no-link').on('click', function (e) {
   e.preventDefault();
 });
 ```
@@ -200,11 +223,11 @@ var blocks = $('#blocks').find('li');
 Теперь вы можете использовать `blocks` переменную туда, куда вы хотите, без необходимости искать DOM-каждый раз, когда:
 
 ```javascript
-$('#hideBlocks').click(function () {
+$('#hideBlocks').on('click', function () {
   blocks.fadeOut();
 });
 
-$('#showBlocks').click(function () {
+$('#showBlocks').on('click', function () {
   blocks.fadeIn();
 });
 ```
@@ -221,12 +244,12 @@ $('#showBlocks').click(function () {
 
 ```javascript
 // Fade
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').fadeToggle('slow');
 });
 
 // Toggle
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').slideToggle('slow');
 });
 ```
@@ -244,7 +267,7 @@ $('.btn').click(function () {
 $('#accordion').find('.content').hide();
 
 // Accordion
-$('#accordion').find('.accordion-header').click(function () {
+$('#accordion').find('.accordion-header').on('click', function () {
   var next = $(this).next();
   next.slideToggle('fast');
   $('.content').not(next).slideUp('fast');
@@ -346,7 +369,7 @@ $(document).on('visibilitychange', function (e) {
 Когда вызов Ajax возвращает ошибку 404 или 500 обработчик ошибок будет выполняться. Если обработчик не определен, другой код jQuery может не работать больше. Определить глобальный обработчик ошибок Ajax:
 
 ```javascript
-$(document).ajaxError(function (e, xhr, settings, error) {
+$(document).on('ajaxError', function (e, xhr, settings, error) {
   console.log(error);
 });
 ```

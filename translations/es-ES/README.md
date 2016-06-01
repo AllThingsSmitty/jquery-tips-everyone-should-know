@@ -16,6 +16,7 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 ## Consejos
 
 1. [Verificando jQuery Cargado](#checking-if-jquery-loaded)
+1. [Utilice `.on ()` En lugar de unión `.click ()`](#use-on-binding-instead-of-click)
 1. [Volver al botón de inicio](#back-to-top-button)
 1. [Carga previa de imágenes](#preload-images)
 1. [comprobando si las imágenes se cargan](#checking-if-images-are-loaded)
@@ -53,6 +54,28 @@ Ahora que estás fuera...
 <sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
+<div id="use-on-binding-instead-of-click"></div>
+### Utilice `.on ()` En lugar de unión `.click ()`
+
+.en El uso de `()` le da varias ventajas sobre el uso de `.click ()`, tales como la capacidad de agregar varios eventos...
+
+``javascript
+.on ('click tap hover)
+```
+
+...Una unión se aplica a los elementos creados de forma dinámica, así (no hay necesidad de obligar manualmente cada elemento añadido dinámicamente a un elemento DOM) ...
+
+...Y la posibilidad de configurar un espacio de nombres:
+
+```javascript
+.on('click.menuOpening')
+```
+
+Los espacios de nombres te dan el poder para desenlazar un evento específico ( `.off('click.menuOpening')`).
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
+
 <div id="back-to-top-button"></div>
 ### Volver al botón de inicio
 
@@ -60,7 +83,7 @@ Mediante el uso de la `animate` y métodos `scrollTop` en jQuery que no es neces
 
 ```javascript
 // Back to top
-$('.top').click(function (e) {
+$('.container').on('click', '.back-to-top', function (e) {
   e.preventDefault();
   $('html, body').animate({scrollTop: 0}, 800);
 });
@@ -102,7 +125,7 @@ $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 A veces puede que tenga que comprobar si las imágenes han cargado completamente con el fin de continuar con las secuencias de comandos:
 
 ```javascript
-$('img').load(function () {
+$('img').on('load', function () {
   console.log('image load successful');
 });
 ```
@@ -136,7 +159,7 @@ Incluso si usted no tiene ningún enlaces rotos, añadiendo que esto no hará ni
 Digamos que usted quiere cambiar la visual de un elemento se puede hacer clic en la página cuando un usuario se desplaza sobre él. Usted puede agregar una clase a su elemento cuando el usuario está flotando; cuando el usuario deja flotando elimina la clase:
 
 ```javascript
-$('.btn').hover(function () {
+$('.btn').on('hover', function () {
   $(this).addClass('hover');
 }, function () {
   $(this).removeClass('hover');
@@ -181,7 +204,7 @@ $('input[type="submit"]').prop('disabled', false);
 A veces no desea vínculos para ir a una determinada página web, ni volver a cargar la página; es posible que desee que hagan otra cosa, como disparador de otro guión. Esto va a hacer el truco de la prevención de la acción por defecto:
 
 ```javascript
-$('a.no-link').click(function (e) {
+$('a.no-link').on('click', function (e) {
   e.preventDefault();
 });
 ```
@@ -201,11 +224,11 @@ var blocks = $('#blocks').find('li');
 Ahora se puede utilizar la variable `blocks` donde quieras sin tener que buscar el DOM en cada ocasión:
 
 ```javascript
-$('#hideBlocks').click(function () {
+$('#hideBlocks').on('click', function () {
   blocks.fadeOut();
 });
 
-$('#showBlocks').click(function () {
+$('#showBlocks').on('click', function () {
   blocks.fadeIn();
 });
 ```
@@ -222,12 +245,12 @@ Deslizante y la decoloración son algo que usamos un montón en nuestras animaci
 
 ```javascript
 // Fade
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').fadeToggle('slow');
 });
 
 // Toggle
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').slideToggle('slow');
 });
 ```
@@ -245,7 +268,7 @@ Este es un método simple para un acordeón rápida:
 $('#accordion').find('.content').hide();
 
 // Accordion
-$('#accordion').find('.accordion-header').click(function () {
+$('#accordion').find('.accordion-header').on('click', function () {
   var next = $(this).next();
   next.slideToggle('fast');
   $('.content').not(next).slideUp('fast');
@@ -347,7 +370,7 @@ $(document).on('visibilitychange', function (e) {
 Cuando una llamada Ajax devuelve un error 404 o 500 se ejecutará el gestor de errores. Si no se define el controlador, otro código jQuery podría no funcionar. Definir un controlador global de error de Ajax:
 
 ```javascript
-$(document).ajaxError(function (e, xhr, settings, error) {
+$(document).on('ajaxError', function (e, xhr, settings, error) {
   console.log(error);
 });
 ```

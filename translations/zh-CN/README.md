@@ -17,6 +17,7 @@
 ## 提示
 
 1. [检查是否加载的jQuery](＃checking-if-jquery-loaded)
+1. [使用`.on()`绑定`.click()`代替](#use-on-binding-instead-of-click)
 1. [返回顶部按钮](#back-to-top-button)
 1. [预先载入图像](#preload-images)
 1. [检查，如果图像加载](#checking-if-images-are-loaded)
@@ -54,6 +55,28 @@ if (typeof jQuery == 'undefined') {
 <sup>[回目录](#table-of-contents)</sup>
 
 
+<div id="use-on-binding-instead-of-click"></div>
+### 使用`.on()`绑定`.click()`代替
+
+使用`.on()`给你几个优点比使用`.click()`，如添加多个事件的能力...
+
+```javascript
+.on('click tap hover')
+```
+
+...绑定适用于动态创建的元素，以及（有没有必要动态添加到DOM元素每一个元素手动绑定）...
+
+...和可能性来设置一个命名空间:
+
+```javascript
+.on('click.menuOpening')
+```
+
+命名空间给你解除对特定事件(`.off('click.menuOpening')`)的权力。
+
+<sup>[回目录](#table-of-contents)</sup>
+
+
 <div id="back-to-top-button"></div>
 ### 返回顶部按钮
 
@@ -61,7 +84,7 @@ if (typeof jQuery == 'undefined') {
 
 ```javascript
 // Back to top
-$('.top').click(function (e) {
+$('.container').on('click', '.back-to-top', function (e) {
   e.preventDefault();
   $('html, body').animate({scrollTop: 0}, 800);
 });
@@ -103,7 +126,7 @@ $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 有时你可能需要检查，如果您的影像出现，以便继续与脚本满载：
 
 ```javascript
-$('img').load(function () {
+$('img').on('load', function () {
   console.log('image load successful');
 });
 ```
@@ -137,7 +160,7 @@ $('img').on('error', function () {
 比方说，你想改变视觉可点击元素的页面上，当用户将鼠标悬停在它。您可以将类添加到你的元素，当用户徘徊;用户停止徘徊时删除类：
 
 ```javascript
-$('.btn').hover(function () {
+$('.btn').on('hover', function () {
   $(this).addClass('hover');
 }, function () {
   $(this).removeClass('hover');
@@ -181,7 +204,7 @@ $('input[type="submit"]').prop('disabled', false);
 有时候，你不想链接到特定网页，也没有重新加载页面;你可能希望他们做别的事情一样触发一些其他的脚本。这将做防止默认操作的技巧：
 
 ```javascript
-$('a.no-link').click(function (e) {
+$('a.no-link').on('click', function (e) {
   e.preventDefault();
 });
 ```
@@ -201,11 +224,11 @@ var blocks = $('#blocks').find('li');
 现在你可以使用任何你想要的`blocks`变量，而不必每次搜索DOM：
 
 ```javascript
-$('#hideBlocks').click(function () {
+$('#hideBlocks').on('click', function () {
   blocks.fadeOut();
 });
 
-$('#showBlocks').click(function () {
+$('#showBlocks').on('click', function () {
   blocks.fadeIn();
 });
 ```
@@ -222,12 +245,12 @@ $('#showBlocks').click(function () {
 
 ```javascript
 // Fade
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').fadeToggle('slow');
 });
 
 // Toggle
-$('.btn').click(function () {
+$('.btn').on('click', function () {
   $('.element').slideToggle('slow');
 });
 ```
@@ -245,7 +268,7 @@ $('.btn').click(function () {
 $('#accordion').find('.content').hide();
 
 // Accordion
-$('#accordion').find('.accordion-header').click(function () {
+$('#accordion').find('.accordion-header').on('click', function () {
   var next = $(this).next();
   next.slideToggle('fast');
   $('.content').not(next).slideUp('fast');
@@ -347,7 +370,7 @@ $(document).on('visibilitychange', function (e) {
 当Ajax调用返回404或500错误的错误处理程序将被执行。如果没有定义的处理程序，其他的jQuery代码可能就失效了。定义一个全局的Ajax错误处理程序：
 
 ```javascript
-$(document).ajaxError(function (e, xhr, settings, error) {
+$(document).on('ajaxError', function (e, xhr, settings, error) {
   console.log(error);
 });
 ```
