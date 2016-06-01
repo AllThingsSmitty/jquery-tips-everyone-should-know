@@ -71,7 +71,7 @@ Utiliser `.on()` vous donne plusieurs avantages par rapport `.click()`, comme la
 .on ('click.menuOpening')
 ```
 
-Namespaces vous donnent le pouvoir de délier un événement spécifique (`.off('click.menuOpening')`).
+Namespaces vous donnent le pouvoir de délier un événement spécifique (par exemple, `.off('click.menuOpening')`).
 
 <sup>[retour à la table des matières](#table-of-contents)</sup>
 

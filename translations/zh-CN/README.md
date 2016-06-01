@@ -72,7 +72,7 @@ if (typeof jQuery == 'undefined') {
 .on('click.menuOpening')
 ```
 
-命名空间给你解除对特定事件(`.off('click.menuOpening')`)的权力。
+命名空间给你解除对特定事件（例如，`.off（'click.menuOpening'）`）的权力。
 
 <sup>[回目录](#table-of-contents)</sup>
 

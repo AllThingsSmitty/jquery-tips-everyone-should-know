@@ -69,7 +69,7 @@ Using `.on()` gives you several advantages over using `.click()`, such as the ab
 .on('click.menuOpening')
 ```
 
-Namespaces give you the power to unbind a specific event (`.off('click.menuOpening')`). 
+Namespaces give you the power to unbind a specific event (e.g., `.off('click.menuOpening')`). 
 
 <sup>[back to table of contents](#table-of-contents)</sup>
 
