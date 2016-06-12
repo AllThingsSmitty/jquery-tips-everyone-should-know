@@ -1,8 +1,8 @@
-# jQuery Советы должен знать каждый [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Советы по jQuery которые должен знать каждый [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-Коллекция простых советов, чтобы помочь вашей игре jQuery.
+Коллекция простых советов, чтобы помочь вашей работе с jQuery.
 
-> Для других больших списков проверить [@sindresorhus](https://github.com/sindresorhus/~~HEAD=dobj) в Куратор список [удивительных списков](https://github.com/sindresorhus/awesome/).
+> Другие прекрасные списки, за которыми следит [@sindresorhus](https://github.com/sindresorhus/~~HEAD=dobj), можно увидеть [здесь](https://github.com/sindresorhus/awesome/).
 
 
 <div id="table-of-contents"></div>
