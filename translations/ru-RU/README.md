@@ -15,7 +15,7 @@
 
 ## Советы
 
-1. [Проверка Если jQuery Loaded](#checking-if-jquery-loaded)
+1. [Проверка готовности jQuery](#checking-if-jquery-loaded)
 1. [Используйте `.on()` Binding Вместо `.click()`](#use-on-binding-instead-of-click)
 1. [Вернуться к началу Button](#back-to-top-button)
 1. [Предварительная загрузка изображений](#preload-images)
@@ -37,9 +37,9 @@
 
 
 <div id="checking-if-jquery-loaded"></div>
-### Проверка Если jQuery Loaded
+### Проверка готовности jQuery
 
-Перед тем, как можно сделать что-нибудь с jQuery в первую очередь необходимо убедиться в том, что загружен:
+Перед тем, как сделать что-нибудь с помощью jQuery, необходимо убедиться в том, что он загружен:
 
 ```javascript
 if (typeof jQuery == 'undefined') {
@@ -49,7 +49,7 @@ if (typeof jQuery == 'undefined') {
 }
 ```
 
-Теперь вы с ...
+Теперь вы можете продолжать ...
 
 <sup>[вернуться к оглавлению](#table-of-contents)</sup>
 
