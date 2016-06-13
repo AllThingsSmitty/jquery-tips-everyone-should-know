@@ -270,15 +270,15 @@ $('#accordion').find('.accordion-header').on('click', function () {
 <sup>[回到目錄](#table-of-contents)</sup>
 
 
-### Make Two Divs the Same Height
+### 使兩個Div一樣高
 
-Sometimes you'll want two divs to have the same height no matter what content they have in them:
+有時候不論兩個Div裡面的內容為何，你會希望他們有同樣的高度：
 
 ```javascript
 $('.div').css('min-height', $('.main-div').height());
 ```
 
-This example sets the `min-height` which means that it can be bigger than the main div but never smaller. However, a more flexible method would be to loop over a set of elements and set the height to the height of the tallest element:
+這個例子設定 `min-height`，表示其只能比 main div 的 `height` 大，永遠不會比它小。然而，在一組元素中循環並將各元素之 `height` 調整至最高的元素高度為另一種更彈性的方法：
 
 ```javascript
 var $columns = $('.column');
@@ -291,7 +291,7 @@ $columns.each(function () {
 $columns.height(height);
 ```
 
-If you want _all_ columns to have the same height:
+如果你希望每一行都有同樣高度：
 
 ```javascript
 var $rows = $('.same-height-columns');
@@ -300,14 +300,14 @@ $rows.each(function () {
 });
 ```
 
-**Note:** This can be done several ways [in CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) but depending on what your needs are, knowing how to do this in jQuery is still worthwhile.
+**注意:** 這件事可以使用幾種方法完成，[使用CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) 這跟你的需求有關，但也值得知道如何使用JQuery完成。
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[回到目錄](#table-of-contents)</sup>
 
 
-### Open External Links in New Tab/Window
+### 在新分頁/視窗開啟外部連結
 
-Open external links in a new browser tab or window and ensure links on the same origin open in the same tab or window:
+在瀏覽器新的分頁或視窗中開啟新的外部連結，並且確定同樣源頭的連結會在同樣的分頁或視窗開啟：
 
 ```javascript
 $('a[href^="http"]').attr('target', '_blank');
@@ -315,26 +315,26 @@ $('a[href^="//"]').attr('target', '_blank');
 $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 ```
 
-**Note:** `window.location.origin` doesn't work in IE10. [This fix](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) takes care of the issue.
+**注意:** `window.location.origin` 在IE10中無效。[這個方法](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) 可以解決這個問題。
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[回到目錄](#table-of-contents)</sup>
 
 
-### Find Element By Text
+### 利用文字找到元素
 
-By using the `contains()` selector in jQuery you can find text in content of an element. If text doesn't exists, that element will be hidden:
+利用JQuery中 `contains()` 選擇器，你可以找到元素內容中的文字。如果沒有文字，該元素會被隱藏：
 
 ```javascript
 var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[回到目錄](#table-of-contents)</sup>
 
 
-### Trigger on Visibility Change
+### 觸發 Visibility 改變
 
-Trigger JavaScript when the user is no longer focusing on a tab, or refocuses on a tab:
+當使用者不再停留在某分頁，或是重新停留在某分頁，觸發JavaScript：
 
 ```javascript
 $(document).on('visibilitychange', function (e) {
@@ -346,12 +346,12 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[回到目錄](#table-of-contents)</sup>
 
 
-### Ajax Call Error Handling
+### Ajax 程序的錯誤處理
 
-When an Ajax call returns a 404 or 500 error the error handler will be executed. If the handler isn't defined, other jQuery code might not work anymore. Define a global Ajax error handler:
+當一個Ajax 程序呼叫後回傳 404 或是 500 錯誤，錯誤處理程序將會被執行。如果沒有定義錯誤處理程序，其他JQuery的程式碼可能不會運作。定義一個全域Ajax錯誤處理程序：
 
 ```javascript
 $(document).on('ajaxError', function (e, xhr, settings, error) {
@@ -359,12 +359,12 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[回到目錄](#table-of-contents)</sup>
 
 
-### Chain Plugin Calls
+### 串連 Plugin 的呼叫
 
-jQuery allows for the "chaining" of plugin method calls to mitigate the process of repeatedly querying the DOM and creating multiple jQuery objects. Let's say the following snippet represents your plugin method calls:
+JQuery 允許「串連」plugin 函式的呼叫來緩和重複查找 DOM 以及重複產生 JQuery 物件。以下的程式碼展示了 plugin 函式的呼叫：
 
 ```javascript
 $('#elem').show();
@@ -372,7 +372,7 @@ $('#elem').html('bla');
 $('#elem').otherStuff();
 ```
 
-This could be vastly improved by using chaining:
+可以利用串連來改進：
 
 ```javascript
 $('#elem')
@@ -381,7 +381,7 @@ $('#elem')
   .otherStuff();
 ```
 
-An alternative is to cache the element in a variable (prefixed with `$`):
+另外一種方法是利用一個變數來 cache 一個元素（在前面加上 `$`）：
 
 ```javascript
 var $elem = $('#elem');
@@ -390,14 +390,14 @@ $elem.html('bla');
 $elem.otherStuff();
 ```
 
-Both chaining and [caching](#cache-jquery-selectors) methods in jQuery are best practices that lead to shorter and faster code.
+JQuery 中串連以及[caching](#cache-jquery-selectors)的方法是最簡潔最快速的實作方式。
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[回到目錄](#table-of-contents)</sup>
 
 
-### Sort List Items Alphabetically
+### 照字母順序排清單元素（list）
 
-Let's say you end up with too many items in a list. Maybe the content is produced by a CMS and you want to order them alphabetically:
+如果在清單中有太多元素，或許其內容是被ㄧ CMS 所製造的且你希望照字母順序來排序：
 
 ```javascript
 var ul = $('#list'),
@@ -410,15 +410,14 @@ lis.sort(function (a, b) {
 ul.append(lis);
 ```
 
-There you go!
+就是這樣！
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[回到目錄](#table-of-contents)</sup>
 
 
 ## 瀏覽器支援
 
-Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
-
+現今版本的Chrome，Firefox，Safari，Opera，Edge 以及 IE11。
 
 ## 翻譯
 
