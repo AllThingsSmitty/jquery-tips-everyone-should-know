@@ -69,7 +69,7 @@ Using `.on()` gives you several advantages over using `.click()`, such as the ab
 .on('click.menuOpening')
 ```
 
-Namespaces give you the power to unbind a specific event (e.g., `.off('click.menuOpening')`). 
+Namespaces give you the power to unbind a specific event (e.g., `.off('click.menuOpening')`).
 
 <sup>[back to table of contents](#table-of-contents)</sup>
 
@@ -426,4 +426,4 @@ Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
 * [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
 * [русский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
 * [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
-* [正體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
+* [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
