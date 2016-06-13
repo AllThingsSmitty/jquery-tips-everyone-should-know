@@ -49,7 +49,7 @@ if (typeof jQuery == 'undefined') {
 ```
 
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 使用 `.on()` 做 Binding，而不要使用 `.click()`
@@ -70,7 +70,7 @@ if (typeof jQuery == 'undefined') {
 
 命名空間讓你能取消對特定事件(event)的連結（例如： `.off('click.menuOpening')`）。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 返回最頂端的按鈕
@@ -96,7 +96,7 @@ $('.container').on('click', '.back-to-top', function (e) {
 
 **注意:** 看看一些使用 `scrollTop` 而導致的[奇怪行為](https://github.com/jquery/api.jquery.com/issues/417) 。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 預先載入圖片
@@ -113,7 +113,7 @@ $.preloadImages = function () {
 $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 檢查圖片是否成功載入
@@ -128,7 +128,7 @@ $('img').on('load', function () {
 
 你也可以透過替換 `<img>` 成其他 ID 或 class 來檢查特定圖片。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 自動修復載入失敗的圖片
@@ -145,7 +145,7 @@ $('img').on('error', function () {
 
 甚至你沒有任何壞掉的圖片連結，這段程式碼也不會帶來什麼壞影響。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 透過 Hover 切換 Class
@@ -170,7 +170,7 @@ $('.btn').on('hover', function () {
 
 **注意:** 使用 CSS 可能是更快的解決方法，但是這個方法還是值得我們學習。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 讓 input field 無法輸入
@@ -187,7 +187,7 @@ $('input[type="submit"]').prop('disabled', true);
 $('input[type="submit"]').prop('disabled', false);
 ```
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 停止載入連結
@@ -200,7 +200,7 @@ $('a.no-link').on('click', function (e) {
 });
 ```
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 快取 jQuery 選擇器
@@ -225,7 +225,7 @@ $('#showBlocks').on('click', function () {
 
 快取 jQuery 選擇器是能夠簡單又能增進效能的小技巧。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 切換 Fade/Slide
@@ -245,7 +245,7 @@ $('.btn').on('click', function () {
 });
 ```
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 簡單可收放元件(Accordion)
@@ -267,7 +267,7 @@ $('#accordion').find('.accordion-header').on('click', function () {
 
 加上這段程式碼後，你要做的只剩下加上必要的 HTML 即可。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 使兩個 Div 一樣高
@@ -302,7 +302,7 @@ $rows.each(function () {
 
 **注意:** 這件事可以使用幾種方法完成，[使用 CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) 這跟你的需求有關，但也值得知道如何使用 jQuery完成。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 在新分頁/視窗開啟外部連結
@@ -317,7 +317,7 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 **注意:** `window.location.origin` 在 IE 10 中無效。[這個方法](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) 可以解決這個問題。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 利用文字找到元素
@@ -329,7 +329,7 @@ var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### Visibility 改變時觸發事件
@@ -346,7 +346,7 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### Ajax 程序的錯誤處理
@@ -359,7 +359,7 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 });
 ```
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 串連 Plugin 的函式呼叫
@@ -392,7 +392,7 @@ $elem.otherStuff();
 
 jQuery 中串連以及[快取](#cache-jquery-selectors)的方法是最簡潔且最快速的實作方式。
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ### 照字母順序排清單元素（list）
@@ -412,7 +412,7 @@ ul.append(lis);
 
 就是這樣！
 
-<sup>[回到目錄](#table-of-contents)</sup>
+<sup>[回到目錄](#目錄)</sup>
 
 
 ## 瀏覽器支援
