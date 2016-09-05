@@ -148,7 +148,13 @@ $('img').on('error', function () {
 });
 ```
 
-Même si vous n'avez pas de liens brisés, ajoutant cela ne fera pas de mal.
+Alternativement, si vous souhaitez simplement masquer les images brisées cet extrait prendra soin de cela pour:
+
+```javascript
+$('img').on('error', function () {
+  $(this).hide();
+});
+```
 
 <sup>[retour à la table des matières](#table-of-contents)</sup>
 

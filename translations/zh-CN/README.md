@@ -149,7 +149,13 @@ $('img').on('error', function () {
 });
 ```
 
-即使你没有任何断开的链接，这将不会做任何伤害。
+另外，如果你想简单地隐藏破碎的形象这个片段将利用该护理：
+
+```javascript
+$('img').on('error', function () {
+  $(this).hide();
+});
+```
 
 <sup>[回目录](#table-of-contents)</sup>
 

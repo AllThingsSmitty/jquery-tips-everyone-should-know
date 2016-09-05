@@ -4,3 +4,8 @@ $('img').on('error', function () {
     $(this).prop('src', 'img/broken.png').addClass('broken-image');
   }
 });
+
+// Hide broken images
+$('img').on('error', function () {
+  $(this).hide();
+});

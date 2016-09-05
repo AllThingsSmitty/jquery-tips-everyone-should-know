@@ -148,7 +148,13 @@ $('img').on('error', function () {
 });
 ```
 
-Incluso si usted no tiene ningún enlaces rotos, añadiendo que esto no hará ningún daño.
+Alternativamente, si desea ocultar simplemente imágenes rotas este fragmento se encargará de que para:
+
+```javascript
+$('img').on('error', function () {
+  $(this).hide();
+});
+```
 
 <sup>[volver al índice de contenidos](#table-of-contents)</sup>
 

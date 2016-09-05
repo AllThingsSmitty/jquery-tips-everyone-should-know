@@ -21,6 +21,9 @@ A collection of simple tips to help up your jQuery game.
 1. [Preload Images](#preload-images)
 1. [Checking If Images Are Loaded](#checking-if-images-are-loaded)
 1. [Fix Broken Images Automatically](#fix-broken-images-automatically)
+
+
+
 1. [Toggle Classes on Hover](#toggle-classes-on-hover)
 1. [Disabling Input Fields](#disabling-input-fields)
 1. [Stop the Loading of Links](#stop-the-loading-of-links)
@@ -144,7 +147,13 @@ $('img').on('error', function () {
 });
 ```
 
-Even if you don't have any broken links, adding this won't do any harm.
+Alternatively, if you wish to simply hide broken images this snippet will take care of that for:
+
+```javascript
+$('img').on('error', function () {
+  $(this).hide();
+});
+```
 
 <sup>[back to table of contents](#table-of-contents)</sup>
 
