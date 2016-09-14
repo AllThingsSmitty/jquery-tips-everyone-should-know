@@ -21,6 +21,7 @@ Une collection de conseils simples pour aider votre jeu jQuery.
 1. [Précharger Images](#preload-images)
 1. [Vérification Si les images sont chargées](#checking-if-images-are-loaded)
 1. [Fix Broken Images automatiquement](#fix-broken-images-automatically)
+1. [Poster un formulaire avec AJAX](#post-a-form-with-ajax)
 1. [Basculer Classes sur Hover](#toggle-classes-on-hover)
 1. [Entrée Désactivation champs](#disabling-input-fields)
 1. [Arrêter le chargement des Liens](#stop-the-loading-of-links)
@@ -154,6 +155,28 @@ Alternativement, si vous souhaitez simplement masquer les images brisées cet ex
 $('img').on('error', function () {
   $(this).hide();
 });
+```
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
+
+<div id="post-a-form-with-ajax"></div>
+### Poster un formulaire avec AJAX
+
+Méthodes jQuery AJAX sont une voie commune pour demander le texte, HTML, XML ou JSON. Si vous voulez envoyer un formulaire via AJAX, vous pouvez collecter les entrées utilisateur via la méthode `val()`:
+
+```javascript
+$.post('sign_up.php', {
+  user_name: $('input[name=user_name]').val(),
+  email:     $('input[name=email]').val(),
+  password:  $('input[name=password]').val(),
+});
+```
+
+Cependant, tous ces `val()` appels est coûteux. Une meilleure façon de recueillir les entrées de l'utilisateur utilise le `serialize()` de fonction qui recueille les entrées de l'utilisateur sous forme de chaîne:
+
+```javascript
+$.post('sign_up', $('#sign-up-form').serialize());
 ```
 
 <sup>[retour à la table des matières](#table-of-contents)</sup>

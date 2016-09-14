@@ -22,6 +22,7 @@
 1. [预先载入图像](#preload-images)
 1. [检查，如果图像加载](#checking-if-images-are-loaded)
 1. [自动修复破碎的形象](#fix-broken-images-automatically)
+1. [发布的AJAX表单](#post-a-form-with-ajax)
 1. [悬停切换类](#toggle-classes-on-hover)
 1. [禁用输入字段](#disabling-input-fields)
 1. [停止路径的负载](#stop-the-loading-of-links)
@@ -155,6 +156,28 @@ $('img').on('error', function () {
 $('img').on('error', function () {
   $(this).hide();
 });
+```
+
+<sup>[回目录](#table-of-contents)</sup>
+
+
+<div id="post-a-form-with-ajax"></div>
+### 发布的AJAX表单
+
+jQuery的AJAX方法来请求文本，HTML，XML或JSON的常用方法。如果你想通过AJAX发送的形式，你可以通过`val()`方法收集用户输入：
+
+```javascript
+$.post('sign_up.php', {
+  user_name: $('input[name=user_name]').val(),
+  email:     $('input[name=email]').val(),
+  password:  $('input[name=password]').val(),
+});
+```
+
+然而，所有这些`val()`调用的是昂贵的。收集用户输入的一个更好的办法是使用'的`serialize()`函数，它收集用户输入一个字符串：
+
+```javascript
+$.post('sign_up', $('#sign-up-form').serialize());
 ```
 
 <sup>[回目录](#table-of-contents)</sup>

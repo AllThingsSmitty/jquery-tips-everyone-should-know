@@ -21,6 +21,7 @@
 1. [Предварительная загрузка изображений](#preload-images)
 1. [Проверка, загружаются ли изображения](#checking-if-images-are-loaded)
 1. [Автоматическое исправление сломанных изображений](#fix-broken-images-automatically)
+1. [Дать форму с помощью AJAX](#post-a-form-with-ajax)
 1. [Переключение классов по наведению](#toggle-classes-on-hover)
 1. [Отключение поля ввода](#disabling-input-fields)
 1. [Прерывание загрузки ссылки](#stop-the-loading-of-links)
@@ -154,6 +155,28 @@ $('img').on('error', function () {
 $('img').on('error', function () {
   $(this).hide();
 });
+```
+
+<sup>[вернуться к оглавлению](#table-of-contents)</sup>
+
+
+<div id="post-a-form-with-ajax"></div>
+### Дать форму с помощью AJAX
+
+методы JQuery AJAX являются распространенным способом запросить текст, HTML, XML или JSON. Если вы хотите отправить форму через AJAX можно собирать пользовательские входные данные через `val()` метода:
+
+```javascript
+$.post('sign_up.php', {
+  user_name: $('input[name=user_name]').val(),
+  email:     $('input[name=email]').val(),
+  password:  $('input[name=password]').val(),
+});
+```
+
+Тем не менее, все эти `val()` звонки стоят дорого. Лучший способ сбора данных, вводимых пользователем использует `serialize()` функцию, которая собирает пользовательские входные данные в виде строки:
+
+```javascript
+$.post('sign_up', $('#sign-up-form').serialize());
 ```
 
 <sup>[вернуться к оглавлению](#table-of-contents)</sup>

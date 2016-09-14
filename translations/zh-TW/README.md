@@ -21,6 +21,7 @@
 1. [預先載入圖片](#預先載入圖片)
 1. [檢查圖片是否成功載入](#檢查圖片是否成功載入)
 1. [自動修復載入失敗的圖片](#自動修復載入失敗的圖片)
+1. [發布的AJAX表單](#post-a-form-with-ajax)
 1. [透過 Hover 切換 Class](#透過-hover-切換-class)
 1. [讓 input field 無法輸入](#讓-input-field-無法輸入)
 1. [停止載入連結](#停止載入連結)
@@ -149,6 +150,28 @@ $('img').on('error', function () {
 $('img').on('error', function () {
   $(this).hide();
 });
+```
+
+<sup>[回到目錄](#目錄)</sup>
+
+
+<div id="post-a-form-with-ajax"></div>
+### 發布的AJAX表單
+
+jQuery的AJAX方法來請求文本，HTML，XML或JSON的常用方法。如果你想通過AJAX發送的形式，你可以通過`val()`方法收集用戶輸入：
+
+```javascript
+$.post('sign_up.php', {
+  user_name: $('input[name=user_name]').val(),
+  email:     $('input[name=email]').val(),
+  password:  $('input[name=password]').val(),
+});
+```
+
+然而，所有這些`val()`調用的是昂貴的。收集用戶輸入的一個更好的辦法是使用CSS`（）`函數，它收集用戶輸入一個字符串：
+
+```javascript
+$.post('sign_up', $('#sign-up-form').serialize());
 ```
 
 <sup>[回到目錄](#目錄)</sup>

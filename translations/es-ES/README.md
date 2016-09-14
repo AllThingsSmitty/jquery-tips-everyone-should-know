@@ -21,6 +21,7 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 1. [Carga previa de imágenes](#preload-images)
 1. [comprobando si las imágenes se cargan](#checking-if-images-are-loaded)
 1. [corregir imágenes automáticamente rotas](#fix-broken-images-automatically)
+1. [Publicar un formulario con AJAX](#post-a-form-with-ajax)
 1. [Las clases de palanca en la libración](#toggle-classes-on-hover)
 1. [Desactivar la acción de campos](#disabling-input-fields)
 1. [Detener la carga de Enlaces](#stop-the-loading-of-links)
@@ -159,6 +160,28 @@ $('img').on('error', function () {
 <sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
+<div id="post-a-form-with-ajax"></div>
+### Publicar un formulario con AJAX
+
+Métodos jQuery AJAX son una forma común para solicitar texto, HTML, XML, JSON o. Si desea enviar un formulario a través de AJAX se podía recoger las entradas del usuario a través del método `val()`:
+
+```javascript
+$.post('sign_up.php', {
+  user_name: $('input[name=user_name]').val(),
+  email:     $('input[name=email]').val(),
+  password:  $('input[name=password]').val(),
+});
+```
+
+Sin embargo, todos esos `val()` llamadas es caro. Una mejor manera de recoger las entradas del usuario está utilizando el `serialize()` función que recoge las entradas del usuario como una cadena:
+
+```javascript
+$.post('sign_up', $('#sign-up-form').serialize());
+```
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
+
 <div id="toggle-classes-on-hover"></div>
 ### Alternar clases en la libración
 
@@ -178,7 +201,6 @@ Sólo tiene que añadir el CSS necesario. Si desea una manera aún _simpler_ uti
 $('.btn').hover(function () {
   $(this).toggleClass('hover');
 });
-```
 ```
 
 **Nota:** CSS puede ser una solución más rápida en este caso, pero es todavía vale la pena saber esto.
