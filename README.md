@@ -21,9 +21,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Preload Images](#preload-images)
 1. [Checking If Images Are Loaded](#checking-if-images-are-loaded)
 1. [Fix Broken Images Automatically](#fix-broken-images-automatically)
-
-
-
+1. [Post a Form with AJAX](#post-a-form-with-ajax)
 1. [Toggle Classes on Hover](#toggle-classes-on-hover)
 1. [Disabling Input Fields](#disabling-input-fields)
 1. [Stop the Loading of Links](#stop-the-loading-of-links)
@@ -153,6 +151,27 @@ Alternatively, if you wish to simply hide broken images this snippet will take c
 $('img').on('error', function () {
   $(this).hide();
 });
+```
+
+<sup>[back to table of contents](#table-of-contents)</sup>
+
+
+### Post a Form with AJAX
+
+jQuery AJAX methods are a common way to request text, HTML, XML, or JSON. If you wanted to send a form via AJAX you could collect the user inputs via the `val()` method:
+
+```javascript
+$.post('sign_up.php', {
+  user_name: $('input[name=user_name]').val(),
+  email:     $('input[name=email]').val(),
+  password:  $('input[name=password]').val(),
+});
+```
+
+However, all of those `val()` calls is expensive. A better way of collecting the user inputs is using the `serialize()` function which collects the user inputs as a string:
+
+```javascript
+$.post('sign_up', $('#sign-up-form').serialize());
 ```
 
 <sup>[back to table of contents](#table-of-contents)</sup>
