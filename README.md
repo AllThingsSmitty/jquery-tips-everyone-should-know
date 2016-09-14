@@ -168,7 +168,7 @@ $.post('sign_up.php', {
 });
 ```
 
-However, all of those `val()` calls is expensive. A better way of collecting the user inputs is using the `serialize()` function which collects the user inputs as a string:
+However, all of those `val()` calls are expensive. A better way of collecting the user inputs is using the `serialize()` function which collects the user inputs as a string:
 
 ```javascript
 $.post('sign_up', $('#sign-up-form').serialize());
