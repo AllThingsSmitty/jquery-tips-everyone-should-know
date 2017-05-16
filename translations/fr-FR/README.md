@@ -426,7 +426,7 @@ $('#elem')
   .otherStuff();
 ```
 
-Une alternative consiste à mettre en cache l'élément dans une variable (avec le préfixe `` $):
+Une alternative consiste à mettre en cache l'élément dans une variable (avec le préfixe `$`):
 
 ```javascript
 var $elem = $('#elem');
