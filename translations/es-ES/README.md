@@ -38,6 +38,7 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 
 
 <div id="checking-if-jquery-loaded"></div>
+
 ### Verificando jQuery Cargado
 
 Antes de que pueda hacer cualquier cosa con jQuery primero tiene que asegurarse de que se ha cargado:
@@ -52,7 +53,7 @@ if (typeof jQuery == 'undefined') {
 
 Ahora que estás fuera...
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="use-on-binding-instead-of-click"></div>
@@ -74,7 +75,7 @@ Ahora que estás fuera...
 
 Los espacios de nombres te dan el poder para desenlazar un evento específico (por ejemplo,`.off('click.menuOpening')`).
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="back-to-top-button"></div>
@@ -99,7 +100,7 @@ El cambio de los cambios de valor `scrollTop` donde se quiere que la barra de de
 
 **Nota:** ve por alguna [comportamiento incorrecto](https://github.com/jquery/api.jquery.com/issues/417) con `scrollTop`.
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="preload-images"></div>
@@ -117,7 +118,7 @@ $.preloadImages = function () {
 $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="checking-if-images-are-loaded"></div>
@@ -133,7 +134,7 @@ $('img').on('load', function () {
 
 También puede comprobar si una imagen en particular se ha cargado mediante la sustitución de la etiqueta `<img>` con un ID o clase.
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="fix-broken-images-automatically"></div>
@@ -157,7 +158,7 @@ $('img').on('error', function () {
 });
 ```
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="post-a-form-with-ajax"></div>
@@ -179,7 +180,7 @@ Sin embargo, todos esos `val()` llamadas es caro. Una mejor manera de recoger la
 $.post('sign_up', $('#sign-up-form').serialize());
 ```
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="toggle-classes-on-hover"></div>
@@ -205,7 +206,7 @@ $('.btn').hover(function () {
 
 **Nota:** CSS puede ser una solución más rápida en este caso, pero es todavía vale la pena saber esto.
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="disabling-input-fields"></div>
@@ -223,7 +224,7 @@ Todo lo que necesita hacer es ejecutar el método `prop` otra vez en la entrada,
 $('input[type="submit"]').prop('disabled', false);
 ```
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id ="stop-the-loading-of-links"></div>div>
@@ -237,7 +238,7 @@ $('a.no-link').on('click', function (e) {
 });
 ```
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="cache-jquery-selectors"></div>
@@ -263,7 +264,7 @@ $('#showBlocks').on('click', function () {
 
 El almacenamiento en caché selectores de jQuery son una ganancia de rendimiento fácil.
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="toggle-fadeslide"></div>
@@ -283,7 +284,7 @@ $('.btn').on('click', function () {
 });
 ```
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="simple-accordion"></div>
@@ -306,7 +307,7 @@ $('#accordion').find('.accordion-header').on('click', function () {
 
 Mediante la adición de este script lo único que tiene que hacer en su página web es el HTML necesario ir a buscar este trabajo.
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="make-two-divs-the-same-height"></div>
@@ -358,7 +359,7 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 **Nota:** `window.location.origin` no funciona en IE10. [Esta corrección](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) se ocupa de la cuestión.
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="find-element-by-text"></div>
@@ -371,7 +372,7 @@ var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="trigger-on-visibility-change"></div>
@@ -389,7 +390,7 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="ajax-call-error-handling"></div>
@@ -403,7 +404,7 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 });
 ```
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="chain-plugin-calls"></div>
@@ -437,7 +438,7 @@ $elem.otherStuff();
 
 Ambos métodos [almacenamiento en caché](#cache-jquery-selectors) en el encadenamiento y son las mejores prácticas que conducen al código corto y más rápido.
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 <div id="sort-list-items-alphabetically"></div>
@@ -458,7 +459,7 @@ ul.append(lis);
 
 Hay que ir!
 
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
 
 
 ## Apoyo
