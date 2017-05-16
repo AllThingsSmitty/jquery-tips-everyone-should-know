@@ -20,13 +20,13 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 1. [Utilice `.on ()` En lugar de unión `.click ()`](#utilice-on--en-lugar-de-unión-click-)
 1. [Volver al botón de inicio](#volver-al-botón-de-inicio)
 1. [Carga previa de imágenes](#carga-previa-de-imágenes)
-1. [comprobando si las imágenes se cargan](#comprobación-si-las-imágenes-se-cargan)
-1. [corregir imágenes automáticamente rotas](#corregir-imágenes-automáticamente-rotas)
+1. [Comprobando si las imágenes se cargan](#comprobación-si-las-imágenes-se-cargan)
+1. [Corregir imágenes automáticamente rotas](#corregir-imágenes-automáticamente-rotas)
 1. [Publicar un formulario con AJAX](#publicar-un-formulario-con-ajax)
 1. [Alternar clases en la libración](##alternar-clases-en-la-libración)
 1. [Desactivar la acción de campos](#desactivación-de-campos-de-entrada)
 1. [Detener la carga de Enlaces](#detener-la-carga-de-enlaces)
-1. [de caché de jQuery selectores](#de-caché-de-jquery-selectores)
+1. [De caché de jQuery selectores](#de-caché-de-jquery-selectores)
 1. [De palanca de fundido / Slide](#de-palanca-de-fundido--slide)
 1. [Acordeón simple](#acordeón-simple)
 1. [Haga dos Divs la misma altura](#haga-dos-divs-la-misma-altura)
@@ -231,7 +231,7 @@ $('a.no-link').on('click', function (e) {
 <sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
-### de caché de jQuery selectores
+### De caché de jQuery selectores
 
 Piense en cuántas veces se escribe el mismo selector una y otra vez en cualquier proyecto. Cada `$('.element')` selector tiene que buscar en todo el DOM cada vez, independientemente de si dicho selector había ejecutado anteriormente. En lugar de ello, ejecute el selector de una vez y almacenar los resultados en una variable:
 
