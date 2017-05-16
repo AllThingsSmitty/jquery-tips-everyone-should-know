@@ -6,6 +6,7 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 
 
 <div id="table-of-contents"></div>
+
 ## Tabla de contenido
 
 * [Tips](#consejos)
@@ -53,10 +54,11 @@ if (typeof jQuery == 'undefined') {
 
 Ahora que estás fuera...
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="use-on-binding-instead-of-click"></div>
+
 ### Utilice `.on ()` En lugar de unión `.click ()`
 
 .en El uso de `()` le da varias ventajas sobre el uso de `.click ()`, tales como la capacidad de agregar varios eventos...
@@ -75,10 +77,11 @@ Ahora que estás fuera...
 
 Los espacios de nombres te dan el poder para desenlazar un evento específico (por ejemplo,`.off('click.menuOpening')`).
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="back-to-top-button"></div>
+
 ### Volver al botón de inicio
 
 Mediante el uso de la `animate` y métodos `scrollTop` en jQuery que no es necesario un plugin para crear una animación simple-scroll-a arriba:
@@ -100,10 +103,11 @@ El cambio de los cambios de valor `scrollTop` donde se quiere que la barra de de
 
 **Nota:** ve por alguna [comportamiento incorrecto](https://github.com/jquery/api.jquery.com/issues/417) con `scrollTop`.
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="preload-images"></div>
+
 ### Carga previa de imágenes
 
 Si su página web utiliza una gran cantidad de imágenes que no son visibles inicialmente (por ejemplo, en vuelo estacionario) que tiene sentido para precargar ellos:
@@ -118,10 +122,11 @@ $.preloadImages = function () {
 $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="checking-if-images-are-loaded"></div>
+
 ### Comprobación Si las imágenes se cargan
 
 A veces puede que tenga que comprobar si las imágenes han cargado completamente con el fin de continuar con las secuencias de comandos:
@@ -134,10 +139,11 @@ $('img').on('load', function () {
 
 También puede comprobar si una imagen en particular se ha cargado mediante la sustitución de la etiqueta `<img>` con un ID o clase.
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="fix-broken-images-automatically"></div>
+
 ### Corregir imágenes automáticamente rotas
 
 Si por casualidad usted encuentra enlaces de imagen rotos en su sitio de la sustitución de uno por uno puede ser un dolor. Esta sencilla pieza de código puede ahorrar muchos dolores de cabeza:
@@ -158,10 +164,11 @@ $('img').on('error', function () {
 });
 ```
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="post-a-form-with-ajax"></div>
+
 ### Publicar un formulario con AJAX
 
 Métodos jQuery AJAX son una forma común para solicitar texto, HTML, XML, JSON o. Si desea enviar un formulario a través de AJAX se podía recoger las entradas del usuario a través del método `val()`:
@@ -180,10 +187,11 @@ Sin embargo, todos esos `val()` llamadas es caro. Una mejor manera de recoger la
 $.post('sign_up', $('#sign-up-form').serialize());
 ```
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="toggle-classes-on-hover"></div>
+
 ### Alternar clases en la libración
 
 Digamos que usted quiere cambiar la visual de un elemento se puede hacer clic en la página cuando un usuario se desplaza sobre él. Usted puede agregar una clase a su elemento cuando el usuario está flotando; cuando el usuario deja flotando elimina la clase:
@@ -206,10 +214,11 @@ $('.btn').hover(function () {
 
 **Nota:** CSS puede ser una solución más rápida en este caso, pero es todavía vale la pena saber esto.
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="disabling-input-fields"></div>
+
 ### Desactivación de campos de entrada
 
 A veces es posible que desee el botón de envío de un formulario o una de sus entradas de texto debe ser inhabilitado hasta que el usuario ha realizado una acción determinada (por ejemplo, control de la "He leído los términos" casilla de verificación). Añadir el atributo `disabled` a la entrada para que pueda activarlo cuando se quiere:
@@ -224,10 +233,11 @@ Todo lo que necesita hacer es ejecutar el método `prop` otra vez en la entrada,
 $('input[type="submit"]').prop('disabled', false);
 ```
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id ="stop-the-loading-of-links"></div>div>
+
 ### Detener la carga de Enlaces
 
 A veces no desea vínculos para ir a una determinada página web, ni volver a cargar la página; es posible que desee que hagan otra cosa, como disparador de otro guión. Esto va a hacer el truco de la prevención de la acción por defecto:
@@ -238,10 +248,11 @@ $('a.no-link').on('click', function (e) {
 });
 ```
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="cache-jquery-selectors"></div>
+
 ### de caché de jQuery selectores
 
 Piense en cuántas veces se escribe el mismo selector una y otra vez en cualquier proyecto. Cada `$('.element')` selector tiene que buscar en todo el DOM cada vez, independientemente de si dicho selector había ejecutado anteriormente. En lugar de ello, ejecute el selector de una vez y almacenar los resultados en una variable:
@@ -264,10 +275,11 @@ $('#showBlocks').on('click', function () {
 
 El almacenamiento en caché selectores de jQuery son una ganancia de rendimiento fácil.
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="toggle-fadeslide"></div>
+
 ### De palanca de fundido / Slide
 
 Deslizante y la decoloración son algo que usamos un montón en nuestras animaciones con jQuery. Es posible que sólo quieren mostrar un elemento cuando un usuario hace clic en algo, lo que hace que los `fadeIn` y métodos de `slideDown` perfecta. Pero si desea que el elemento que aparezca en la primera posición y luego desaparecen en el segundo esto va a funcionar muy bien:
@@ -284,10 +296,11 @@ $('.btn').on('click', function () {
 });
 ```
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="simple-accordion"></div>
+
 ### Acordeón simple
 
 Este es un método simple para un acordeón rápida:
@@ -307,10 +320,11 @@ $('#accordion').find('.accordion-header').on('click', function () {
 
 Mediante la adición de este script lo único que tiene que hacer en su página web es el HTML necesario ir a buscar este trabajo.
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="make-two-divs-the-same-height"></div>
+
 ### Haga dos Divs la misma altura
 
 A veces, usted querrá dos divs tener la misma altura no importa qué contenido tienen en ellos:
@@ -347,6 +361,7 @@ $rows.each(function () {
 
 
 <div id="open-external-links-in-new-tabwindow"></div>
+
 ### Abrir enlaces externos en una nueva pestaña / ventana
 
 Abrir enlaces externos en una nueva pestaña o ventana del navegador y garantizar enlaces en el mismo origen abierta en la misma pestaña o ventana:
@@ -359,10 +374,11 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 **Nota:** `window.location.origin` no funciona en IE10. [Esta corrección](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) se ocupa de la cuestión.
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="find-element-by-text"></div>
+
 ### Buscar elemento Por Texto
 
 Mediante el uso de la selector `contains()` en jQuery se puede encontrar texto en el contenido de un elemento. Si no existe texto, ese elemento se ocultará:
@@ -372,10 +388,11 @@ var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="trigger-on-visibility-change"></div>
+
 ### Visibilidad gatillo de Cambio
 
 Gatillo JavaScript cuando el usuario ya no se centra en una pestaña, o vuelve a centrar en una pestaña:
@@ -390,10 +407,11 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="ajax-call-error-handling"></div>
+
 ### Control de errores de llamada Ajax
 
 Cuando una llamada Ajax devuelve un error 404 o 500 se ejecutará el gestor de errores. Si no se define el controlador, otro código jQuery podría no funcionar. Definir un controlador global de error de Ajax:
@@ -404,10 +422,11 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 });
 ```
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="chain-plugin-calls"></div>
+
 ### llamadas Plugin Cadena
 
 jQuery permite el "encadenamiento" plug-in de llamadas a métodos para mitigar el proceso de consulta en repetidas ocasiones el DOM y la creación de varios objetos jQuery. Digamos que el siguiente fragmento representa sus llamadas a métodos plugin:
@@ -438,10 +457,11 @@ $elem.otherStuff();
 
 Ambos métodos [almacenamiento en caché](#cache-jquery-selectors) en el encadenamiento y son las mejores prácticas que conducen al código corto y más rápido.
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 <div id="sort-list-items-alphabetically"></div>
+
 ### ordenar la lista de elementos alfabéticamente
 
 Digamos que usted termina con demasiados elementos en una lista. Tal vez el contenido es producido por un CMS y desea ordenar por orden alfabético:
@@ -459,7 +479,7 @@ ul.append(lis);
 
 Hay que ir!
 
-<sup>[volver al índice de contenidos](#tabla-de-contenido)</sup>
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 ## Apoyo
