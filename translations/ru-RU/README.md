@@ -35,7 +35,7 @@
 1. [Обработка ошибок в AJAX-запросах](#ajax-call-error-handling)
 1. [Цепочка вызовов плагинов](#chain-plugin-calls)
 1. [Сортировка элементов списка по алфавиту](#sort-list-items-alphabetically)
-
+1. [Отключить правую кнопку мыши](#disable-right-click)
 
 <div id="checking-if-jquery-loaded"></div>
 ### Проверка готовности jQuery
@@ -457,6 +457,32 @@ ul.append(lis);
 ```
 
 Такие дела!
+
+<sup>[вернуться к оглавлению](#table-of-contents)</sup>
+
+
+<div id="disable-right-click"></div>
+### Отключить правую кнопку мыши
+
+Если вы хотите отключить контекстное меню, вы можете сделать это для всей страницы...
+
+```javascript
+$(document).ready(function() {
+  $(document).bind('contextmenu', function(e) {
+    return false;
+  })
+})
+```
+
+...но вы также можете сделать то же самое для конкретного элемента:
+
+```javascript
+$(document).ready(function() {
+  $('#submit').bind('contextmenu', function(e) {
+    return false;
+  })
+})
+```
 
 <sup>[вернуться к оглавлению](#table-of-contents)</sup>
 

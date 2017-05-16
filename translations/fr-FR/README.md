@@ -35,7 +35,7 @@ Une collection de conseils simples pour aider votre jeu jQuery.
 1. [Gestion des erreurs Ajax Appel](#ajax-call-error-handling)
 1. [Appels de Plugin Chain](#chain-plugin-calls)
 1. [Trier Liste des articles par ordre alphabétique](#sort-list-items-alphabetically)
-
+1. [Desactivar Botón Derecho del Ratón](#disable-right-click)
 
 <div id="checking-if-jquery-loaded"></div>
 ### Vérification Si jQuery Loaded
@@ -457,6 +457,32 @@ ul.append(lis);
 ```
 
 Voilà!
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
+
+<div id="disable-right-click"></div>
+### Desactivar Botón Derecho del Ratón
+
+Si desea desactivar botón derecho del ratón, se puede hacer por una página entera...
+
+```javascript
+$(document).ready(function() {
+  $(document).bind('contextmenu', function(e) {
+    return false;
+  })
+})
+```
+
+...pero se puede hacer aussi la même para un elemento específico:
+
+```javascript
+$(document).ready(function() {
+  $('#submit').bind('contextmenu', function(e) {
+    return false;
+  })
+})
+```
 
 <sup>[retour à la table des matières](#table-of-contents)</sup>
 

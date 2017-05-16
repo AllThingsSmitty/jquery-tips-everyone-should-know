@@ -35,6 +35,7 @@
 1. [Ajax 程序的錯誤處理](#ajax-程序的錯誤處理)
 1. [串連 Plugin 的函式呼叫](#串連-plugin-的函式呼叫)
 1. [照字母順序排序清單元素（list）](#照字母順序排清單元素list)
+1. [禁用右键单击](#禁用右键单击)
 
 
 ### 檢查 jQuery 是否成功載入
@@ -444,14 +445,32 @@ ul.append(lis);
 <sup>[回到目錄](#目錄)</sup>
 
 
+### 禁用右键单击
+
+
+如果要禁用右键单击，您可以对整个页面进行操作...
+
+```javascript
+$(document).ready(function() {
+  $(document).bind('contextmenu', function(e) {
+    return false;
+  })
+})
+```
+
+...但是您也可以为特定元素做同样的事情：
+
+```javascript
+$(document).ready(function() {
+  $('#submit').bind('contextmenu', function(e) {
+    return false;
+  })
+})
+```
+
+<sup>[回到目錄](#目錄)</sup>
+
+
 ## 瀏覽器支援
 
 現今版本的 Chrome，Firefox，Safari，Opera，Edge 以及 IE11。
-
-## 翻譯
-
-* [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
-* [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
-* [русский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
-* [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
-* [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)

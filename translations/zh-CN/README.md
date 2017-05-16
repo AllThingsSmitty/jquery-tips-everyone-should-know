@@ -36,6 +36,7 @@
 1. [Ajax调用错误处理](#ajax-call-error-handling)
 1. [连锁插件调用](#chain-plugin-calls)
 1. [排序列表项按字母顺序](#sort-list-items-alphabetically)
+1. [禁用右鍵單擊](#disable-right-click)
 
 
 <div id="checking-if-jquery-loaded"></div>
@@ -459,6 +460,32 @@ ul.append(lis);
 ```
 
 你去那里！
+
+<sup>[回目录](#table-of-contents)</sup>
+
+
+<div id="disable-right-click"></div>
+### 禁用右鍵單擊
+
+如果要禁用右鍵單擊，您可以對整個頁面進行操作...
+
+```javascript
+$(document).ready(function(){
+  $(document).bind('contextmenu', function(e){
+    return false;
+  })
+})
+```
+
+...但是您也可以為特定元素做同樣的事情：
+
+```javascript
+$(document).ready(function(){
+  $('#submit').bind('contextmenu', function(e){
+    return false;
+  })
+})
+```
 
 <sup>[回目录](#table-of-contents)</sup>
 
