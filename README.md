@@ -35,6 +35,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Ajax Call Error Handling](#ajax-call-error-handling)
 1. [Chain Plugin Calls](#chain-plugin-calls)
 1. [Sort List Items Alphabetically](#sort-list-items-alphabetically)
+1. [Disable Right-Click](#disable-right-click)
 
 
 ### Checking If jQuery Loaded
@@ -439,6 +440,31 @@ ul.append(lis);
 ```
 
 There you go!
+
+<sup>[back to table of contents](#table-of-contents)</sup>
+
+
+### Disable Right-Click
+
+If you want to disable right-click, you can do it for an entire page...
+
+```javascript
+$(document).ready(function(){
+  $(document).bind('contextmenu', function(e){
+    return false;
+  })
+})
+```
+
+...but you can also do the same for a specific element:
+
+```javascript
+$(document).ready(function(){
+  $('#submit').bind('contextmenu', function(e){
+    return false;
+  })
+})
+```
 
 <sup>[back to table of contents](#table-of-contents)</sup>
 
