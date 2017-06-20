@@ -16,7 +16,6 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 
 ## Consejos
 
-<<<<<<< Updated upstream
 1. [Verificando jQuery Cargado](#verificando-jquery-cargado)
 1. [Utilice `.on ()` En lugar de unión `.click ()`](#utilice-on--en-lugar-de-unión-click-)
 1. [Volver al botón de inicio](#volver-al-botón-de-inicio)
@@ -37,34 +36,12 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 1. [Control de errores de llamada Ajax](#control-de-errores-de-llamada-ajax)
 1. [Llamadas Plugin Cadena](#llamadas-plugin-cadena)
 1. [Ordenar la lista de elementos alfabéticamente](#ordenar-la-lista-de-elementos-alfabéticamente)
-
-
-=======
-1. [Verificando jQuery Cargado](#checking-if-jquery-loaded)
-1. [Utilice `.on ()` En lugar de unión `.click ()`](#use-on-binding-instead-of-click)
-1. [Volver al botón de inicio](#back-to-top-button)
-1. [Carga previa de imágenes](#preload-images)
-1. [comprobando si las imágenes se cargan](#checking-if-images-are-loaded)
-1. [corregir imágenes automáticamente rotas](#fix-broken-images-automatically)
-1. [Publicar un formulario con AJAX](#post-a-form-with-ajax)
-1. [Las clases de palanca en la libración](#toggle-classes-on-hover)
-1. [Desactivar la acción de campos](#disabling-input-fields)
-1. [Detener la carga de Enlaces](#stop-the-loading-of-links)
-1. [de caché de jQuery selectores](#cache-jquery-selectors)
-1. [De palanca de fundido / Slide](#toggle-fadeslide)
-1. [Acordeón simple](#simple-accordion)
-1. [Haga dos Divs la misma altura](#make-two-divs-the-same-height)
-1. [Abrir enlaces externos en una nueva pestaña / ventana](#open-external-links-in-new-tabwindow)
-1. [Buscar elemento Por Texto](#find-element-by-text)
-1. [Visibilidad gatillo de Cambio](#trigger-on-visibility-change)
-1. [Control de errores de llamada Ajax](#ajax-call-error-handling)
-1. [Llamadas Plugin Cadena](#chain-plugin-calls)
-1. [Ordenar la lista de elementos alfabéticamente](#sort-list-items-alphabetically)
-1. [Deshabilitar clic derecho](#disable-right-click)
+1. [Deshabilitar clic derecho](#deshabilitar-clic-derecho)
 
 
 <div id="checking-if-jquery-loaded"></div>
->>>>>>> Stashed changes
+
+
 ### Verificando jQuery Cargado
 
 Antes de que pueda hacer cualquier cosa con jQuery primero tiene que asegurarse de que se ha cargado:
@@ -470,6 +447,8 @@ Hay que ir!
 
 
 <div id="disable-right-click"></div>
+
+
 ### Deshabilitar clic derecho
 
 Si desea desactivar el botón derecho del ratón, puede hacerlo para una página entera...
