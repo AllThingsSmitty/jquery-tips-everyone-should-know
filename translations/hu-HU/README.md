@@ -4,7 +4,6 @@ Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 
 > További nagyszerű listákért tekintsd meg [@sindresorhus](https://github.com/sindresorhus/) válogatott [listáját](https://github.com/sindresorhus/awesome/).
 
-
 ## Tartalomjegyzék
 
 * [Tippek](#tips)
@@ -52,7 +51,7 @@ if (typeof jQuery == 'undefined') {
 
 Now you're off...
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### `.on()` binding ("kötés") használata `.click()` helyett
@@ -73,7 +72,7 @@ Using `.on()` gives you several advantages over using `.click()`, such as the ab
 
 Namespaces give you the power to unbind a specific event (e.g., `.off('click.menuOpening')`).
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### 'Vissza az elejére' gomb
@@ -99,7 +98,7 @@ Changing the `scrollTop` value changes where you wants the scrollbar to land. Al
 
 **Note:** Watch for some [buggy behavior](https://github.com/jquery/api.jquery.com/issues/417) with `scrollTop`.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Képek előbetöltése
@@ -116,7 +115,7 @@ $.preloadImages = function () {
 $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Betöltöttek-e a képek? - Ellenőrzés
@@ -131,7 +130,7 @@ $('img').on('load', function () {
 
 You can also check if one particular image has loaded by replacing the `<img>` tag with an ID or class.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Betölt(het)etlen képek automatikus javítása
@@ -154,7 +153,7 @@ $('img').on('error', function () {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Űrlap elküldése AJAX-al
@@ -175,7 +174,7 @@ However, all of those `val()` calls are expensive. A better way of collecting th
 $.post('sign_up', $('#sign-up-form').serialize());
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### CSS osztály aktiválása a kurzor hatására
@@ -200,7 +199,7 @@ $('.btn').on('hover', function () {
 
 **Note:** CSS may be a faster solution in this case but it's still worthwhile to know this.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Beviteli mezők kikapcsolása
@@ -217,7 +216,7 @@ All you need to do is run the `prop` method again on the input, but set the valu
 $('input[type="submit"]').prop('disabled', false);
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Linkbetöltés megállítása
@@ -230,7 +229,7 @@ $('a.no-link').on('click', function (e) {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### jQuery kiválasztók eltárolása
@@ -255,7 +254,7 @@ $('#showBlocks').on('click', function () {
 
 Caching jQuery selectors are an easy performance gain.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Áttűnés/becsúszás effekt rögzítése
@@ -274,7 +273,7 @@ $('.btn').on('click', function () {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Egyszerű accordion (harmonika-menü)
@@ -296,7 +295,7 @@ $('#accordion').find('.accordion-header').on('click', function () {
 
 By adding this script all you really needs to do on your web page is the necessary HTML go get this working.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### HTML div elemek egyező magassággal
@@ -331,7 +330,7 @@ $rows.each(function () {
 
 **Note:** This can be done several ways [in CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) but depending on what your needs are, knowing how to do this in jQuery is still worthwhile.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Külső linkek megnyitása új fülön/ablakban
@@ -346,7 +345,7 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 **Note:** `window.location.origin` doesn't work in IE10. [This fix](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) takes care of the issue.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Elemek keresése szöveg alapján
@@ -358,7 +357,7 @@ var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Script aktiválás láthatóság változása esetén
@@ -375,7 +374,7 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### AJAX hívások hibakezelése
@@ -388,7 +387,7 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Plugin hívások láncolása
@@ -421,7 +420,7 @@ $elem.otherStuff();
 
 Both chaining and [caching](#cache-jquery-selectors) methods in jQuery are best practices that lead to shorter and faster code.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Listaelemek sorba rendezése ABC szerint
@@ -441,7 +440,7 @@ ul.append(lis);
 
 There you go!
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Jobb egérkattintás kikapcsolása
@@ -466,7 +465,7 @@ $(document).ready(function() {
 })
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ## Támogatás
