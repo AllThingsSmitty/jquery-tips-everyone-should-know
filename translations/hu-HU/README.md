@@ -1,4 +1,4 @@
-# jQuery tippek, amiket mindenkinek tudnia kellene [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# jQuery tippek, amiket mindenkinek tudnia kell [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 
@@ -9,7 +9,7 @@ Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 * [Tippek](#tips)
 * [Támogatás](#support)
 * [További fordítások](#translations)
-* [Közreműködési útmutató (angolul)](CONTRIBUTING.md)
+* [Közreműködési útmutató (angolul)](../../CONTRIBUTING.md)
 
 
 ## Tippek
@@ -224,7 +224,7 @@ $('input[type="submit"]').prop('disabled', false);
 
 ### Linkbetöltés megállítása
 
-Sometimes you don't want links to go to a certain web page nor reload the page; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
+Alkalmanként előfordulhat, hogy egy linkre kattintva nem kívánsz se betölteni egy bizonyos weboldalt, se ugyanazt az oldalt újra, hanem valami másra kell, mint például valami más script aktiválása. Ez a kód megelőzi az alapértelmezett akció lefutását:
 
 ```javascript
 $('a.no-link').on('click', function (e) {
@@ -237,13 +237,13 @@ $('a.no-link').on('click', function (e) {
 
 ### jQuery kiválasztók eltárolása
 
-Think of how many times you write the same selector over and over again in any project. Every `$('.element')` selector has to search the entire DOM each time, regardless if that selector had previously run. Instead, run the selector once and store the results in a variable:
+Gondolj bele, milyen sokszor kellett ugyanazt a kiválasztót (selector) leírnod újra meg újra. Minden `$('.elem')` kiválasztó újra meg újra végig kell böngéssze a teljes DOM-ot akárhányszor meghívod - függetlenül attól, hogy az a kiválasztó egyszer volt-e már futtatva. Szóval helyette futtasd a kiválasztót egyszer, és tárold el az eredményét egy változóban:
 
 ```javascript
 var blocks = $('#blocks').find('li');
 ```
 
-Now you can use the `blocks` variable wherever you want without having to search the DOM every time:
+Most már használhatod s `blocks` változót akárhányszor csak akarod, anélkül, hogy a DOM-ot át kelljen böngészni érte:
 
 ```javascript
 $('#hideBlocks').on('click', function () {
@@ -254,15 +254,14 @@ $('#showBlocks').on('click', function () {
   blocks.fadeIn();
 });
 ```
-
-Caching jQuery selectors are an easy performance gain.
+A jQuery kiválasztók eltárolása egy roppant egyszerű teljesítményjavító technika.
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Áttűnés/becsúszás effekt rögzítése
 
-Sliding and fading are something we use plenty in our animations with jQuery. You might just want to show an element when a user clicks something, which makes the `fadeIn` and `slideDown` methods perfect. But if you want that element to appear on the first click and then disappear on the second this will work just fine:
+A becsúszások és az áttűnések olyan tuajdonságok, amiket előszeretettel használunk animációkhoz a jQuery-ben. Lehet, hogy csak akkor szeretnéd láthatóvá tenni az adott elemet, amikor a felhasználó rákattint valamire, amire a `fadeIn` és `slideDown` eljárások tökéletesek. De ha azt szeretnéd, hogy az adott elem első kattintásra felbukkanjon, majd a másodikre eltűnjön, ez pont megfelel a célra:
 
 ```javascript
 // Fade
@@ -281,7 +280,7 @@ $('.btn').on('click', function () {
 
 ### Egyszerű accordion (harmonika-menü)
 
-This is a simple method for a quick accordion:
+Íme egy egyszerá eljárás egy egyszerű harmonika-menü elkészítésére:
 
 ```javascript
 // Close all panels
@@ -296,20 +295,22 @@ $('#accordion').find('.accordion-header').on('click', function () {
 });
 ```
 
-By adding this script all you really needs to do on your web page is the necessary HTML go get this working.
+Ezen script hozzáadásával már nincs már feladatot hátra a weboldaladon, mint a szükséges HTML elkészítése ahhoz, hogy ezt működésre bírd.
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### HTML div elemek egyező magassággal
 
-Sometimes you'll want two divs to have the same height no matter what content they have in them:
+Néha szükséged lehet arra, hogy két HTML div elem egyforma magas legyen, függetlenül azok belső tartalmától:
 
 ```javascript
 $('.div').css('min-height', $('.main-div').height());
 ```
 
-This example sets the `min-height` which means that it can be bigger than the main div but never smaller. However, a more flexible method would be to loop over a set of elements and set the height to the height of the tallest element:
+Ez a példa beállít egy `min-height` értéket, ami azt jelenti, hogy a kiválasztott elemnek megengedjük, hogy a fő div-nél nagyobb legyen, de azt nem, hogy kisebb.
+
+Egy rugalmasabb megoldás ciklusban végigmenni elemek egy adott halmazán, és azok közül a legmagasabbéhoz állítani a kérdéses elem magasságát:
 
 ```javascript
 var $columns = $('.column');
@@ -322,7 +323,7 @@ $columns.each(function () {
 $columns.height(height);
 ```
 
-If you want _all_ columns to have the same height:
+Ha _minden_ minden oszop magasságát egyformára akarod:
 
 ```javascript
 var $rows = $('.same-height-columns');
@@ -331,14 +332,14 @@ $rows.each(function () {
 });
 ```
 
-**Note:** This can be done several ways [in CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) but depending on what your needs are, knowing how to do this in jQuery is still worthwhile.
+**Megjegyzés:** Erre sok megoldás van [CSS-ben](http://codepen.io/AllThingsSmitty/pen/KMPqoO) de a szükségleteidtől függően, érdemes lehet tudni, hogyan is megy ez jQuery-ben.
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Külső linkek megnyitása új fülön/ablakban
 
-Open external links in a new browser tab or window and ensure links on the same origin open in the same tab or window:
+Külső linkek új böngészőfülön  vagy -ablakban megnyitása, és annak biztosítása, hogy az azonos forrású linkek ugyanabban a fülben/ablakban nyílnak meg:
 
 ```javascript
 $('a[href^="http"]').attr('target', '_blank');
@@ -346,14 +347,14 @@ $('a[href^="//"]').attr('target', '_blank');
 $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 ```
 
-**Note:** `window.location.origin` doesn't work in IE10. [This fix](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) takes care of the issue.
+**Megjegyzés:** `window.location.origin` nem működik IE10-ben. [Ez a javítás](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) gondoskodik erről a problémáról.
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Elemek keresése szöveg alapján
 
-By using the `contains()` selector in jQuery you can find text in content of an element. If text doesn't exists, that element will be hidden:
+A jQuery `contains()` kiválasztójának használatával megtalálhatsz szöveg(részlet)eket egy elem tartalmában. Ez a kód, ha nem talál szöveget az elemben, elrejti azt:
 
 ```javascript
 var search = $('#search').val();
@@ -365,7 +366,7 @@ $('div:not(:contains("' + search + '"))').hide();
 
 ### Script aktiválás láthatóság változása esetén
 
-Trigger JavaScript when the user is no longer focusing on a tab, or refocuses on a tab:
+Javascript aktiválásra amikor a felhasználó ellapoz egy fülről, vagy visszalép oda:
 
 ```javascript
 $(document).on('visibilitychange', function (e) {
@@ -382,7 +383,7 @@ $(document).on('visibilitychange', function (e) {
 
 ### AJAX hívások hibakezelése
 
-When an Ajax call returns a 404 or 500 error the error handler will be executed. If the handler isn't defined, other jQuery code might not work anymore. Define a global Ajax error handler:
+Amikor egy AJAX hívás HTTP 404 vagy 500 hibával tér vissza, a hibakezelő végrehajtásra kerül. Ha a hibakezelő nincs definiálva, további jQuery kódok potenciálisan működésképtelenné válnak. Definiálj egy globális AJAX hibakezelőt:
 
 ```javascript
 $(document).on('ajaxError', function (e, xhr, settings, error) {
@@ -395,7 +396,7 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 
 ### Plugin hívások láncolása
 
-jQuery allows for the "chaining" of plugin method calls to mitigate the process of repeatedly querying the DOM and creating multiple jQuery objects. Let's say the following snippet represents your plugin method calls:
+A jQuery lehetővé teszi plugin eljáráshívások "láncolását" a DOM ismételt lekérése folyamatának enyhítésére, valamint több jQuery objektum létrehozására. Tegyük fel, hogy az alábbi kódtöredék jelképezi a plugin eljáráshívásaid:
 
 ```javascript
 $('#elem').show();
@@ -403,7 +404,7 @@ $('#elem').html('bla');
 $('#elem').otherStuff();
 ```
 
-This could be vastly improved by using chaining:
+Ekkor igen komoly teljesítményövekedést érhetsz el láncolás használatával:
 
 ```javascript
 $('#elem')
@@ -412,7 +413,7 @@ $('#elem')
   .otherStuff();
 ```
 
-An alternative is to cache the element in a variable (prefixed with `$`):
+Alternatívaként eltárolhatod az elemet egy változóban (`$` előtaggal):
 
 ```javascript
 var $elem = $('#elem');
@@ -421,14 +422,14 @@ $elem.html('bla');
 $elem.otherStuff();
 ```
 
-Both chaining and [caching](#cache-jquery-selectors) methods in jQuery are best practices that lead to shorter and faster code.
+Mind a láncolás, mint az [eltárolás](#cache-jquery-selectors) eljárásai "legjobb gyakorlatnak" (best practice) tekinthetők jQuery-ben, és rövidebb, gyorsabb kódot eredményeznek. 
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Listaelemek sorba rendezése ABC szerint
 
-Let's say you end up with too many items in a list. Maybe the content is produced by a CMS and you want to order them alphabetically:
+Tegyük fel, hogy egy listádban túl sok elem van. Mondjuk a lista tartalma egy CMS által került legenerálásra, és te szeretnéd ezt ABC-sorba rendezni:
 
 ```javascript
 var ul = $('#list'),
@@ -441,14 +442,14 @@ lis.sort(function (a, b) {
 ul.append(lis);
 ```
 
-There you go!
+Meg is volnánk!
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Jobb egérkattintás kikapcsolása
 
-If you want to disable right-click, you can do it for an entire page...
+Ha le szeretnéd tiltani a jobb-klikket, az egész oldalra megteheted...
 
 ```javascript
 $(document).ready(function() {
@@ -458,7 +459,7 @@ $(document).ready(function() {
 })
 ```
 
-...but you can also do the same for a specific element:
+...de akár egy konkrét elemre is:
 
 ```javascript
 $(document).ready(function() {
