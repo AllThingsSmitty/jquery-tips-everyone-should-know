@@ -1,4 +1,4 @@
-# jQuery tippek, amiket mindenkinek tudnia kell [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# jQuery tippek, amiket mindenkinek tudni érdemes [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 
@@ -6,36 +6,35 @@ Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 
 ## Tartalomjegyzék
 
-* [Tippek](#tips)
-* [Támogatás](#support)
-* [További fordítások](#translations)
+* [Tippek](#tippek)
+* [Támogatás](#t%C3%A1mogat%C3%A1s)
+* [További fordítások](#tov%C3%A1bbi-ford%C3%ADt%C3%A1sok)
 * [Közreműködési útmutató (angolul)](../../CONTRIBUTING.md)
 
 
 ## Tippek
 
-1. [Betöltött-e a jQuery? - Ellenőrzés](#checking-if-jquery-loaded)
-1. [`.on()` binding ("kötés") használata `.click()` helyett](#use-on-binding-instead-of-click)
-1. ['Vissza az elejére' gomb](#back-to-top-button)
-1. [Képek előbetöltése](#preload-images)
-1. [Betöltöttek-e a képek? - Ellenőrzés](#checking-if-images-are-loaded)
-1. [Betölt(het)etlen képek automatikus javítása](#fix-broken-images-automatically)
-1. [Űrlap elküldése AJAX-al](#post-a-form-with-ajax)
-1. [CSS osztály aktiválása a kurzor hatására](#toggle-classes-on-hover)
-1. [Beviteli mezők kikapcsolása](#disabling-input-fields)
-1. [Linkbetöltés megállítása](#stop-the-loading-of-links)
-1. [jQuery kiválasztók eltárolása](#cache-jquery-selectors)
-1. [Áttűnés/becsúszás effekt rögzítése](#toggle-fadeslide)
-1. [Egyszerű accordion (harmonika-menü)](#simple-accordion)
-1. [HTML div elemek egyező magassággal](#make-two-divs-the-same-height)
-1. [Külső linkek megnyitása új fülön/ablakban](#open-external-links-in-new-tabwindow)
-1. [Elemek keresése szöveg alapján](#find-element-by-text)
-1. [Script aktiválás láthatóság változása esetén](#trigger-on-visibility-change)
-1. [AJAX hívások hibakezelése](#ajax-call-error-handling)
-1. [Plugin hívások láncolása](#chain-plugin-calls)
-1. [Listaelemek sorba rendezése ABC szerint](#sort-list-items-alphabetically)
-1. [Jobb egérkattintás kikapcsolása](#disable-right-click)
-
+1. [Betöltött-e a jQuery? - Ellenőrzés](#bet%C3%B6lt%C3%B6tt-e-a-jquery---ellen%C5%91rz%C3%A9s)
+1. [`.on()` binding ("kötés") használata `.click()` helyett](#on-binding-k%C3%B6t%C3%A9s-haszn%C3%A1lata-click-helyett)
+1. ['Vissza az elejére' gomb](#vissza-az-elej%C3%A9re-gomb)
+1. [Képek előbetöltése](#k%C3%A9pek-el%C5%91bet%C3%B6lt%C3%A9se)
+1. [Betöltöttek-e a képek? - Ellenőrzés](#bet%C3%B6lt%C3%B6ttek-e-a-k%C3%A9pek---ellen%C5%91rz%C3%A9s)
+1. [Betölt(het)etlen képek automatikus javítása](#bet%C3%B6lthetetlen-k%C3%A9pek-automatikus-jav%C3%ADt%C3%A1sa)
+1. [Űrlap elküldése AJAX-al](#%C5%B1rlap-elk%C3%BCld%C3%A9se-ajax-al)
+1. [CSS osztály aktiválása a kurzor hatására](#css-oszt%C3%A1ly-aktiv%C3%A1l%C3%A1sa-a-kurzor-hat%C3%A1s%C3%A1ra)
+1. [Beviteli mezők kikapcsolása](#beviteli-mez%C5%91k-kikapcsol%C3%A1sa)
+1. [Linkbetöltés megállítása](#linkbet%C3%B6lt%C3%A9s-meg%C3%A1ll%C3%ADt%C3%A1sa)
+1. [jQuery kiválasztók eltárolása](#jquery-kiv%C3%A1laszt%C3%B3k-elt%C3%A1rol%C3%A1sa)
+1. [Áttűnés/becsúszás effekt rögzítése](#%C3%A1tt%C5%B1n%C3%A9sbecs%C3%BAsz%C3%A1s-effekt-r%C3%B6gz%C3%ADt%C3%A9se)
+1. [Egyszerű accordion (harmonika-menü)](#egyszer%C5%B1-accordion-harmonika-men%C3%BC)
+1. [HTML div elemek egyező magassággal](#html-div-elemek-egyez%C5%91-magass%C3%A1ggal)
+1. [Külső linkek megnyitása új fülön/ablakban](#k%C3%BCls%C5%91-linkek-megnyit%C3%A1sa-%C3%BAj-f%C3%BCl%C3%B6nablakban)
+1. [Elemek keresése szöveg alapján](#elemek-keres%C3%A9se-sz%C3%B6veg-alapj%C3%A1n)
+1. [Script aktiválás láthatóság változása esetén](#script-aktiv%C3%A1l%C3%A1s-l%C3%A1that%C3%B3s%C3%A1g-v%C3%A1ltoz%C3%A1sa-eset%C3%A9n)
+1. [AJAX hívások hibakezelése](#ajax-h%C3%ADv%C3%A1sok-hibakezel%C3%A9se)
+1. [Plugin hívások láncolása](#plugin-h%C3%ADv%C3%A1sok-l%C3%A1ncol%C3%A1sa)
+1. [Listaelemek sorba rendezése ABC szerint](#listaelemek-sorba-rendez%C3%A9se-abc-szerint)
+1. [Jobb egérkattintás kikapcsolása](#jobb-eg%C3%A9rkattint%C3%A1s-kikapcsol%C3%A1sa)
 
 ### Betöltött-e a jQuery? - Ellenőrzés
 
