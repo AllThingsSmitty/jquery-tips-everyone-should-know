@@ -39,7 +39,7 @@ Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 
 ### Betöltött-e a jQuery? - Ellenőrzés
 
-Before you can do anything with jQuery you first need to make certain it has loaded:
+Mielőtt bármihez is kezdhetnél a jQuery-vel, először biztosra kell menned abban, hogy betöltött:
 
 ```javascript
 if (typeof jQuery == 'undefined') {
@@ -49,35 +49,36 @@ if (typeof jQuery == 'undefined') {
 }
 ```
 
-Now you're off...
+Most, hogy elstartoltunk...
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### `.on()` binding ("kötés") használata `.click()` helyett
 
-Using `.on()` gives you several advantages over using `.click()`, such as the ability to add multiple events...
+Az `.on()` függvény használata számos előnnyel rendelkezik a `.click()` megoldással szemben, mint például: több esemény egyszeri hozzáadása...
 
 ```javascript
 .on('click tap hover')
 ```
 
-...a binding applies to dynamically created elements, as well (there's no need to manually bind every single element dynamically added to a DOM element)...
+...a kötés alkalmazása dinamikusan létrehozott elemekre is (tehát nem kell egyesével végrehajtani a kötést minden dinamikus DOM elemre)...
 
-...and the possibility to set a namespace:
+...és a névterek felállításának lehetősége:
 
 ```javascript
 .on('click.menuOpening')
 ```
 
-Namespaces give you the power to unbind a specific event (e.g., `.off('click.menuOpening')`).
+Névterek segítségével "lecsatolhatsz" egyes konkrét eseményeket (pl. `.off('click.menuOpening')`).
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### 'Vissza az elejére' gomb
 
-By using the `animate` and `scrollTop` methods in jQuery you don't need a plugin to create a simple scroll-to-top animation:
+Hála a jQuery `animate` és `scrollTop` eljárásainak, nincs szükséged pluginokra ahhoz, hogy létrehozz egy egyszerű 'scroll-to-top' animációt:
+
 
 ```javascript
 // Back to top
@@ -94,9 +95,9 @@ $('.container').on('click', '.back-to-top', function (e) {
 </div>
 ```
 
-Changing the `scrollTop` value changes where you wants the scrollbar to land. All you're really doing is animating the body of the document throughout the course of 800 milliseconds until it scrolls to the top of the document.
+A `scrollTop` értékének változtatásával beállíthatod, hova szeretnéd, hogy érkezzen a görgetősáv. Igazából amit csinálsz, az annyi, hogy a látható részt animálod egy 800 miliszekundumos időtartamon belül, aminek a végére ez aztán "felgurul" a dokumentum tetejére.
 
-**Note:** Watch for some [buggy behavior](https://github.com/jquery/api.jquery.com/issues/417) with `scrollTop`.
+**Megjegyzés:** Figyelj oda a `scrollTop` esetenkénti [bugos viselkedésére](https://github.com/jquery/api.jquery.com/issues/417).
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
@@ -120,7 +121,7 @@ $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 
 ### Betöltöttek-e a képek? - Ellenőrzés
 
-Sometimes you might need to check if your images have fully loaded in order to continue on with your scripts:
+Alkalmanként szükséges lehet rá. hogy leellenőrizd, teljesen betöltöttek-e a képeid, annak érdekében, hogy folytatódhasson a scripted lefutása:
 
 ```javascript
 $('img').on('load', function () {
@@ -128,14 +129,14 @@ $('img').on('load', function () {
 });
 ```
 
-You can also check if one particular image has loaded by replacing the `<img>` tag with an ID or class.
+Ezen felül azt is leellenőrizheted, hogy egy konkrét kép betöltött-e: mindössze cseréld le a fenti kódban az `<img>` címkét egy megfelelő azonosíra (ID) vagy osztályra.
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Betölt(het)etlen képek automatikus javítása
 
-If you happen to find broken image links on your site replacing them one by one can be a pain. This simple piece of code can save a lot of headaches:
+Ha úgy alakul, hogy 'törött képlinkeket' találsz az oldaladon, egyenként mindet lecserélni fájdalmasan hosszú és kimerítő folyamat lenne. Ez az egyszerű kódrészlet sok fejfájástól megkímélhet:
 
 ```javascript
 $('img').on('error', function () {
@@ -145,7 +146,7 @@ $('img').on('error', function () {
 });
 ```
 
-Alternatively, if you wish to simply hide broken images this snippet will take care of that for:
+Alternatívaként, ha egyszerűen csak el kívánod rejteni ezeket a betölt(het)etlen képeket, ez a kódrészlet gondoskodik róla:
 
 ```javascript
 $('img').on('error', function () {
@@ -158,7 +159,7 @@ $('img').on('error', function () {
 
 ### Űrlap elküldése AJAX-al
 
-jQuery AJAX methods are a common way to request text, HTML, XML, or JSON. If you wanted to send a form via AJAX you could collect the user inputs via the `val()` method:
+A jQuery AJAX eljárások elterjedt módjai szöveges, HTML, XML vagy JSON állományok lekérésének. Ha egy egyszerű űrlapot kívánsz AJAX-on keresztül elküldeni, a felhasználói bemenetet össze tudod gyűjteni a `val()` eljárás segítségével:
 
 ```javascript
 $.post('sign_up.php', {
@@ -168,7 +169,7 @@ $.post('sign_up.php', {
 });
 ```
 
-However, all of those `val()` calls are expensive. A better way of collecting the user inputs is using the `serialize()` function which collects the user inputs as a string:
+A `val()` hívások ugyanakkor számításigényesek. Felhasználói input begyűjtésére kedvezőbb módszer a `serialize()` függvény használata, ami ezeket string-ként gyűjti be:
 
 ```javascript
 $.post('sign_up', $('#sign-up-form').serialize());
@@ -179,7 +180,9 @@ $.post('sign_up', $('#sign-up-form').serialize());
 
 ### CSS osztály aktiválása a kurzor hatására
 
-Let's say you want to change the visual of a clickable element on your page when a user hovers over it. You can add a class to your element when the user is hovering; when the user stops hovering removes the class:
+Tegyük fel, hogy egy kattintható elem megjelenését szeretnéd megváltoztatni, amikor egy felhasználó a kurzorával éppen fölötte áll. (:hover)
+
+Elemedhez hozzáadhatsz egy vagy több CSS osztályt ilyen esetekben; amikor a felhasználó arrébb viszi a kurzort, az osztály automatikusan eltávolításra kerül az elemről:
 
 ```javascript
 $('.btn').on('hover', function () {
@@ -189,7 +192,7 @@ $('.btn').on('hover', function () {
 });
 ```
 
-You just need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
+Innentől már csak a szükséges CSS-t kell hozzáadnod. Viszont egy _még egyszerűbb_ módszerért használhatod a `toggleClass` eljárást is:
 
 ```javascript
 $('.btn').on('hover', function () {
@@ -197,20 +200,20 @@ $('.btn').on('hover', function () {
 });
 ```
 
-**Note:** CSS may be a faster solution in this case but it's still worthwhile to know this.
+**Megjegyzés:** a CSS gyorsabb megoldás lehet ebben az esetben, mindazonáltal érdemes tudnod róla, hogy ilyet is lehet.
 
 <sup>[vissza a tartalomjegyzékhez](#table-of-contents)</sup>
 
 
 ### Beviteli mezők kikapcsolása
 
-At times you may want the submit button of a form or one of its text inputs to be disabled until the user has performed a certain action (e.g., checking the "I've read the terms" checkbox). Add the `disabled` attribute to your input so you can enable it when you want:
+Alkalmanként előfordulhat, hogy érdekedben áll kikapcsolni a "küldés" gombot egy űrlapon, vagy letiltani egy vagy több szövegbeviteli mezőt, amíg a felhasználó végre nem hajt egy bizonyos akciót (pl. bepipálja az "elolvastam a felhasználói feltételeket" jelölőnégyzetet). Adj hozzá egy `disabled` tulajdonságot a beviteli mezőidhez, így kedved szerint (de)aktiválhatod őket:
 
 ```javascript
 $('input[type="submit"]').prop('disabled', true);
 ```
 
-All you need to do is run the `prop` method again on the input, but set the value of `disabled` to `false`:
+Nem kell mást tenned, mint újra futtatni a `prop` eljárást az adott beviteli mező(kö)n, ezúttal `false` értékkel:
 
 ```javascript
 $('input[type="submit"]').prop('disabled', false);
