@@ -477,6 +477,8 @@ $(document).ready(function() {
 
 A Chrome, Firefox, Safari, Opera, Edge és IE11 böngészők jelenlegi verziói.
 
+<sup>[vissza a tartalomjegyzékhez](#tartalomjegyz%C3%A9k)</sup>
+
 
 ## További fordítások
 
@@ -485,3 +487,5 @@ A Chrome, Firefox, Safari, Opera, Edge és IE11 böngészők jelenlegi verziói.
 * [Pусский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
 * [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
 * [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
+
+<sup>[vissza a tartalomjegyzékhez](#tartalomjegyz%C3%A9k)</sup>
