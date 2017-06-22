@@ -490,3 +490,5 @@ $(document).ready(function() {
 ## Soutien
 
 Les versions actuelles de Chrome, Firefox, Safari, Opera, Edge, et IE11.
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
