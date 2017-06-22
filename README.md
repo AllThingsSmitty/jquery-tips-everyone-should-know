@@ -473,6 +473,8 @@ $(document).ready(function() {
 
 Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
 
+<sup>[back to table of contents](#table-of-contents)</sup>
+
 
 ## Translations
 
@@ -482,3 +484,6 @@ Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
 * [Pусский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
 * [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
 * [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
+
+<sup>[back to table of contents](#table-of-contents)</sup>
+
