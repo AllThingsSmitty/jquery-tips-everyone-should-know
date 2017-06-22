@@ -6,6 +6,7 @@ Une collection de conseils simples pour aider votre jeu jQuery.
 
 
 <div id="table-of-contents"></div>
+
 ## Table des matières
 
 * [Conseils](#conseils)
@@ -38,6 +39,7 @@ Une collection de conseils simples pour aider votre jeu jQuery.
 1. [Desactivar Botón Derecho del Ratón](#disable-right-click)
 
 <div id="checking-if-jquery-loaded"></div>
+
 ### Vérification Si jQuery Loaded
 
 Avant de pouvoir faire quoi que ce soit avec jQuery vous devez d'abord vous assurer qu'il a été chargé:
@@ -56,6 +58,7 @@ Maintenant, vous êtes hors ...
 
 
 <div id="use-on-binding-instead-of-click"></div>
+
 ### Utilisez `.on()` Binding Au lieu de `.click()`
 
 Utiliser `.on()` vous donne plusieurs avantages par rapport `.click()`, comme la possibilité d'ajouter plusieurs événements...
@@ -78,6 +81,7 @@ Namespaces vous donnent le pouvoir de délier un événement spécifique (par ex
 
 
 <div id="back-to-top-button"></div>
+
 ### Haut de la page Bouton
 
 En utilisant le `animate` et méthodes `scrollTop` dans jQuery vous ne pas besoin d'un plug-in pour créer une animation simple défilement-to-top:
@@ -103,6 +107,7 @@ Modification des valeur change `scrollTop` où vous veut le scrollbar à la terr
 
 
 <div id="preload-images"></div>
+
 ### Précharger Images
 
 Si votre page Web utilise beaucoup d'images qui ne sont pas visibles initialement (par exemple, sur le vol stationnaire), il est logique de les précharger:
@@ -121,6 +126,7 @@ $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 
 
 <div id="checking-if-images-are-loaded"></div>
+
 ### Vérification Si les images sont chargées
 
 Parfois, vous pourriez avoir besoin de vérifier si vos images sont entièrement chargées, afin de continuer avec vos scripts:
@@ -137,6 +143,7 @@ Vous pouvez également vérifier si une image particulière a été chargé par 
 
 
 <div id="fix-broken-images-automatically"></div>
+
 ### Fix Broken Images automatiquement
 
 Si vous arrive de trouver des liens d'image cassés sur votre site pour les remplacer un par un peut être une douleur. Ce simple morceau de code permet d'économiser beaucoup de maux de tête:
@@ -161,6 +168,7 @@ $('img').on('error', function () {
 
 
 <div id="post-a-form-with-ajax"></div>
+
 ### Poster un formulaire avec AJAX
 
 Méthodes jQuery AJAX sont une voie commune pour demander le texte, HTML, XML ou JSON. Si vous voulez envoyer un formulaire via AJAX, vous pouvez collecter les entrées utilisateur via la méthode `val()`:
@@ -183,6 +191,7 @@ $.post('sign_up', $('#sign-up-form').serialize());
 
 
 <div id="toggle-classes-on-hover"></div>
+
 ### Basculer Classes sur Hover
 
 Disons que vous voulez changer le visuel d'un élément cliquable sur votre page quand un utilisateur survole. Vous pouvez ajouter une classe à votre élément lorsque l'utilisateur est en vol stationnaire; lorsque l'utilisateur arrête planant supprime la classe:
@@ -209,6 +218,7 @@ $('.btn').hover(function () {
 
 
 <div id="disabling-input-fields"></div>
+
 ### Désactivation de champs d'entrée
 
 Parfois, vous voudrez peut-être le bouton d'envoi d'un formulaire ou une de ses entrées de texte est désactivé jusqu'à ce que l'utilisateur a effectué une certaine action (par exemple, la vérification du «Je l'ai lu les termes« case à cocher). Ajouter l'attribut `disabled` à votre entrée de sorte que vous pouvez l'activer quand vous voulez:
@@ -227,6 +237,7 @@ $('input[type="submit"]').prop('disabled', false);
 
 
 <div id="stop-the-loading-of-links"></div>
+
 ### Arrêter le chargement des Liens
 
 Parfois, vous ne voulez pas de liens pour aller à une certaine page Web, ni recharger la page; vous voudrez peut-être qu'ils fassent d'autre comme déclencheur d'un autre script quelque chose. Cela fera l'affaire d'empêcher l'action par défaut:
@@ -241,6 +252,7 @@ $('a.no-link').on('click', function (e) {
 
 
 <div id="cache-jquery-selectors"></div>
+
 ### Cache jQuery sélecteurs
 
 Pensez à combien de fois vous écrivez le même sélecteur maintes et maintes fois dans tout projet. Chaque `$ ( '. Élément')` sélecteur doit rechercher l'ensemble DOM chaque fois, peu importe si ce sélecteur avait précédemment terme. Au lieu de cela, exécutez le sélecteur une fois et stocker les résultats dans une variable:
@@ -267,6 +279,7 @@ sélecteurs Caching jQuery sont un gain de performance facile.
 
 
 <div id="toggle-fadeslide"></div>
+
 ### Basculer Fade / Slide
 
 Coulissantes et à la décoloration sont quelque chose que nous utilisons beaucoup dans nos animations avec jQuery. Vous voudrez peut-être juste pour montrer un élément lorsqu'un utilisateur clique sur quelque chose, ce qui rend les méthodes `slideDown` et `fadeIn` parfait. Mais si vous voulez que l'élément à apparaître sur le premier clic et puis disparaissent sur le second cela fonctionne très bien:
@@ -287,6 +300,7 @@ $('.btn').on('click', function () {
 
 
 <div id="simple-accordion"></div>
+
 ### Accordéon Simple
 
 Ceci est une méthode simple pour un accordéon rapide:
@@ -310,6 +324,7 @@ En ajoutant ce script tout ce que vous a vraiment besoin de le faire sur votre p
 
 
 <div id="make-two-divs-the-same-height"></div>
+
 ### Faire deux Divs la même hauteur
 
 Parfois, vous aurez envie deux divs d'avoir la même hauteur, peu importe le contenu qu'ils ont en eux:
@@ -346,6 +361,7 @@ $rows.each(function () {
 
 
 <div id="open-external-links-in-new-tabwindow"></div>
+
 ### Ouvrez Liens externes dans un nouvel onglet / fenêtre
 
 Ouvrir des liens externes dans un nouvel onglet du navigateur ou la fenêtre et assurer des liens sur la même origine ouvert dans le même onglet ou une fenêtre:
@@ -362,6 +378,7 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 
 <div id="find-element-by-text"></div>
+
 ### Trouver Élément Par texte
 
 En utilisant le `contains()` sélecteur jQuery vous pouvez rechercher du texte dans le contenu d'un élément. Si le texte n'existe pas, cet élément sera caché:
@@ -375,6 +392,7 @@ $('div:not(:contains("' + search + '"))').hide();
 
 
 <div id="trigger-on-visibility-change"></div>
+
 ### Déclenchement de la visibilité Change
 
 Trigger JavaScript lorsque l'utilisateur est plus axé sur un onglet, ou réoriente sur un onglet:
@@ -393,6 +411,7 @@ $(document).on('visibilitychange', function (e) {
 
 
 <div id="ajax-call-error-handling"></div>
+
 ### Gestion des erreurs Ajax Appel
 
 Lorsqu'un appel Ajax renvoie une erreur 404 ou 500 le gestionnaire d'erreur sera exécutée. Si le gestionnaire ne se définit pas, un autre code jQuery ne fonctionneront plus. Définir un gestionnaire global d'erreur Ajax:
@@ -407,6 +426,7 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 
 
 <div id="chain-plugin-calls"></div>
+
 ### appels Plugin Chain
 
 jQuery permet le "chaînage" du plug-in méthode appelle pour atténuer le processus d'interrogation à plusieurs reprises le DOM et la création de plusieurs objets jQuery. Disons que l'extrait suivant représente vos appels de méthode plugin:
@@ -441,6 +461,7 @@ Les deux chaînage et [cache](#jquery-sélecteurs cache-) méthodes jQuery sont 
 
 
 <div id="sort-list-items-alphabetically"></div>
+
 ### Trier Liste Articles alphabétiquement
 
 Disons que vous vous retrouvez avec trop d'éléments dans une liste. Peut-être que le contenu est produit par un CMS et que vous souhaitez les commander par ordre alphabétique:
@@ -462,6 +483,7 @@ Voilà!
 
 
 <div id="disable-right-click"></div>
+
 ### Desactivar Botón Derecho del Ratón
 
 Si desea desactivar botón derecho del ratón, se puede hacer por una página entera...
