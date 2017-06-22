@@ -477,3 +477,6 @@ $(document).ready(function() {
 ## Apoyo
 
 Las versiones actuales de Chrome, Firefox, Safari, Opera, Edge y EI11.
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
