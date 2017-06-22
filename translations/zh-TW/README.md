@@ -474,3 +474,5 @@ $(document).ready(function() {
 ## 瀏覽器支援
 
 現今版本的 Chrome，Firefox，Safari，Opera，Edge 以及 IE11。
+
+<sup>[回到目錄](#目錄)</sup>
