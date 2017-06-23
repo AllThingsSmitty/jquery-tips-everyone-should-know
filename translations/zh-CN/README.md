@@ -518,3 +518,17 @@ $(document).ready(function(){
 当前版本的Chrome，火狐，Safari，歌剧，EDGE和IE11的。
 
 <sup>[回目录](#table-of-contents)</sup>
+
+
+<div id="translations"></div>
+
+## 翻譯
+
+* [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
+* [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
+* [Magyar](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/hu-HU)
+* [Pусский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
+* [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
+* [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
+
+<sup>[回目录](#table-of-contents)</sup>
