@@ -16,6 +16,7 @@
 
 ## 技巧
 
+1. [使用 `noConflict()`](#使用-noConflict)
 1. [檢查 jQuery 是否成功載入](#檢查-jquery-是否成功載入)
 1. [使用 `.on()` 做 Binding，而不要使用 `.click()`](#使用-on-做-binding而不要使用-click)
 1. [返回最頂端的按鈕](#返回最頂端的按鈕)
@@ -39,6 +40,19 @@
 1. [禁用右键单击](#禁用右键单击)
 
 
+### 使用 `noConflict()`
+
+其他JavaScript库也使用jQuery使用的`$`别名。 为了确保jQuery不会与不同库的`$`对象发生冲突，请在文档的开头使用`noConflict()`方法：
+
+```javascript
+jQuery.noConflict();
+```
+
+现在，您将使用`jQuery`变量名称而不是`$`来引用jQuery对象（例如`jQuery('div p').hide()`）。
+
+<sup>[回到目錄](#目錄)</sup>
+
+
 ### 檢查 jQuery 是否成功載入
 
 在你使用 jQuery 做任何事情之前，你應該先確定其是否成功載入：
@@ -50,7 +64,6 @@ if (typeof jQuery == 'undefined') {
   console.log('jQuery has loaded');
 }
 ```
-
 
 <sup>[回到目錄](#目錄)</sup>
 

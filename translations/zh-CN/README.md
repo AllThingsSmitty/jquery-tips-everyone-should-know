@@ -18,6 +18,7 @@
 
 ## 提示
 
+1. [使用 `noConflict()`](#use-noconflict)
 1. [检查是否加载的jQuery](＃checking-if-jquery-loaded)
 1. [使用`.on()`绑定`.click()`代替](#use-on-binding-instead-of-click)
 1. [返回顶部按钮](#back-to-top-button)
@@ -39,6 +40,21 @@
 1. [连锁插件调用](#chain-plugin-calls)
 1. [排序列表项按字母顺序](#sort-list-items-alphabetically)
 1. [禁用右鍵單擊](#disable-right-click)
+
+
+<div id="use-noconflict"></div>
+
+### 使用 `noConflict()`
+
+其他JavaScript庫也使用jQuery使用的`$`別名。 為了確保jQuery不會與不同庫的`$`對象發生衝突，請在文檔的開頭使用`noConflict()`方法：
+
+```javascript
+jQuery.noConflict();
+```
+
+現在，您將使用`jQuery`變量名稱而不是`$`來引用jQuery對象（例如，`jQuery('div p').hide()`）。
+
+<sup>[回目录](#table-of-contents)</sup>
 
 
 <div id="checking-if-jquery-loaded"></div>
