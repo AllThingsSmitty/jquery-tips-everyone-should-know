@@ -17,6 +17,7 @@ Une collection de conseils simples pour aider votre jeu jQuery.
 
 ## Conseils
 
+1. [Utilisez `noConflict()`](#use-noconflict)
 1. [Vérification Si jQuery Loaded](#checking-if-jquery-loaded)
 1. [Utilisez `.on()` Binding Au lieu de `.click()`](#use-on-binding-instead-of-click)
 1. [Haut de la page Bouton](#back-to-top-button)
@@ -38,6 +39,22 @@ Une collection de conseils simples pour aider votre jeu jQuery.
 1. [Appels de Plugin Chain](#chain-plugin-calls)
 1. [Trier Liste des articles par ordre alphabétique](#sort-list-items-alphabetically)
 1. [Desactivar Botón Derecho del Ratón](#disable-right-click)
+
+
+<div id="use-noconflict"></div>
+
+### Utilisez `noConflict()`
+
+L'alias `$` utilisé par jQuery est également utilisé par d'autres bibliothèques JavaScript. Pour vous assurer que jQuery n'est pas en conflit avec l'objet `$` de différentes bibliothèques, utilisez la méthode `noConflict ()` au début du document:
+
+```javascript
+jQuery.noConflict();
+```
+
+Vous allez maintenant référencer l'objet jQuery en utilisant le nom de variable `jQuery` au lieu de `$` (par exemple, `jQuery('div p').hide()`).
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
 
 <div id="checking-if-jquery-loaded"></div>
 

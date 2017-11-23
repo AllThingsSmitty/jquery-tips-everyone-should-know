@@ -17,6 +17,7 @@
 
 ## Советы
 
+1. [Используйте `noConflict()`](#use-noconflict)
 1. [Проверка готовности jQuery](#checking-if-jquery-loaded)
 1. [Используйте `.on()` вместо `.click()`](#use-on-binding-instead-of-click)
 1. [Кнопка "вернуться к началу"](#back-to-top-button)
@@ -38,6 +39,22 @@
 1. [Цепочка вызовов плагинов](#chain-plugin-calls)
 1. [Сортировка элементов списка по алфавиту](#sort-list-items-alphabetically)
 1. [Отключить правую кнопку мыши](#disable-right-click)
+
+
+<div id="use-noconflict"></div>
+
+### Используйте `noConflict()`
+
+Асимвол `$`, используемый jQuery, также используется другими библиотеками JavaScript. Чтобы гарантировать, что jQuery не конфликтует с объектом `$` из разных библиотек, используйте метод `noConflict()` в начале документа:
+
+```javascript
+jQuery.noConflict();
+```
+
+Теперь вы ссылаетесь на объект jQuery, используя имя переменной `jQuery` вместо `$` (например, `jQuery('div p').hide()`).
+
+<sup>[вернуться к оглавлению](#table-of-contents)</sup>
+
 
 <div id="checking-if-jquery-loaded"></div>
 

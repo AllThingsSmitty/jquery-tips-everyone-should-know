@@ -17,6 +17,7 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 
 ## Consejos
 
+1. [Utilizar `noConflict()`](#utilizar-noconflict)
 1. [Verificando jQuery Cargado](#verificando-jquery-cargado)
 1. [Utilice `.on ()` En lugar de unión `.click ()`](#utilice-on--en-lugar-de-unión-click-)
 1. [Volver al botón de inicio](#volver-al-botón-de-inicio)
@@ -40,7 +41,17 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 1. [Deshabilitar clic derecho](#deshabilitar-clic-derecho)
 
 
-<div id="checking-if-jquery-loaded"></div>
+### Utilizar `noConflict()`
+
+El alias `$` usado por jQuery también lo usan otras bibliotecas de JavaScript. Para garantizar que jQuery no entre en conflicto con el objeto `$` de diferentes bibliotecas, utilice el método `noConflict()` al comienzo del documento:
+
+```javascript
+jQuery.noConflict();
+```
+
+Ahora hará referencia al objeto jQuery utilizando el nombre de la variable `jQuery` en lugar de `$` (por ejemplo, `jQuery('div p').hide()`).
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
 
 
 ### Verificando jQuery Cargado

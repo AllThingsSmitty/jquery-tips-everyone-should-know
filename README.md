@@ -15,6 +15,7 @@ A collection of simple tips to help up your jQuery game.
 
 ## Tips
 
+1. [Use `noConflict()`](#use-noconflict-method)
 1. [Checking If jQuery Loaded](#checking-if-jquery-loaded)
 1. [Use `.on()` Binding Instead of `.click()`](#use-on-binding-instead-of-click)
 1. [Back to Top Button](#back-to-top-button)
@@ -36,6 +37,19 @@ A collection of simple tips to help up your jQuery game.
 1. [Chain Plugin Calls](#chain-plugin-calls)
 1. [Sort List Items Alphabetically](#sort-list-items-alphabetically)
 1. [Disable Right-Click](#disable-right-click)
+
+
+### Use `noConflict()`
+
+The `$` alias used by jQuery is also used by other JavaScript libraries. To ensure that jQuery doesn't conflict with the `$` object of different libraries, use the `noConflict()` method at the start of the document:
+
+```javascript
+jQuery.noConflict();
+```
+
+Now you'll reference the jQuery object using the `jQuery` variable name instead of `$` (e.g., `jQuery('div p').hide()`).
+
+<sup>[back to table of contents](#table-of-contents)</sup>
 
 
 ### Checking If jQuery Loaded

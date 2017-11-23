@@ -14,6 +14,7 @@ Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 
 ## Tippek
 
+1. [Használat `noConflict()`](#használat-noconflict)
 1. [Betöltött-e a jQuery? - Ellenőrzés](#bet%C3%B6lt%C3%B6tt-e-a-jquery---ellen%C5%91rz%C3%A9s)
 1. [`.on()` binding ("kötés") használata `.click()` helyett](#on-binding-k%C3%B6t%C3%A9s-haszn%C3%A1lata-click-helyett)
 1. ['Vissza az elejére' gomb](#vissza-az-elej%C3%A9re-gomb)
@@ -35,6 +36,20 @@ Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 1. [Plugin hívások láncolása](#plugin-h%C3%ADv%C3%A1sok-l%C3%A1ncol%C3%A1sa)
 1. [Listaelemek sorba rendezése ABC szerint](#listaelemek-sorba-rendez%C3%A9se-abc-szerint)
 1. [Jobb egérkattintás kikapcsolása](#jobb-eg%C3%A9rkattint%C3%A1s-kikapcsol%C3%A1sa)
+
+
+### Használat `noConflict()`
+
+A jQuery által használt `$` álnevet más JavaScript könyvtárak is használják. Annak érdekében, hogy a jQuery ne ütközzön a különböző könyvtárak `$` objektumával, használja a `noConflict()` metódust a dokumentum elején:
+
+```javascript
+jQuery.noConflict();
+```
+
+Most a jQuery objektumra a `jQuery` változónevet a `$` (például `jQuery('div p')hide()`).
+
+<sup>[vissza a tartalomjegyzékhez](#tartalomjegyz%C3%A9k)</sup>
+
 
 ### Betöltött-e a jQuery? - Ellenőrzés
 
