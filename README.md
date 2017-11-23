@@ -15,7 +15,7 @@ A collection of simple tips to help up your jQuery game.
 
 ## Tips
 
-1. [Use `noConflict()`](#use-noconflict-method)
+1. [Use `noConflict()`](#use-noconflict)
 1. [Checking If jQuery Loaded](#checking-if-jquery-loaded)
 1. [Use `.on()` Binding Instead of `.click()`](#use-on-binding-instead-of-click)
 1. [Back to Top Button](#back-to-top-button)
