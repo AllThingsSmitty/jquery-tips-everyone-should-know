@@ -9,14 +9,13 @@
 
 * [技巧](#技巧)
 * [瀏覽器支援](#瀏覽器支援)
-* [翻譯](#翻譯)
 * [翻译](#translations)
 * [貢獻守則](../../CONTRIBUTING.md)
 
 
 ## 技巧
 
-1. [使用 `noConflict()`](#使用-noConflict)
+1. [使用 `noConflict()`](#使用-noconflict)
 1. [檢查 jQuery 是否成功載入](#檢查-jquery-是否成功載入)
 1. [使用 `.on()` 做 Binding，而不要使用 `.click()`](#使用-on-做-binding而不要使用-click)
 1. [返回最頂端的按鈕](#返回最頂端的按鈕)

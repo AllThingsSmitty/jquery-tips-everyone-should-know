@@ -9,8 +9,8 @@
 
 ## 目录
 
-* [温馨提示](＃提示)
-* [支持](＃support)
+* [温馨提示](#提示)
+* [支持](#support)
 * [贡献指引](../../CONTRIBUTING.md)
 
 
@@ -19,7 +19,7 @@
 ## 提示
 
 1. [使用 `noConflict()`](#use-noconflict)
-1. [检查是否加载的jQuery](＃checking-if-jquery-loaded)
+1. [检查是否加载的jQuery](#checking-if-jquery-loaded)
 1. [使用`.on()`绑定`.click()`代替](#use-on-binding-instead-of-click)
 1. [返回顶部按钮](#back-to-top-button)
 1. [预先载入图像](#preload-images)
