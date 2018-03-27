@@ -466,8 +466,8 @@ Hay que ir!
 Si desea desactivar el botón derecho del ratón, puede hacerlo para una página entera...
 
 ```javascript
-$(document).ready(function() {
-  $(document).bind('contextmenu', function(e) {
+$(document).ready(function () {
+  $(document).bind('contextmenu', function (e) {
     return false;
   })
 })
@@ -476,8 +476,8 @@ $(document).ready(function() {
 ...pero también puede hacer lo mismo para un elemento específico:
 
 ```javascript
-$(document).ready(function() {
-  $('#submit').bind('contextmenu', function(e) {
+$(document).ready(function () {
+  $('#submit').bind('contextmenu', function (e) {
     return false;
   })
 })

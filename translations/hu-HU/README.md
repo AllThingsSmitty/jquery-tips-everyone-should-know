@@ -466,8 +466,8 @@ Meg is volnánk!
 Ha le szeretnéd tiltani a jobb-klikket, az egész oldalra megteheted...
 
 ```javascript
-$(document).ready(function() {
-  $(document).bind('contextmenu', function(e) {
+$(document).ready(function () {
+  $(document).bind('contextmenu', function (e) {
     return false;
   })
 })
@@ -476,8 +476,8 @@ $(document).ready(function() {
 ...de akár egy konkrét elemre is:
 
 ```javascript
-$(document).ready(function() {
-  $('#submit').bind('contextmenu', function(e) {
+$(document).ready(function () {
+  $('#submit').bind('contextmenu', function (e) {
     return false;
   })
 })

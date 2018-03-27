@@ -464,8 +464,8 @@ ul.append(lis);
 如果要禁用右键单击，您可以对整个页面进行操作...
 
 ```javascript
-$(document).ready(function() {
-  $(document).bind('contextmenu', function(e) {
+$(document).ready(function () {
+  $(document).bind('contextmenu', function (e) {
     return false;
   })
 })
@@ -474,8 +474,8 @@ $(document).ready(function() {
 ...但是您也可以为特定元素做同样的事情：
 
 ```javascript
-$(document).ready(function() {
-  $('#submit').bind('contextmenu', function(e) {
+$(document).ready(function () {
+  $('#submit').bind('contextmenu', function (e) {
     return false;
   })
 })

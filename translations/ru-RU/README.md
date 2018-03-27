@@ -507,8 +507,8 @@ ul.append(lis);
 Если вы хотите отключить контекстное меню, вы можете сделать это для всей страницы...
 
 ```javascript
-$(document).ready(function() {
-  $(document).bind('contextmenu', function(e) {
+$(document).ready(function () {
+  $(document).bind('contextmenu', function (e) {
     return false;
   })
 })
@@ -517,8 +517,8 @@ $(document).ready(function() {
 ...но вы также можете сделать то же самое для конкретного элемента:
 
 ```javascript
-$(document).ready(function() {
-  $('#submit').bind('contextmenu', function(e) {
+$(document).ready(function () {
+  $('#submit').bind('contextmenu', function (e) {
     return false;
   })
 })
