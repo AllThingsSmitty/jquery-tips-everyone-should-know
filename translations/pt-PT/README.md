@@ -11,7 +11,6 @@ Uma  colecção de dicas simples para ajudar-te com a jQuery.
 
 * [Dicas](#Dicas)
 * [Apoio](#apoio)
-* [Traduções](#traduções)
 * [Tabelas de contribuições](../../CONTRIBUTING.md)
 
 
@@ -490,15 +489,3 @@ $(document).ready(function () {
 As versoes actuais de Chrome, Firefox, Safari, Opera, Edge e EI11.
 
 <sup>[Regressar ao índice de conteudos](#table-of-contents)</sup>
-
-
-## Traducoes
-
-* [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
-* [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
-* [Magyar](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/hu-HU)
-* [Pусский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
-* [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
-* [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
-
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
