@@ -11,7 +11,6 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 
 * [Tips](#consejos)
 * [Apoyo](#apoyo)
-* [Traducciones](#traducciones)
 * [Pautas de contribución](../../CONTRIBUTING.md)
 
 
@@ -489,17 +488,5 @@ $(document).ready(function () {
 ## Apoyo
 
 Las versiones actuales de Chrome, Firefox, Safari, Opera, Edge y EI11.
-
-<sup>[volver al índice de contenidos](#table-of-contents)</sup>
-
-
-## Traducciones
-
-* [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
-* [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
-* [Magyar](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/hu-HU)
-* [Pусский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
-* [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
-* [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
 
 <sup>[volver al índice de contenidos](#table-of-contents)</sup>

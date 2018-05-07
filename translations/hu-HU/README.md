@@ -8,7 +8,6 @@ Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 
 * [Tippek](#tippek)
 * [Támogatás](#t%C3%A1mogat%C3%A1s)
-* [További fordítások](#tov%C3%A1bbi-ford%C3%ADt%C3%A1sok)
 * [Közreműködési útmutató (angolul)](../../CONTRIBUTING.md)
 
 
@@ -491,17 +490,5 @@ $(document).ready(function () {
 
 
 A Chrome, Firefox, Safari, Opera, Edge és IE11 böngészők jelenlegi verziói.
-
-<sup>[vissza a tartalomjegyzékhez](#tartalomjegyz%C3%A9k)</sup>
-
-
-## További fordítások
-
-* [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
-* [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
-* [Magyar](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/hu-HU)
-* [Pусский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
-* [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
-* [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
 
 <sup>[vissza a tartalomjegyzékhez](#tartalomjegyz%C3%A9k)</sup>

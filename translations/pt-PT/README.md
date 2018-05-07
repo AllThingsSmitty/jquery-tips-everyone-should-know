@@ -9,7 +9,7 @@ Uma  colecção de dicas simples para ajudar-te com a jQuery.
 
 ## Tabela de conteúdo
 
-* [Dicas](#Dicas)
+* [Conselhos](#conselhos)
 * [Apoio](#apoio)
 * [Tabelas de contribuições](../../CONTRIBUTING.md)
 

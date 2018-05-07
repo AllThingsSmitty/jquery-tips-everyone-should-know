@@ -9,7 +9,6 @@
 
 * [技巧](#技巧)
 * [瀏覽器支援](#瀏覽器支援)
-* [翻译](#translations)
 * [貢獻守則](../../CONTRIBUTING.md)
 
 
@@ -487,19 +486,5 @@ $(document).ready(function () {
 ## 瀏覽器支援
 
 現今版本的 Chrome，Firefox，Safari，Opera，Edge 以及 IE11。
-
-<sup>[回到目錄](#目錄)</sup>
-
-
-<div id="translations"></div>
-
-## 翻译
-
-* [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
-* [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
-* [Magyar](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/hu-HU)
-* [Pусский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
-* [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
-* [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
 
 <sup>[回到目錄](#目錄)</sup>
