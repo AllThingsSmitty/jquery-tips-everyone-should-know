@@ -160,7 +160,7 @@ $('img').on('error', function () {
 });
 ```
 
-Alternatively, if you wish to simply hide broken images this snippet will take care of that for:
+Alternatively, if you wish to hide broken images this snippet will take care of that for:
 
 ```javascript
 $('img').on('error', function () {
@@ -183,7 +183,7 @@ $.post('sign_up.php', {
 });
 ```
 
-However, all of those `val()` calls are expensive. A better way of collecting the user inputs is using the `serialize()` function which collects the user inputs as a string:
+But, all of those `val()` calls are expensive. A better way of collecting the user inputs is using the `serialize()` function which collects the user inputs as a string:
 
 ```javascript
 $.post('sign_up', $('#sign-up-form').serialize());
@@ -204,7 +204,7 @@ $('.btn').on('hover', function () {
 });
 ```
 
-You just need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
+You need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
 
 ```javascript
 $('.btn').on('hover', function () {
@@ -267,14 +267,14 @@ $('#showBlocks').on('click', function () {
 });
 ```
 
-Caching jQuery selectors are an easy performance gain.
+Caching jQuery selectors is a good performance gain.
 
 <sup>[back to table of contents](#table-of-contents)</sup>
 
 
 ### Toggle Fade/Slide
 
-Sliding and fading are something we use plenty in our animations with jQuery. You might just want to show an element when a user clicks something, which makes the `fadeIn` and `slideDown` methods perfect. But if you want that element to appear on the first click and then disappear on the second this will work just fine:
+Sliding and fading are something we use plenty in our animations with jQuery. You might want to show an element when a user clicks something, which makes the `fadeIn` and `slideDown` methods perfect. But if you want that element to appear on the first click and then disappear on the second this will work fine:
 
 ```javascript
 // Fade
