@@ -50,7 +50,11 @@ L'alias `$` utilisé par jQuery est également utilisé par d'autres bibliothèq
 jQuery.noConflict();
 ```
 
-Vous allez maintenant référencer l'objet jQuery en utilisant le nom de variable `jQuery` au lieu de `$` (par exemple, `jQuery('div p').hide()`).
+Vous allez maintenant référencer l'objet jQuery en utilisant le nom de variable `jQuery` au lieu de `$` (par exemple, `jQuery('div p').hide()`). Si vous avez plusieurs versions de jQuery sur la même page, vous pouvez utiliser `noConflict ()` pour définir un alias pour une version spécifique:
+
+```javascript
+let $x = jQuery.noConflict();
+```
 
 <sup>[retour à la table des matières](#table-of-contents)</sup>
 

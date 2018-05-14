@@ -48,7 +48,11 @@ O símbolo  `$` usado pela jQuery também usa outras bibliotecas de JavaScript. 
 jQuery.noConflict();
 ```
 
-Agora haverá referência ao objeto jQuery utilizando o nome da variavel `jQuery` no lugar de `$` (por exemplo, `jQuery('div p').hide()`).
+Agora haverá referência ao objeto jQuery utilizando o nome da variavel `jQuery` no lugar de `$` (por exemplo, `jQuery('div p').hide()`). Se você tem várias versões do jQuery na mesma página, você pode usar o `noConflict ()` para definir um alias para uma versão específica:
+
+```javascript
+let $x = jQuery.noConflict();
+```
 
 <sup>[Regressar ao índice de conteudos](#table-of-contents)</sup>
 

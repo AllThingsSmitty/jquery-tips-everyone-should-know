@@ -45,7 +45,11 @@ A jQuery által használt `$` álnevet más JavaScript könyvtárak is használj
 jQuery.noConflict();
 ```
 
-Most a jQuery objektumra a `jQuery` változónevet a `$` (például `jQuery('div p')hide()`).
+Most a jQuery objektumra a `jQuery` változónevet a `$` (például `jQuery('div p')hide()`). Ha a jQuery több verziója ugyanazon az oldalon található, akkor a `noConflict ()` paranccsal adhat meg egy álnevet egy adott verzióhoz:
+
+```javascript
+let $x = jQuery.noConflict();
+```
 
 <sup>[vissza a tartalomjegyzékhez](#tartalomjegyz%C3%A9k)</sup>
 

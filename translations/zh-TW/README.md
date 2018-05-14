@@ -46,7 +46,11 @@
 jQuery.noConflict();
 ```
 
-现在，您将使用`jQuery`变量名称而不是`$`来引用jQuery对象（例如`jQuery('div p').hide()`）。
+现在，您将使用`jQuery`变量名称而不是`$`来引用jQuery对象（例如`jQuery('div p').hide()`）。如果你在同一页面上有多个jQuery版本，你可以使用`noConflict（）`来设置一个特定版本的别名：
+
+```javascript
+let $x = jQuery.noConflict();
+```
 
 <sup>[回到目錄](#目錄)</sup>
 
