@@ -16,7 +16,7 @@ Please ensure your pull request adheres to the following guidelines:
 * Search open and closed PR's to avoid duplicate suggestions.
 * Only submit jQuery tips that you think would be useful to others. This implies each tip has enough succinct content to describe why it's useful.
 * Add your tip at the bottom of the [README](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/blob/master/README.md) document. Add a link to your tip at the bottom of the table of contents.
-* Use [title-casing](http://titlecapitalization.com).
+* Use [title-casex](https://titlecaseconverter.com/).
 * Code formatting should follow standard [JSLint](http://www.jslint.com/) default settings, including:
   * Indent with two spaces
   * Use single quotes, e.g., `$.preloadImages('img/hover-on.png');`
