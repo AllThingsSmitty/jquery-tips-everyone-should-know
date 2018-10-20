@@ -33,7 +33,7 @@ A collection of simple tips to help up your jQuery game.
 1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
 1. [Find Element By Text](#find-element-by-text)
 1. [Trigger on Visibility Change](#trigger-on-visibility-change)
-1. [Ajax Call Error Handling](#ajax-call-error-handling)
+1. [AJAX Call Error Handling](#ajax-call-error-handling)
 1. [Chain Plugin Calls](#chain-plugin-calls)
 1. [Sort List Items Alphabetically](#sort-list-items-alphabetically)
 1. [Disable Right-Click](#disable-right-click)
@@ -47,7 +47,7 @@ The `$` alias used by jQuery is also used by other JavaScript libraries. To ensu
 jQuery.noConflict();
 ```
 
-Now you'll reference the jQuery object using the `jQuery` variable name instead of `$` (e.g., `jQuery('div p').hide()`). If you have multiple versions of jQuery on the same page, you can use `noConflict()` to set an alias to a specific version:
+Now you'll reference the jQuery object using the `jQuery` variable name instead of `$` (e.g., `jQuery('div p').hide()`). If you have multiple versions of jQuery on the same page (not recommended), you can use `noConflict()` to set an alias to a specific version:
 
 ```javascript
 let $x = jQuery.noConflict();
@@ -187,7 +187,7 @@ $.post('sign_up.php', {
 });
 ```
 
-But, all of those `val()` calls are expensive. A better way of collecting the user inputs is using the `serialize()` function which collects the user inputs as a string:
+But all of those `val()` calls are expensive and using `.val()` on `<textarea>` elements will strip carriage return characters from the browser-reported value. A better way of collecting user inputs is using the `serialize()` function which collects them as a string:
 
 ```javascript
 $.post('sign_up', $('#sign-up-form').serialize());
@@ -240,7 +240,7 @@ $('input[type="submit"]').prop('disabled', false);
 
 ### Stop the Loading of Links
 
-Sometimes you don't want links to go to a certain web page nor reload the page; you might want them to do something else like trigger some other script. This will do the trick of preventing the default action:
+Sometimes you don't want links to go to a certain web page nor reload the page; you might want them to do something else like trigger another script. This will do the trick of preventing the default action:
 
 ```javascript
 $('a.no-link').on('click', function (e) {
@@ -253,7 +253,7 @@ $('a.no-link').on('click', function (e) {
 
 ### Cache jQuery Selectors
 
-Think of how many times you write the same selector over and over again in any project. Every `$('.element')` selector has to search the entire DOM each time, regardless if that selector had previously run. Instead, run the selector once and store the results in a variable:
+Think of how many times you write the same selector over and over again in any project. Every `$('.element')` selector has to search the entire DOM each time, regardless if that selector had previously run. Instead you can run the selector once and store the results in a variable:
 
 ```javascript
 var blocks = $('#blocks').find('li');
@@ -278,7 +278,7 @@ Caching jQuery selectors is a good performance gain.
 
 ### Toggle Fade/Slide
 
-Sliding and fading are something we use plenty in our animations with jQuery. You might want to show an element when a user clicks something, which makes the `fadeIn` and `slideDown` methods perfect. But if you want that element to appear on the first click and then disappear on the second this will work fine:
+Sliding and fading are common in animations with jQuery. You might want to show an element when a user clicks something, which makes the `fadeIn` and `slideDown` methods perfect, but if you want that element to appear on the first click and then disappear on the second, this will work fine:
 
 ```javascript
 // Fade
@@ -312,7 +312,7 @@ $('#accordion').find('.accordion-header').on('click', function () {
 });
 ```
 
-By adding this script all you really needs to do on your web page is the necessary HTML go get this working.
+By adding this script all you really need to do on your web page is the necessary HTML to get this working.
 
 <sup>[back to table of contents](#table-of-contents)</sup>
 
@@ -325,7 +325,7 @@ Sometimes you'll want two divs to have the same height no matter what content th
 $('.div').css('min-height', $('.main-div').height());
 ```
 
-This example sets the `min-height` which means that it can be bigger than the main div but never smaller. However, a more flexible method would be to loop over a set of elements and set the height to the height of the tallest element:
+This example sets the `min-height` which means that it can be bigger than the main div but never smaller. However, a more flexible method would be to loop over a set of elements and set `height` to the height of the tallest element:
 
 ```javascript
 var $columns = $('.column');
@@ -347,7 +347,7 @@ $rows.each(function () {
 });
 ```
 
-**Note:** This can be done several ways [in CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) but depending on what your needs are, knowing how to do this in jQuery is still worthwhile.
+**Note:** This can be done several ways [in CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) but depending on what your needs are, knowing how to do this in jQuery is handy.
 
 <sup>[back to table of contents](#table-of-contents)</sup>
 
@@ -381,7 +381,7 @@ $('div:not(:contains("' + search + '"))').hide();
 
 ### Trigger on Visibility Change
 
-Trigger JavaScript when the user is no longer focusing on a tab, or refocuses on a tab:
+Trigger JavaScript when the user is no longer focusing on a tab or refocuses on a tab:
 
 ```javascript
 $(document).on('visibilitychange', function (e) {
@@ -396,9 +396,9 @@ $(document).on('visibilitychange', function (e) {
 <sup>[back to table of contents](#table-of-contents)</sup>
 
 
-### Ajax Call Error Handling
+### AJAX Call Error Handling
 
-When an Ajax call returns a 404 or 500 error the error handler will be executed. If the handler isn't defined, other jQuery code might not work anymore. Define a global Ajax error handler:
+When an AJAX call returns a 404 or 500 error, the error handler will be executed. If the handler isn't defined, other jQuery code might not work as intended. To define a global AJAX error handler:
 
 ```javascript
 $(document).on('ajaxError', function (e, xhr, settings, error) {
@@ -474,7 +474,7 @@ $(document).ready(function () {
 })
 ```
 
-...but you can also do the same for a specific element:
+...and you can also do the same for a specific element:
 
 ```javascript
 $(document).ready(function () {
