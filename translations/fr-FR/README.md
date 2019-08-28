@@ -18,6 +18,7 @@ Une collection de conseils simples pour aider votre jeu jQuery.
 
 1. [Utilisez `noConflict()`](#use-noconflict)
 1. [Vérification Si jQuery Loaded](#checking-if-jquery-loaded)
+1. [Vérifier si un élément existe](#check-whether-an-element-exists)
 1. [Utilisez `.on()` Binding Au lieu de `.click()`](#use-on-binding-instead-of-click)
 1. [Haut de la page Bouton](#back-to-top-button)
 1. [Précharger Images](#preload-images)
@@ -74,6 +75,21 @@ if (typeof jQuery == 'undefined') {
 ```
 
 Maintenant, vous êtes hors ...
+
+<sup>[retour à la table des matières](#table-of-contents)</sup>
+
+
+<div id="check-whether-an-element-exists"></div>
+
+### Vérifier si un élément existe
+
+Avant d'utiliser un élément HTML, vous devez vous assurer qu'il fait partie de DOM.
+
+```javascript
+if ($("#selector").length) {
+  //faire quelque chose avec élément
+}
+```
 
 <sup>[retour à la table des matières](#table-of-contents)</sup>
 

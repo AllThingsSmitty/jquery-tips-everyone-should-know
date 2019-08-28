@@ -18,6 +18,7 @@ Una colección de consejos simples para ayudar a su juego jQuery.
 
 1. [Utilizar `noConflict()`](#utilizar-noconflict)
 1. [Verificando jQuery Cargado](#verificando-jquery-cargado)
+1. [Compruebe si existe un elemento](#compruebe-si-existe-un-elemento)
 1. [Utilice `.on ()` En lugar de unión `.click ()`](#utilice-on--en-lugar-de-unión-click-)
 1. [Volver al botón de inicio](#volver-al-botón-de-inicio)
 1. [Carga previa de imágenes](#carga-previa-de-imágenes)
@@ -70,6 +71,19 @@ if (typeof jQuery == 'undefined') {
 ```
 
 Ahora que estás fuera...
+
+<sup>[volver al índice de contenidos](#table-of-contents)</sup>
+
+
+### Compruebe si existe un elemento
+
+Antes de usar un elemento HTML, debe asegurarse de que sea parte de DOM.
+
+```javascript
+if ($("#selector").length) {
+  //hacer algo con elemento
+}
+```
 
 <sup>[volver al índice de contenidos](#table-of-contents)</sup>
 

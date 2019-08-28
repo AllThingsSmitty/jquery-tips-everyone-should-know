@@ -15,6 +15,7 @@ Egyszerű tippek gyűjteménye, a jQuery-ben való elmélyülésed  segítendő.
 
 1. [Használat `noConflict()`](#használat-noconflict)
 1. [Betöltött-e a jQuery? - Ellenőrzés](#bet%C3%B6lt%C3%B6tt-e-a-jquery---ellen%C5%91rz%C3%A9s)
+1. [Ellenőrizze, hogy van-e elem](#ellenőrizze,-hogy-van-e-elem)
 1. [`.on()` binding ("kötés") használata `.click()` helyett](#on-binding-k%C3%B6t%C3%A9s-haszn%C3%A1lata-click-helyett)
 1. ['Vissza az elejére' gomb](#vissza-az-elej%C3%A9re-gomb)
 1. [Képek előbetöltése](#k%C3%A9pek-el%C5%91bet%C3%B6lt%C3%A9se)
@@ -67,6 +68,19 @@ if (typeof jQuery == 'undefined') {
 ```
 
 Most, hogy elstartoltunk...
+
+<sup>[vissza a tartalomjegyzékhez](#tartalomjegyz%C3%A9k)</sup>
+
+
+### Ellenőrizze, hogy van-e elem
+
+A HTML elem használata előtt meg kell győződnie arról, hogy része a DOM-nak.
+
+```javascript
+if ($("#selector").length) {
+  //csinálj valamit az elemmel
+}
+```
 
 <sup>[vissza a tartalomjegyzékhez](#tartalomjegyz%C3%A9k)</sup>
 

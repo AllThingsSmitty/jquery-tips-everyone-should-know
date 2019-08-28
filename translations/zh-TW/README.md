@@ -16,6 +16,7 @@
 
 1. [使用 `noConflict()`](#使用-noconflict)
 1. [檢查 jQuery 是否成功載入](#檢查-jquery-是否成功載入)
+1. [檢查元素是否存在](#檢查元素是否存在)
 1. [使用 `.on()` 做 Binding，而不要使用 `.click()`](#使用-on-做-binding而不要使用-click)
 1. [返回最頂端的按鈕](#返回最頂端的按鈕)
 1. [預先載入圖片](#預先載入圖片)
@@ -64,6 +65,19 @@ if (typeof jQuery == 'undefined') {
   console.log('jQuery hasn\'t loaded');
 } else {
   console.log('jQuery has loaded');
+}
+```
+
+<sup>[回到目錄](#目錄)</sup>
+
+
+### 檢查元素是否存在
+
+在使用HTML元素之前，您需要確保它是DOM的一部分。
+
+```javascript
+if ($("#selector").length) {
+  //do something with element
 }
 ```
 

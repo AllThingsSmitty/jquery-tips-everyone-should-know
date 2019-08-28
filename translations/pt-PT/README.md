@@ -18,6 +18,7 @@ Uma  colecção de dicas simples para ajudar-te com a jQuery.
 
 1. [Utilizar `noConflict()`](#utilizar-noconflict)
 1. [Verificando a jQuery Carrgada](#verificando-a-jquery-carrgada)
+1. [Verifique se existe um elemento](#verifique-se-existe-um-elemento)
 1. [Utiliza `.on()` No lugar de uniao `.click()`](#utiliza-on--no-lugar-de-uniao-click-)
 1. [Regressar a botao de inicio](#regressar-a-botao-de-inicio)
 1. [Carregar preview de imágens](#carregar-preview-de-imágens)
@@ -70,6 +71,19 @@ if (typeof jQuery == 'undefined') {
 ```
 
 Agora que estás fora...
+
+<sup>[Regressar ao índice de conteudos](#table-of-contents)</sup>
+
+
+### Verifique se existe um elemento
+
+Antes de usar um elemento HTML, você precisa garantir que ele faça parte do DOM.
+
+```javascript
+if ($("#selector").length) {
+  //faça algo com element
+}
+```
 
 <sup>[Regressar ao índice de conteudos](#table-of-contents)</sup>
 

@@ -18,6 +18,7 @@
 
 1. [Используйте `noConflict()`](#use-noconflict)
 1. [Проверка готовности jQuery](#checking-if-jquery-loaded)
+1. [проверить, существует ли элемент](#check-whether-an-element-exists)
 1. [Используйте `.on()` вместо `.click()`](#use-on-binding-instead-of-click)
 1. [Кнопка "вернуться к началу"](#back-to-top-button)
 1. [Предварительная загрузка изображений](#preload-images)
@@ -74,6 +75,21 @@ if (typeof jQuery == 'undefined') {
 ```
 
 Теперь вы можете продолжать ...
+
+<sup>[вернуться к оглавлению](#table-of-contents)</sup>
+
+
+<div id="check-whether-an-element-exists"></div>
+
+### Cпроверить, существует ли элемент
+
+Прежде чем использовать элемент HTML, необходимо убедиться, что он является частью DOM.
+
+```javascript
+if ($("#selector").length) {
+  //сделать что-то с элементом
+}
+```
 
 <sup>[вернуться к оглавлению](#table-of-contents)</sup>
 

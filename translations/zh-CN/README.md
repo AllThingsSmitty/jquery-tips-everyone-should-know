@@ -20,6 +20,7 @@
 
 1. [使用 `noConflict()`](#use-noconflict)
 1. [检查是否加载的jQuery](#checking-if-jquery-loaded)
+1. [检查元素是否存在](#check-whether-an-element-exists)
 1. [使用`.on()`绑定`.click()`代替](#use-on-binding-instead-of-click)
 1. [返回顶部按钮](#back-to-top-button)
 1. [预先载入图像](#preload-images)
@@ -76,6 +77,21 @@ if (typeof jQuery == 'undefined') {
 ```
 
 现在你是关闭...
+
+<sup>[回目录](#table-of-contents)</sup>
+
+
+<div id="check-whether-an-element-exists"></div>
+
+### 检查元素是否存在
+
+在使用HTML元素之前，您需要确保它是DOM的一部分。
+
+```javascript
+if ($("#selector").length) {
+  //do something with element
+}
+```
 
 <sup>[回目录](#table-of-contents)</sup>
 

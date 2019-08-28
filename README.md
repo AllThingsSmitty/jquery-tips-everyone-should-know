@@ -17,6 +17,7 @@ A collection of simple tips to help up your jQuery game.
 
 1. [Use `noConflict()`](#use-noconflict)
 1. [Checking If jQuery Loaded](#checking-if-jquery-loaded)
+1. [Check Whether an Element Exists](#check-whether-an-element-exists)
 1. [Use `.on()` Binding Instead of `.click()`](#use-on-binding-instead-of-click)
 1. [Back to Top Button](#back-to-top-button)
 1. [Preload Images](#preload-images)
@@ -69,6 +70,19 @@ if (typeof jQuery == 'undefined') {
 ```
 
 Now you're off...
+
+<sup>[back to table of contents](#table-of-contents)</sup>
+
+
+### Check Whether an Element Exists
+
+Prior using a HTML element you need to ensure it's part of DOM.
+
+```javascript
+if ($("#selector").length) {
+  //do something with element
+}
+```
 
 <sup>[back to table of contents](#table-of-contents)</sup>
 
@@ -485,6 +499,10 @@ $(document).ready(function () {
 ```
 
 <sup>[back to table of contents](#table-of-contents)</sup>
+
+
+
+
 
 
 ## Support
