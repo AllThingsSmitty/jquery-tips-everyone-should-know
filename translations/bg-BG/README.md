@@ -9,8 +9,6 @@
 
 * [Съвети](#съвети)
 * [Поддръжка](#поддръжка)
-* [Преводи](#преводи)
-* [Правила и насоки за вземането на участие](../../CONTRIBUTING.md)
 
 
 ## Съвети
@@ -512,18 +510,5 @@ $(document).ready(function () {
 ## Поддръжка
 
 Актуалните версии на Chrome, Firefox, Safari, Opera, Edge, и IE11.
-
-<sup>[обратно към съдържанието](#съдържание)</sup>
-
-
-## Преводи
-
-* [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
-* [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
-* [Magyar](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/hu-HU)
-* [Português do Europe](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/pt-PT)
-* [Pусский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
-* [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
-* [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
 
 <sup>[обратно към съдържанието](#съдържание)</sup>
