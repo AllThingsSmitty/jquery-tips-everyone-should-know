@@ -15,41 +15,41 @@
 ## 팁
 
 1. [`noConflict()` 사용하기](#use-noconflict)
-1. [Checking If jQuery Loaded](#checking-if-jquery-loaded)
-1. [Check Whether an Element Exists](#check-whether-an-element-exists)
-1. [Use `.on()` Binding Instead of `.click()`](#use-on-binding-instead-of-click)
-1. [Back to Top Button](#back-to-top-button)
-1. [Preload Images](#preload-images)
-1. [Checking If Images Are Loaded](#checking-if-images-are-loaded)
-1. [Fix Broken Images Automatically](#fix-broken-images-automatically)
-1. [Post a Form with AJAX](#post-a-form-with-ajax)
-1. [Toggle Classes on Hover](#toggle-classes-on-hover)
-1. [Disabling Input Fields](#disabling-input-fields)
-1. [Stop the Loading of Links](#stop-the-loading-of-links)
-1. [Cache jQuery Selectors](#cache-jquery-selectors)
-1. [Toggle Fade/Slide](#toggle-fadeslide)
-1. [Simple Accordion](#simple-accordion)
-1. [Make Two Divs the Same Height](#make-two-divs-the-same-height)
-1. [Open External Links in New Tab/Window](#open-external-links-in-new-tabwindow)
-1. [Find Element By Text](#find-element-by-text)
-1. [Trigger on Visibility Change](#trigger-on-visibility-change)
-1. [AJAX Call Error Handling](#ajax-call-error-handling)
-1. [Chain Plugin Calls](#chain-plugin-calls)
-1. [Sort List Items Alphabetically](#sort-list-items-alphabetically)
-1. [Disable Right-Click](#disable-right-click)
+1. [jQuery가 로드되었는지 확인하기](#checking-if-jquery-loaded)
+1. [엘리먼트가 존재하는지 확인하기](#check-whether-an-element-exists)
+1. [`.click()` 대신에 `.on()` 으로 바인딩 하기](#use-on-binding-instead-of-click)
+1. [처음으로 돌아가기 버튼](#back-to-top-button)
+1. [이미지 사전로드 시키기](#preload-images)
+1. [이미지들이 로드되었는지 확인하기](#checking-if-images-are-loaded)
+1. [손상된 이미지 자동으로 수정](#fix-broken-images-automatically)
+1. [AJAX 형식으로 게시하기](#post-a-form-with-ajax)
+1. [마우스를 올렸을 때 클래스 토글하기](#toggle-classes-on-hover)
+1. [입력 필드 비활성 하기](#disabling-input-fields)
+1. [링크의 로딩을 중지하기](#stop-the-loading-of-links)
+1. [jQuery 셀렉터를 캐시에 저장하기](#cache-jquery-selectors)
+1. [Fade/Slide 토글](#toggle-fadeslide)
+1. [아코디언 간단히 작성하기](#simple-accordion)
+1. [두 개의 Div를 같은 높이로 만들기](#make-two-divs-the-same-height)
+1. [새 탭/새 창에서 외부 링크 열기](#open-external-links-in-new-tabwindow)
+1. [텍스트로 엘리먼트 찾기](#find-element-by-text)
+1. [가시성 변화에 따른 작동](#trigger-on-visibility-change)
+1. [AJAX의 에러반환에 대한 핸들링](#ajax-call-error-handling)
+1. [체인 플러그인 호출](#chain-plugin-calls)
+1. [알파벳 순서로 아이템 목록 정렬하기](#sort-list-items-alphabetically)
+1. [우클릭 비활성화](#disable-right-click)
 
 
 <div id="use-noconflict"></div>
 
 ### `noConflict()`사용하기
 
-The `$` alias used by jQuery is also used by other JavaScript libraries. To ensure that jQuery doesn't conflict with the `$` object of different libraries, use the `noConflict()` method at the start of the document:
+jQuery에서 사용되는 `$` 와 같은 별명은 JavaScript의 다른 라이브러리에서도 사용됩니다. jQuery의 `$` 객체가 다른 라이브러리와 충돌하지 않게 하려면, 문서의 시작에 `coConflict()` 메소드를 사용하세요:
 
 ```javascript
 jQuery.noConflict();
 ```
 
-Now you'll reference the jQuery object using the `jQuery` variable name instead of `$` (e.g., `jQuery('div p').hide()`). If you have multiple versions of jQuery on the same page (not recommended), you can use `noConflict()` to set an alias to a specific version:
+이제 `$` 대신에 `jQuery` 변수 이름을 사용하여 jQuery 객체를 참조할 것입니다 (예를들어, `jQuery('div p').hide()`). 만일 같은 페이지에서 여러 버전의 jQuery를 사용한다면 (추천하지는 않습니다), `noConflict()` 를 사용하여 특정 버전에 별명을 설정할 수 있습니다:
 
 ```javascript
 let $x = jQuery.noConflict();
@@ -59,9 +59,9 @@ let $x = jQuery.noConflict();
 
 <div id="checking-if-jquery-loaded"></div>
 
-### Checking If jQuery Loaded
+### jQuery가 로드되었는지 확인하기
 
-Before you can do anything with jQuery you first need to make certain it has loaded:
+jQuery로 무엇이든 하기전에 jQuery가 확실히 로드되었는지 확인할 필요가 있습니다:
 
 ```javascript
 if (typeof jQuery == 'undefined') {
@@ -71,19 +71,19 @@ if (typeof jQuery == 'undefined') {
 }
 ```
 
-Now you're off...
+이제 시작해 봅시다...
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="check-whether-an-element-exists"></div>
 
-### Check Whether an Element Exists
+### 엘리먼트가 존재하는지 확인하기
 
-Prior using a HTML element you need to ensure it's part of DOM.
+HTML 엘리먼트를 사용하기 전에 그 엘리먼트가 DOM의 일부인지 확인해야 합니다.
 
 ```javascript
 if ($("#selector").length) {
-  //do something with element
+  //엘리먼트로 무언가를 해볼 것
 }
 ```
 
@@ -91,34 +91,34 @@ if ($("#selector").length) {
 
 <div id="use-on-binding-instead-of-click"></div>
 
-### Use `.on()` Binding Instead of `.click()`
+### `.click()` 대신에 `.on()` 으로 바인딩 하기
 
-Using `.on()` gives you several advantages over using `.click()`, such as the ability to add multiple events...
+`.on()` 을 사용하는 것은 `.click()` 에 비해 몇 가지 더 장점이 있습니다, 예를들면 여러 이벤트를 추가할 수 있는 점...
 
 ```javascript
 .on('click tap hover')
 ```
 
-...a binding applies to dynamically created elements, as well (there's no need to manually bind every single element dynamically added to a DOM element)...
+...동적으로 생성된 엘리먼트에 바인딩이 적용된다는 점, 뿐만 아니라 (동적으로 추가된 모든 DOM 요소에 각각 직접 바인딩할 필요가 없다는 점)...
 
-...and the possibility to set a namespace:
+...그리고 네임스페이스 설정이 가능하다는 점:
 
 ```javascript
 .on('click.menuOpening')
 ```
 
-Namespaces give you the power to unbind a specific event (e.g., `.off('click.menuOpening')`).
+네임스페이스는 특정 이벤트의 바인딩을 해제할 수도 있게 해줍니다 (예를들면, `.off('click.menuOpening')`).
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="back-to-top-button"></div>
 
-### Back to Top Button
+### 처음으로 돌아가기 버튼
 
-By using the `animate` and `scrollTop` methods in jQuery you don't need a plugin to create a simple scroll-to-top animation:
+jQuery에서 `animate` 와 `scrollTop` 메소드를 이용하면 처음으로 돌아가기 애니메이션을 만들기 위해 플러그인을 이용할 필요가 없습니다:
 
 ```javascript
-// Back to top
+// 처음으로 돌아가기
 $('.container').on('click', '.back-to-top', function (e) {
   e.preventDefault();
   $('html, body').animate({scrollTop: 0}, 800);
@@ -126,23 +126,23 @@ $('.container').on('click', '.back-to-top', function (e) {
 ```
 
 ```html
-<!-- Create an anchor tag -->
+<!-- a 태그 만들기 -->
 <div class="container">
   <a href="#" class="back-to-top">Back to top</a>
 </div>
 ```
 
-Changing the `scrollTop` value changes where you wants the scrollbar to land. All you're really doing is animating the body of the document throughout the course of 800 milliseconds until it scrolls to the top of the document.
+`scrollTop`의 값을 원하는 곳으로 변경함으로서 스크롤바가 멈출 곳을 정할 수 있습니다. 그저 800밀리초 동안 문서의 처음으로 올라갈때까지 본문을 애니메이션으로 만드는 것만 하면 됩니다.
 
-**Note:** Watch for some [buggy behavior](https://github.com/jquery/api.jquery.com/issues/417) with `scrollTop`.
+**메모:** `scrollTop` 의 몇 가지 [버그동작](https://github.com/jquery/api.jquery.com/issues/417) 을 보세요.
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="preload-images"></div>
 
-### Preload Images
+### 이미지 사전로드 시키기
 
-If your web page uses a lot of images that aren't visible initially (e.g., on hover) it makes sense to preload them:
+만일 웹페이지가 초기에 볼 수 없는 많은 이미지를 이용할 경우 (예를들어, 마우스를 올렸을 때) 이미지들을 사전로드 시키는 것이 옳은 방법입니다:
 
 ```javascript
 $.preloadImages = function () {
@@ -158,9 +158,9 @@ $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 
 <div id="checking-if-images-are-loaded"></div>
 
-### Checking If Images Are Loaded
+### 이미지들이 로드되었는지 확인하기
 
-Sometimes you might need to check if your images have fully loaded in order to continue on with your scripts:
+때로는 스크립트를 계속 진행하기 위해 이미지가 완전히 로드되었는지 확인해야 할 때도 있습니다:
 
 ```javascript
 $('img').on('load', function () {
@@ -168,15 +168,15 @@ $('img').on('load', function () {
 });
 ```
 
-You can also check if one particular image has loaded by replacing the `<img>` tag with an ID or class.
+필요에따라 `<img>` 태그를 ID나 class로 변경하여 특정 이미지가 로드되었는지 체크할 수도 있습니다.
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="fix-broken-images-automatically"></div>
 
-### Fix Broken Images Automatically
+### 손상된 이미지 자동으로 수정
 
-If you happen to find broken image links on your site replacing them one by one can be a pain. This simple piece of code can save a lot of headaches:
+사이트에서 손상된 이미지들을 발견했을 때 그 이미지들을 하나하나 수정하는 것은 고통을 가져옵니다. 이 간단한 코드는 그러한 많은 두통을 겪지않게 할 수 있습니다:
 
 ```javascript
 $('img').on('error', function () {
@@ -186,7 +186,7 @@ $('img').on('error', function () {
 });
 ```
 
-Alternatively, if you wish to hide broken images this snippet will take care of that for:
+대체로, 손상된 이미지들을 숨기려할 때 이 스니펫이 그 부분을 도와줄 것입니다:
 
 ```javascript
 $('img').on('error', function () {
@@ -198,9 +198,10 @@ $('img').on('error', function () {
 
 <div id="post-a-form-with-ajax"></div>
 
+AJAX 형식으로 게시하기
 ### Post a Form with AJAX
 
-jQuery AJAX methods are a common way to request text, HTML, XML, or JSON. If you wanted to send a form via AJAX you could collect the user inputs via the `val()` method:
+jQuery의 AJAX 메소드는 text, HTML, XML 또는 JSON을 요청하는 일반적인 방법과 같습니다. 만일 AJAX 형식으로 보내기를 원한다면 사용자의 입력을 `val()` 메소드로 받을 수 있습니다:
 
 ```javascript
 $.post('sign_up.php', {
@@ -210,7 +211,7 @@ $.post('sign_up.php', {
 });
 ```
 
-But all of those `val()` calls are expensive and using `.val()` on `<textarea>` elements will strip carriage return characters from the browser-reported value. A better way of collecting user inputs is using the `serialize()` function which collects them as a string:
+그러나 모든 `val()` 부름은 값을 많이 치뤄야 하고 `<textarea>` 에 `.val()` 을 사용하면 브라우저의 반환 값에서 줄바꿈 되는 문자가 제거됩니다. 따라서 사용자의 입력을 받는 더 좋은 방법은 `serialize()` 함수를 이용하여 문자열로 받는 것입니다:
 
 ```javascript
 $.post('sign_up', $('#sign-up-form').serialize());
@@ -220,9 +221,10 @@ $.post('sign_up', $('#sign-up-form').serialize());
 
 <div id="toggle-classes-on-hover"></div>
 
-### Toggle Classes on Hover
 
-Let's say you want to change the visual of a clickable element on your page when a user hovers over it. You can add a class to your element when the user is hovering; when the user stops hovering removes the class:
+### 마우스를 올렸을 때 클래스 토글하기
+
+사용자가 페이지 중 클릭가능한 엘리먼트에 마우스를 올렸을 때 페이지가 시각적으로 바뀌는 것을 얘기해봅시다. 당신은 사용자가 엘리먼트에 마우스를 올렸을 때 그 엘리먼트에 클래스가 추가되도록 할 수 있습니다; 그리고 사용자가 엘리먼트에서 마우스를 내리면 클래스가 제거되도록 할 수 있습니다:
 
 ```javascript
 $('.btn').on('hover', function () {
@@ -232,7 +234,7 @@ $('.btn').on('hover', function () {
 });
 ```
 
-You need to add the necessary CSS. If you want an even _simpler_ way use the `toggleClass` method:
+`toggleClass` 메소드를 사용하기 위해 더 _간단한_ 방법을 원한다면. 당신은 필수적으로 CSS를 추가할 필요가 있습니다:
 
 ```javascript
 $('.btn').on('hover', function () {
@@ -240,21 +242,21 @@ $('.btn').on('hover', function () {
 });
 ```
 
-**Note:** CSS may be a faster solution in this case but it's still worthwhile to know this.
+**메모:** 이 예시에서는 CSS가 더 빠른 해결방법이 될 수 있지만 이 방법을 아는 것도 여전히 가치가 있습니다.
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="disabling-input-fields"></div>
 
-### Disabling Input Fields
+### 입력 필드 비활성 하기
 
-At times you may want the submit button of a form or one of its text inputs to be disabled until the user has performed a certain action (e.g., checking the "I've read the terms" checkbox). Add the `disabled` attribute to your input so you can enable it when you want:
+때때로 사용자가 특정 액션을 행할때까지 양식의 제출 버튼 또는 글 입력 필드가 비활성 되어있기를 바랄 수 있습니다 (예를들면, "조항을 읽었습니다" 의 체크박스를 체크할 때). 이런때에는 input에 `disabled` 속성을 추가함으로서 당신이 원할때 입력필드를 활성화시킬 수 있습니다:
 
 ```javascript
 $('input[type="submit"]').prop('disabled', true);
 ```
 
-All you need to do is run the `prop` method again on the input, but set the value of `disabled` to `false`:
+당신이 할 일은 input의 `prop` 메소드를 다시 실행시키되, `disabled` 의 값을 `false` 로 설정하는 것 뿐입니다:
 
 ```javascript
 $('input[type="submit"]').prop('disabled', false);
@@ -264,9 +266,10 @@ $('input[type="submit"]').prop('disabled', false);
 
 <div id="stop-the-loading-of-links"></div>
 
-### Stop the Loading of Links
 
-Sometimes you don't want links to go to a certain web page nor reload the page; you might want them to do something else like trigger another script. This will do the trick of preventing the default action:
+### 링크의 로딩을 중지하기
+
+때때로 링크를 어떤 웹 페이지로 보내거나 페이지를 리로드하는 것을 원치 않을 때가 있습니다; 다른 스크립트를 띄우는 것과 같은 다른 것을 하기를 원할 때가 있습니다. 이 것은 기본적인 액션을 방지하는 트릭입니다:
 
 ```javascript
 $('a.no-link').on('click', function (e) {
@@ -278,15 +281,15 @@ $('a.no-link').on('click', function (e) {
 
 <div id="cache-jquery-selectors"></div>
 
-### Cache jQuery Selectors
+### jQuery 셀렉터를 캐시에 저장하기
 
-Think of how many times you write the same selector over and over again in any project. Every `$('.element')` selector has to search the entire DOM each time, regardless if that selector had previously run. Instead you can run the selector once and store the results in a variable:
+프로젝트에서 같은 셀렉터를 얼마나 많이 적어보게 되는지 생각해보세요. 모든 `$('.element')` 셀렉터는 이전에 실행되었는지에 상관없이 매번 모든 DOM을 검색해야 합니다. 이에대한 대안으로 셀렉터를 한번만 실행하고 그 결과를 변수에 저장할 수 있습니다:
 
 ```javascript
 var blocks = $('#blocks').find('li');
 ```
 
-Now you can use the `blocks` variable wherever you want without having to search the DOM every time:
+이제 매번 DOM을 검색하지 않아도 `blocks` 변수를 원하는 곳에서 사용할 수 있습니다:
 
 ```javascript
 $('#hideBlocks').on('click', function () {
@@ -298,15 +301,16 @@ $('#showBlocks').on('click', function () {
 });
 ```
 
-Caching jQuery selectors is a good performance gain.
+jQuery 셀렉터를 캐시에 저장하는 것은 성능의 향상에 도움이 됩니다.
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="toggle-fadeslide"></div>
 
-### Toggle Fade/Slide
 
-Sliding and fading are common in animations with jQuery. You might want to show an element when a user clicks something, which makes the `fadeIn` and `slideDown` methods perfect, but if you want that element to appear on the first click and then disappear on the second, this will work fine:
+### Fade/Slide 토글
+
+jQuery에서 sliding과 fading은 일반적인 애니메이션입니다. 당신은 사용자가 무언가를 클릭할 때, `fadeIn` 과 `slideDown` 메소드를 완벽하게 만들 수도 있지만, 첫번째 클릭에 엘리먼트가 나타나고 두번째 클릭에 사라지게 하는 것도, 제대로 작동하게 만들 수 있습니다:
 
 ```javascript
 // Fade
@@ -324,15 +328,15 @@ $('.btn').on('click', function () {
 
 <div id="simple-accordion"></div>
 
-### Simple Accordion
+### 아코디언 간단히 작성하기
 
-This is a simple method for a quick accordion:
+이것은 빠르게 아코디언을 작성하기 위한 간단한 메소드입니다:
 
 ```javascript
-// Close all panels
+// 모든 패널 닫기
 $('#accordion').find('.content').hide();
 
-// Accordion
+// 아코디언
 $('#accordion').find('.accordion-header').on('click', function () {
   var next = $(this).next();
   next.slideToggle('fast');
@@ -341,21 +345,21 @@ $('#accordion').find('.accordion-header').on('click', function () {
 });
 ```
 
-By adding this script all you really need to do on your web page is the necessary HTML to get this working.
+이 스크립트를 추가함으로서 당신이 할 일은 이 웹페이지가 작동하기위해 필수적인 HTML을 작성하는 것 뿐입니다.
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="make-two-divs-the-same-height"></div>
 
-### Make Two Divs the Same Height
+### 두 개의 Div를 같은 높이로 만들기
 
-Sometimes you'll want two divs to have the same height no matter what content they have in them:
+때때로 각 div의 내용에 상관없이 두 개의 div가 같은 높이이기를 원할때가 있을 것입니다:
 
 ```javascript
 $('.div').css('min-height', $('.main-div').height());
 ```
 
-This example sets the `min-height` which means that it can be bigger than the main div but never smaller. However, a more flexible method would be to loop over a set of elements and set `height` to the height of the tallest element:
+이 예시는 `min-height` 을 설정함으로서 main div보다 클 수는 있지만 결코 작아질 수 없도록 했습니다. 그러나, 더 유연한 메소드는 엘리먼트의 높이확인을 반복하여 가장 큰 엘리먼트의 높이로 `height` 을 설정하는 것입니다:
 
 ```javascript
 var $columns = $('.column');
@@ -368,7 +372,7 @@ $columns.each(function () {
 $columns.height(height);
 ```
 
-If you want _all_ columns to have the same height:
+만일 _모든_ 열의 높이를 같게 하고 싶다면:
 
 ```javascript
 var $rows = $('.same-height-columns');
@@ -377,15 +381,15 @@ $rows.each(function () {
 });
 ```
 
-**Note:** This can be done several ways [in CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) but depending on what your needs are, knowing how to do this in jQuery is handy.
+**메모:** 이것은 [CSS를 이용해](http://codepen.io/AllThingsSmitty/pen/KMPqoO) 여러가지 방법으로 할 수 있습니다. 그러나 필요에 따라, jQuery로 이것을 핸들링하는 방법을 알아야 편리할 때도 있습니다.
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="open-external-links-in-new-tabwindow"></div>
 
-### Open External Links in New Tab/Window
+### 새 탭/새 창에서 외부 링크 열기
 
-Open external links in a new browser tab or window and ensure links on the same origin open in the same tab or window:
+브라우저의 새로운 탭 또는 새로운 창에서 외부 링크를 열고 같은 원본의 링크가 같은 탭 또는 창에서 열리는것을 보장함:
 
 ```javascript
 $('a[href^="http"]').attr('target', '_blank');
@@ -393,15 +397,15 @@ $('a[href^="//"]').attr('target', '_blank');
 $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 ```
 
-**Note:** `window.location.origin` doesn't work in IE10. [This fix](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) takes care of the issue.
+**메모:** `window.location.origin` 은 IE10에서 작동하지 않습니다. [이 수정](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) 으로 문제가 해결되었습니다. 
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="find-element-by-text"></div>
 
-### Find Element By Text
+### 텍스트로 엘리먼트 찾기
 
-By using the `contains()` selector in jQuery you can find text in content of an element. If text doesn't exists, that element will be hidden:
+jQuery에서 `contains()` 셀렉터를 사용하여 엘리먼트의 내용에서 텍스트를 찾을 수 있습니다. 만일 텍스트가 존재하지 않으면, 해당 엘리먼트는 숨겨질 것입니다:
 
 ```javascript
 var search = $('#search').val();
@@ -412,9 +416,9 @@ $('div:not(:contains("' + search + '"))').hide();
 
 <div id="trigger-on-visibility-change"></div>
 
-### Trigger on Visibility Change
+### 가시성 변화에 따른 작동
 
-Trigger JavaScript when the user is no longer focusing on a tab or refocuses on a tab:
+사용자가 더이상 탭에 초점을 맞추지 않거나 탭에 다시 포커스를 맞출 때 자바스크립트가 작동합니다:
 
 ```javascript
 $(document).on('visibilitychange', function (e) {
@@ -430,9 +434,9 @@ $(document).on('visibilitychange', function (e) {
 
 <div id="ajax-call-error-handling"></div>
 
-### AJAX Call Error Handling
+### AJAX의 에러반환에 대한 핸들링
 
-When an AJAX call returns a 404 or 500 error, the error handler will be executed. If the handler isn't defined, other jQuery code might not work as intended. To define a global AJAX error handler:
+AJAX의 반환값이 404 또는 500 에러일 때, 에러 핸들러가 실행될 것입니다. 만일 핸들러가 정의되지 않았다면, 다른 jQuery 코드가 계획대로 작동하지 않을 수 있습니다. 따라서 전역에 AJAX 오류 핸들러를 정의하려면:
 
 ```javascript
 $(document).on('ajaxError', function (e, xhr, settings, error) {
@@ -444,9 +448,9 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 
 <div id="chain-plugin-calls"></div>
 
-### Chain Plugin Calls
+### 체인 플러그인 호출
 
-jQuery allows for the "chaining" of plugin method calls to mitigate the process of repeatedly querying the DOM and creating multiple jQuery objects. Let's say the following snippet represents your plugin method calls:
+jQuery는 여러 개체를 생성하고 반복적으로 DOM을 처리하는 과정을 완화하기 위해 플러그인 메소드의 호출을 "체이닝" 하는 것을 허용합니다. 다음 스니펫이 당신의 플러그인 메소드 호출을 나타낸다고 가정해봅시다:
 
 ```javascript
 $('#elem').show();
@@ -454,7 +458,7 @@ $('#elem').html('bla');
 $('#elem').otherStuff();
 ```
 
-This could be vastly improved by using chaining:
+이 스니펫은 체이닝을 통해 크게 개선될 수 있습니다:
 
 ```javascript
 $('#elem')
@@ -463,7 +467,7 @@ $('#elem')
   .otherStuff();
 ```
 
-An alternative is to cache the element in a variable (prefixed with `$`):
+대안 중 하나는 엘리먼트를 변수 안에 캐시하는 것입니다 (`$`를 앞에 붙인):
 
 ```javascript
 var $elem = $('#elem');
@@ -472,15 +476,15 @@ $elem.html('bla');
 $elem.otherStuff();
 ```
 
-Both chaining and [caching](#cache-jquery-selectors) methods in jQuery are best practices that lead to shorter and faster code.
+jQuery에서 체이닝과 [캐싱](#cache-jquery-selectors) 메소드는 길이가 더 짧고 더 빠른 코드에 대한 최고의 예제입니다.
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="sort-list-items-alphabetically"></div>
 
-### Sort List Items Alphabetically
+### 알파벳 순서로 아이템 목록 정렬하기
 
-Let's say you end up with too many items in a list. Maybe the content is produced by a CMS and you want to order them alphabetically:
+하나의 목록에 아이템이 너무 많다고 가정해봅시다. 아마 컨텐츠는 CMS에 의해 생성되었을 것이고 당신은 알파벳순서로 정돈하기를 원할 것입니다:
 
 ```javascript
 var ul = $('#list'),
@@ -493,15 +497,15 @@ lis.sort(function (a, b) {
 ul.append(lis);
 ```
 
-There you go!
+여기 있습니다!
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
 <div id="disable-right-click"></div>
 
-### Disable Right-Click
+### 우클릭 비활성화
 
-If you want to disable right-click, you can do it for an entire page...
+만일 우클릭을 비활성화 시키고 싶다면, 전체 페이지에 그것을 적용할 수 있습니다...
 
 ```javascript
 $(document).ready(function () {
@@ -511,7 +515,7 @@ $(document).ready(function () {
 })
 ```
 
-...and you can also do the same for a specific element:
+...그리고 특정 엘리먼트에만 적용할 수도 있습니다:
 
 ```javascript
 $(document).ready(function () {
@@ -530,7 +534,7 @@ $(document).ready(function () {
 
 ## 지원
 
-Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
+Chrome, Firefox, Safari, Opera, edge, and IE11의 최신버전.
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
