@@ -1,21 +1,20 @@
-# jQuery Tips Everyone Should Know [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# 모두가 알아야 할 jQuery 팁들 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-A collection of simple tips to help up your jQuery game.
+당신의 jQuery 사용에 도움이 되는 간단한 팁들의 모음입니다.
+ 
+> [@sindresorhus](https://github.com/sindresorhus/)이 엄선한 [awesome lists](https://github.com/sindresorhus/awesome/)의 다른 훌륭한 리스트들 확인해보세요.
 
-> For other great lists check out [@sindresorhus](https://github.com/sindresorhus/)'s curated list of [awesome lists](https://github.com/sindresorhus/awesome/).
+## 목차
+
+* [팁](#팁)
+* [지원](#지원)
+* [다른언어](#다른언어)
+* [컨트리뷰션시 지켜야 할 사항](../../CONTRIBUTING.md)
 
 
-## Table of Contents
+## 팁
 
-* [Tips](#tips)
-* [Support](#support)
-* [Translations](#translations)
-* [Contribution Guidelines](CONTRIBUTING.md)
-
-
-## Tips
-
-1. [Use `noConflict()`](#use-noconflict)
+1. [`noConflict()` 사용하기](#noconflict-사용하기)
 1. [Checking If jQuery Loaded](#checking-if-jquery-loaded)
 1. [Check Whether an Element Exists](#check-whether-an-element-exists)
 1. [Use `.on()` Binding Instead of `.click()`](#use-on-binding-instead-of-click)
@@ -40,7 +39,9 @@ A collection of simple tips to help up your jQuery game.
 1. [Disable Right-Click](#disable-right-click)
 
 
-### Use `noConflict()`
+<div id="use-noconflict"></div>
+
+### `noConflict()`사용하기
 
 The `$` alias used by jQuery is also used by other JavaScript libraries. To ensure that jQuery doesn't conflict with the `$` object of different libraries, use the `noConflict()` method at the start of the document:
 
@@ -54,7 +55,7 @@ Now you'll reference the jQuery object using the `jQuery` variable name instead 
 let $x = jQuery.noConflict();
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Checking If jQuery Loaded
@@ -71,7 +72,8 @@ if (typeof jQuery == 'undefined') {
 
 Now you're off...
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
+
 
 
 ### Check Whether an Element Exists
@@ -84,7 +86,7 @@ if ($("#selector").length) {
 }
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Use `.on()` Binding Instead of `.click()`
@@ -105,7 +107,7 @@ Using `.on()` gives you several advantages over using `.click()`, such as the ab
 
 Namespaces give you the power to unbind a specific event (e.g., `.off('click.menuOpening')`).
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Back to Top Button
@@ -131,7 +133,7 @@ Changing the `scrollTop` value changes where you wants the scrollbar to land. Al
 
 **Note:** Watch for some [buggy behavior](https://github.com/jquery/api.jquery.com/issues/417) with `scrollTop`.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Preload Images
@@ -148,7 +150,7 @@ $.preloadImages = function () {
 $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Checking If Images Are Loaded
@@ -163,7 +165,7 @@ $('img').on('load', function () {
 
 You can also check if one particular image has loaded by replacing the `<img>` tag with an ID or class.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Fix Broken Images Automatically
@@ -186,7 +188,7 @@ $('img').on('error', function () {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Post a Form with AJAX
@@ -207,7 +209,7 @@ But all of those `val()` calls are expensive and using `.val()` on `<textarea>` 
 $.post('sign_up', $('#sign-up-form').serialize());
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Toggle Classes on Hover
@@ -232,7 +234,7 @@ $('.btn').on('hover', function () {
 
 **Note:** CSS may be a faster solution in this case but it's still worthwhile to know this.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Disabling Input Fields
@@ -249,7 +251,7 @@ All you need to do is run the `prop` method again on the input, but set the valu
 $('input[type="submit"]').prop('disabled', false);
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Stop the Loading of Links
@@ -262,7 +264,7 @@ $('a.no-link').on('click', function (e) {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Cache jQuery Selectors
@@ -287,7 +289,7 @@ $('#showBlocks').on('click', function () {
 
 Caching jQuery selectors is a good performance gain.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Toggle Fade/Slide
@@ -306,7 +308,7 @@ $('.btn').on('click', function () {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Simple Accordion
@@ -328,7 +330,7 @@ $('#accordion').find('.accordion-header').on('click', function () {
 
 By adding this script all you really need to do on your web page is the necessary HTML to get this working.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Make Two Divs the Same Height
@@ -363,7 +365,7 @@ $rows.each(function () {
 
 **Note:** This can be done several ways [in CSS](http://codepen.io/AllThingsSmitty/pen/KMPqoO) but depending on what your needs are, knowing how to do this in jQuery is handy.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Open External Links in New Tab/Window
@@ -378,7 +380,7 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 **Note:** `window.location.origin` doesn't work in IE10. [This fix](http://tosbourn.com/a-fix-for-window-location-origin-in-internet-explorer/) takes care of the issue.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Find Element By Text
@@ -390,7 +392,7 @@ var search = $('#search').val();
 $('div:not(:contains("' + search + '"))').hide();
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Trigger on Visibility Change
@@ -407,7 +409,7 @@ $(document).on('visibilitychange', function (e) {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### AJAX Call Error Handling
@@ -420,7 +422,7 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 });
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Chain Plugin Calls
@@ -453,7 +455,7 @@ $elem.otherStuff();
 
 Both chaining and [caching](#cache-jquery-selectors) methods in jQuery are best practices that lead to shorter and faster code.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Sort List Items Alphabetically
@@ -473,7 +475,7 @@ ul.append(lis);
 
 There you go!
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 ### Disable Right-Click
@@ -498,21 +500,21 @@ $(document).ready(function () {
 })
 ```
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
 
 
 
 
-## Support
+## 지원
 
 Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
 
-## Translations
+## 다른언어
 
 * [български](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/bg-BG)
 * [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
@@ -523,5 +525,5 @@ Current versions of Chrome, Firefox, Safari, Opera, Edge, and IE11.
 * [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
 * [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
 
-<sup>[back to table of contents](#table-of-contents)</sup>
+<sup>[목차로 돌아가기](#목차)</sup>
 
