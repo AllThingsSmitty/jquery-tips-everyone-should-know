@@ -57,6 +57,7 @@ let $x = jQuery.noConflict();
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="checking-if-jquery-loaded"></div>
 
 ### Checking If jQuery Loaded
 
@@ -74,7 +75,7 @@ Now you're off...
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
-
+<div id="check-whether-an-element-exists"></div>
 
 ### Check Whether an Element Exists
 
@@ -88,6 +89,7 @@ if ($("#selector").length) {
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="use-on-binding-instead-of-click"></div>
 
 ### Use `.on()` Binding Instead of `.click()`
 
@@ -109,6 +111,7 @@ Namespaces give you the power to unbind a specific event (e.g., `.off('click.men
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="back-to-top-button"></div>
 
 ### Back to Top Button
 
@@ -135,6 +138,7 @@ Changing the `scrollTop` value changes where you wants the scrollbar to land. Al
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="preload-images"></div>
 
 ### Preload Images
 
@@ -152,6 +156,7 @@ $.preloadImages('img/hover-on.png', 'img/hover-off.png');
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="checking-if-images-are-loaded"></div>
 
 ### Checking If Images Are Loaded
 
@@ -167,6 +172,7 @@ You can also check if one particular image has loaded by replacing the `<img>` t
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="fix-broken-images-automatically"></div>
 
 ### Fix Broken Images Automatically
 
@@ -190,6 +196,7 @@ $('img').on('error', function () {
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="post-a-form-with-ajax"></div>
 
 ### Post a Form with AJAX
 
@@ -211,6 +218,7 @@ $.post('sign_up', $('#sign-up-form').serialize());
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="toggle-classes-on-hover"></div>
 
 ### Toggle Classes on Hover
 
@@ -236,6 +244,7 @@ $('.btn').on('hover', function () {
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="disabling-input-fields"></div>
 
 ### Disabling Input Fields
 
@@ -253,6 +262,7 @@ $('input[type="submit"]').prop('disabled', false);
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="stop-the-loading-of-links"></div>
 
 ### Stop the Loading of Links
 
@@ -266,6 +276,7 @@ $('a.no-link').on('click', function (e) {
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="cache-jquery-selectors"></div>
 
 ### Cache jQuery Selectors
 
@@ -291,6 +302,7 @@ Caching jQuery selectors is a good performance gain.
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="toggle-fadeslide"></div>
 
 ### Toggle Fade/Slide
 
@@ -310,6 +322,7 @@ $('.btn').on('click', function () {
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="simple-accordion"></div>
 
 ### Simple Accordion
 
@@ -332,6 +345,7 @@ By adding this script all you really need to do on your web page is the necessar
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="make-two-divs-the-same-height"></div>
 
 ### Make Two Divs the Same Height
 
@@ -367,6 +381,7 @@ $rows.each(function () {
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="open-external-links-in-new-tabwindow"></div>
 
 ### Open External Links in New Tab/Window
 
@@ -382,6 +397,7 @@ $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="find-element-by-text"></div>
 
 ### Find Element By Text
 
@@ -394,6 +410,7 @@ $('div:not(:contains("' + search + '"))').hide();
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="trigger-on-visibility-change"></div>
 
 ### Trigger on Visibility Change
 
@@ -411,6 +428,7 @@ $(document).on('visibilitychange', function (e) {
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="ajax-call-error-handling"></div>
 
 ### AJAX Call Error Handling
 
@@ -424,6 +442,7 @@ $(document).on('ajaxError', function (e, xhr, settings, error) {
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="chain-plugin-calls"></div>
 
 ### Chain Plugin Calls
 
@@ -457,6 +476,7 @@ Both chaining and [caching](#cache-jquery-selectors) methods in jQuery are best 
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="sort-list-items-alphabetically"></div>
 
 ### Sort List Items Alphabetically
 
@@ -477,6 +497,7 @@ There you go!
 
 <sup>[목차로 돌아가기](#목차)</sup>
 
+<div id="disable-right-click"></div>
 
 ### Disable Right-Click
 
