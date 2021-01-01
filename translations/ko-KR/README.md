@@ -8,7 +8,6 @@
 
 * [팁](#팁)
 * [지원](#지원)
-* [다른언어](#다른언어)
 * [컨트리뷰션시 지켜야 할 사항](../../CONTRIBUTING.md)
 
 
@@ -528,27 +527,8 @@ $(document).ready(function () {
 <sup>[목차로 돌아가기](#목차)</sup>
 
 
-
-
-
-
 ## 지원
 
 Chrome, Firefox, Safari, Opera, edge, and IE11의 최신버전.
 
 <sup>[목차로 돌아가기](#목차)</sup>
-
-
-## 다른언어
-
-* [български](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/bg-BG)
-* [Español](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/es-ES)
-* [Français](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/fr-FR)
-* [Magyar](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/hu-HU)
-* [Português do Europe](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/pt-PT)
-* [Pусский](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/ru-RU)
-* [简体中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-CN)
-* [繁體中文](https://github.com/AllThingsSmitty/jquery-tips-everyone-should-know/tree/master/translations/zh-TW)
-
-<sup>[목차로 돌아가기](#목차)</sup>
-
