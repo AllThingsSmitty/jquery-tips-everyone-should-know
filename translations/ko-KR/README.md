@@ -14,7 +14,7 @@
 
 ## 팁
 
-1. [`noConflict()` 사용하기](#noconflict-사용하기)
+1. [`noConflict()` 사용하기](#use-noconflict)
 1. [Checking If jQuery Loaded](#checking-if-jquery-loaded)
 1. [Check Whether an Element Exists](#check-whether-an-element-exists)
 1. [Use `.on()` Binding Instead of `.click()`](#use-on-binding-instead-of-click)
