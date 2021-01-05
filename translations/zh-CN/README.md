@@ -40,7 +40,7 @@
 1. [Ajax调用错误处理](#ajax-call-error-handling)
 1. [连锁插件调用](#chain-plugin-calls)
 1. [排序列表项按字母顺序](#sort-list-items-alphabetically)
-1. [禁用右鍵單擊](#disable-right-click)
+1. [禁用右键单击](#禁用右键单击)
 
 
 <div id="use-noconflict"></div>
@@ -524,23 +524,24 @@ ul.append(lis);
 
 <div id="disable-right-click"></div>
 
-### 禁用右鍵單擊
+### 禁用右键单击
 
-如果要禁用右鍵單擊，您可以對整個頁面進行操作...
+
+如果要禁用右键单击，您可以对整个页面进行操作...
 
 ```javascript
-$(document).ready(function (){
-  $(document).bind('contextmenu', function (e){
+$(document).ready(function () {
+  $(document).bind('contextmenu', function (e) {
     return false;
   })
 })
 ```
 
-...但是您也可以為特定元素做同樣的事情：
+...但是您也可以为特定元素做同样的事情：
 
 ```javascript
-$(document).ready(function (){
-  $('#submit').bind('contextmenu', function (e){
+$(document).ready(function () {
+  $('#submit').bind('contextmenu', function (e) {
     return false;
   })
 })

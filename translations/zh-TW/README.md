@@ -14,29 +14,33 @@
 
 ## 技巧
 
-1. [使用 `noConflict()`](#使用-noconflict)
-1. [檢查 jQuery 是否成功載入](#檢查-jquery-是否成功載入)
-1. [檢查元素是否存在](#檢查元素是否存在)
-1. [使用 `.on()` 做 Binding，而不要使用 `.click()`](#使用-on-做-binding而不要使用-click)
-1. [返回最頂端的按鈕](#返回最頂端的按鈕)
-1. [預先載入圖片](#預先載入圖片)
-1. [檢查圖片是否成功載入](#檢查圖片是否成功載入)
-1. [自動修復載入失敗的圖片](#自動修復載入失敗的圖片)
-1. [發布的AJAX表單](#post-a-form-with-ajax)
-1. [透過 Hover 切換 Class](#透過-hover-切換-class)
-1. [讓 input field 無法輸入](#讓-input-field-無法輸入)
-1. [停止載入連結](#停止載入連結)
-1. [快取 jQuery 選擇器](#快取-jquery-選擇器)
-1. [切換 Fade/Slide](#切換-fadeslide)
-1. [簡單可收放元件(Accordion)](#簡單可收放元件accordion)
-1. [使兩個 Div 一樣高](#使兩個-div-一樣高)
-1. [在新分頁/視窗開啟外部連結](#在新分頁視窗開啟外部連結)
-1. [利用文字找到元素](#利用文字找到元素)
-1. [Visibility 改變時觸發事件](#visibility-改變時觸發事件)
-1. [Ajax 程序的錯誤處理](#ajax-程序的錯誤處理)
-1. [串連 Plugin 的函式呼叫](#串連-plugin-的函式呼叫)
-1. [照字母順序排序清單元素（list）](#照字母順序排清單元素list)
-1. [禁用右键单击](#禁用右键单击)
+- [大家都應該知道的 jQuery 小技巧 ![Awesome](https://github.com/sindresorhus/awesome)](#大家都應該知道的-jquery-小技巧-)
+  - [目錄](#目錄)
+  - [技巧](#技巧)
+    - [使用 `noConflict()`](#使用-noconflict)
+    - [檢查 jQuery 是否成功載入](#檢查-jquery-是否成功載入)
+    - [檢查元素是否存在](#檢查元素是否存在)
+    - [使用 `.on()` 做 Binding，而不要使用 `.click()`](#使用-on-做-binding而不要使用-click)
+    - [返回最頂端的按鈕](#返回最頂端的按鈕)
+    - [預先載入圖片](#預先載入圖片)
+    - [檢查圖片是否成功載入](#檢查圖片是否成功載入)
+    - [自動修復載入失敗的圖片](#自動修復載入失敗的圖片)
+    - [發布的AJAX表單](#發布的ajax表單)
+    - [透過 Hover 切換 Class](#透過-hover-切換-class)
+    - [讓 input field 無法輸入](#讓-input-field-無法輸入)
+    - [停止載入連結](#停止載入連結)
+    - [快取 jQuery 選擇器](#快取-jquery-選擇器)
+    - [切換 Fade/Slide](#切換-fadeslide)
+    - [簡單可收放元件(Accordion)](#簡單可收放元件accordion)
+    - [使兩個 Div 一樣高](#使兩個-div-一樣高)
+    - [在新分頁/視窗開啟外部連結](#在新分頁視窗開啟外部連結)
+    - [利用文字找到元素](#利用文字找到元素)
+    - [Visibility 改變時觸發事件](#visibility-改變時觸發事件)
+    - [Ajax 程序的錯誤處理](#ajax-程序的錯誤處理)
+    - [串連 Plugin 的函式呼叫](#串連-plugin-的函式呼叫)
+    - [照字母順序排清單元素（list）](#照字母順序排清單元素list)
+    - [停用右鍵](#停用右鍵)
+  - [瀏覽器支援](#瀏覽器支援)
 
 
 ### 使用 `noConflict()`
@@ -474,25 +478,23 @@ ul.append(lis);
 
 <sup>[回到目錄](#目錄)</sup>
 
+### 停用右鍵
 
-### 禁用右键单击
-
-
-如果要禁用右键单击，您可以对整个页面进行操作...
+如果要停用右鍵，您可以對整個頁面這麼做...
 
 ```javascript
-$(document).ready(function () {
-  $(document).bind('contextmenu', function (e) {
+$(document).ready(function (){
+  $(document).bind('contextmenu', function (e){
     return false;
   })
 })
 ```
 
-...但是您也可以为特定元素做同样的事情：
+...而您也可以為特定元素做同樣的事情：
 
 ```javascript
-$(document).ready(function () {
-  $('#submit').bind('contextmenu', function (e) {
+$(document).ready(function (){
+  $('#submit').bind('contextmenu', function (e){
     return false;
   })
 })
