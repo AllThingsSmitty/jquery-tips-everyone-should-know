@@ -479,8 +479,8 @@ ul.append(lis);
 如果要停用右鍵，您可以對整個頁面這麼做...
 
 ```javascript
-$(document).ready(function (){
-  $(document).bind('contextmenu', function (e){
+$(document).ready(function () {
+  $(document).bind('contextmenu', function (e) {
     return false;
   })
 })
@@ -489,8 +489,8 @@ $(document).ready(function (){
 ...而您也可以為特定元素做同樣的事情：
 
 ```javascript
-$(document).ready(function (){
-  $('#submit').bind('contextmenu', function (e){
+$(document).ready(function () {
+  $('#submit').bind('contextmenu', function (e) {
     return false;
   })
 })
